@@ -27,7 +27,6 @@ Material:
   m_ValidKeywords:
   - _COLORMAP
   - _MAPPING1_UV
-  - _ROUGHNESSMAP
   m_InvalidKeywords:
   - _EMISSION
   - _TYPEMATERIAL_STANDAR
@@ -53,7 +52,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: a6abfe1cb345cee469404ed84e9cdc76, type: 3}
+        m_Texture: {fileID: 2800000, guid: f40f231eb4b11554ebad776038ee6613, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -81,7 +80,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 61983c5abc158db42b138134fec41be5, type: 3}
+        m_Texture: {fileID: 2800000, guid: eaf0e740d7eb1ac47b4b6ff72eca44c2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -97,7 +96,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _R_M_AO:
-        m_Texture: {fileID: 2800000, guid: f4ac7c3d42229654a978c90304a51b3f, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SSSMap:
@@ -134,7 +133,7 @@ Material:
     - _BlendModePreserveSpecular: 1
     - _BlendRoughness: 0.624
     - _Brillo: 1.03
-    - _BrilloRoughness: 3.08
+    - _BrilloRoughness: 1
     - _BumpScale: 1
     - _COLORMAP: 1
     - _CastShadows: 1
@@ -160,10 +159,10 @@ Material:
     - _FuzzyBias: 0
     - _FuzzyScale: 1
     - _GlossMapScale: 0
-    - _Glossiness: 0.421
+    - _Glossiness: 0.846
     - _GlossyReflections: 0
     - _HUE: 2
-    - _InvertRoughness: 1
+    - _InvertRoughness: 0
     - _MAPPING1: 0
     - _METALLICMAP: 0
     - _MaxRoughness: 1
@@ -174,19 +173,19 @@ Material:
     - _MixMetallic: 0
     - _MixRoughness: 1
     - _NoiseScale: 0
-    - _NormalDetails: 0
+    - _NormalDetails: 1
     - _NormalStrenght: 2
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _Power: 1
     - _PowerAO: 1
-    - _PowerFresnel: 0.36
-    - _PowerFresnelBC: 3.15
+    - _PowerFresnel: 3.13
+    - _PowerFresnelBC: 1.89
     - _PowerTint: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     - _RANDOMHUE: 0
-    - _ROUGHNESSMAP: 1
+    - _ROUGHNESSMAP: 0
     - _RandomHUE: 0
     - _RandomHue: 0
     - _ReceiveShadows: 1
@@ -208,7 +207,7 @@ Material:
     - _Threshold: 0
     - _USECOLORMAP: 1
     - _UseAlphaMap: 0
-    - _UseAoMap: 1
+    - _UseAoMap: 0
     - _UseColorMap: 1
     - _UseDither: 0
     - _UseEmissiveMap: 0
