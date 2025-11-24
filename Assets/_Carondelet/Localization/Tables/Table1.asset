@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
+  m_Name: Table1
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: 0c1a7f72f933d7443a50e296b3d22956, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: 5b1544055d306d743b663e1ea24bac17, type: 2}
+  - {fileID: 11400000, guid: 8cfc9eaf52dd3ed4994199753dd1acc4, type: 2}
+  - {fileID: 11400000, guid: 76913349af16766409ad2159064cf9a2, type: 2}
+  - {fileID: 11400000, guid: 60f4529ea38a9b44790256099b9c6637, type: 2}
+  m_Extensions:
+  - rid: 6962753076226949339
+  m_Group: String Table
+  references:
+    version: 2
+    RefIds:
+    - rid: 6962753076226949339
+      type: {class: CsvExtension, ns: UnityEditor.Localization.Plugins.CSV, asm: Unity.Localization.Editor}
+      data:
+        m_Collection: {fileID: 11400000}
+        m_ColumnsList:
+        - rid: 6962753076226949340
+        - rid: 6962753076226949341
+        - rid: 6962753076226949342
+        - rid: 6962753076226949343
+        - rid: 6962753076226949344
+        m_ConnectedFile: 
+    - rid: 6962753076226949340
+      type: {class: KeyIdColumns, ns: UnityEditor.Localization.Plugins.CSV.Columns, asm: Unity.Localization.Editor}
+      data:
+        m_IncludeId: 1
+        m_IncludeSharedComments: 1
+        m_KeyFieldName: Key
+        m_IdFieldName: Id
+        m_CommentFieldName: Shared Comments
+    - rid: 6962753076226949341
+      type: {class: LocaleColumns, ns: UnityEditor.Localization.Plugins.CSV.Columns, asm: Unity.Localization.Editor}
+      data:
+        m_LocaleIdentifier:
+          m_Code: en
+        m_FieldName: English(en)
+        m_CommentFieldName: English(en) Comments
+        m_IncludeComments: 0
+    - rid: 6962753076226949342
+      type: {class: LocaleColumns, ns: UnityEditor.Localization.Plugins.CSV.Columns, asm: Unity.Localization.Editor}
+      data:
+        m_LocaleIdentifier:
+          m_Code: fr
+        m_FieldName: French(fr)
+        m_CommentFieldName: French(fr) Comments
+        m_IncludeComments: 0
+    - rid: 6962753076226949343
+      type: {class: LocaleColumns, ns: UnityEditor.Localization.Plugins.CSV.Columns, asm: Unity.Localization.Editor}
+      data:
+        m_LocaleIdentifier:
+          m_Code: es-EC
+        m_FieldName: Spanish (Ecuador)(es-EC)
+        m_CommentFieldName: Spanish (Ecuador)(es-EC) Comments
+        m_IncludeComments: 0
+    - rid: 6962753076226949344
+      type: {class: LocaleColumns, ns: UnityEditor.Localization.Plugins.CSV.Columns, asm: Unity.Localization.Editor}
+      data:
+        m_LocaleIdentifier:
+          m_Code: es
+        m_FieldName: Spanish(es)
+        m_CommentFieldName: Spanish(es) Comments
+        m_IncludeComments: 0

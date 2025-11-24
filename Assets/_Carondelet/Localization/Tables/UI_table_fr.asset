@@ -1,0 +1,349 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: UI_table_fr
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: fr
+  m_SharedData: {fileID: 11400000, guid: 1afafbb30f2ae4748a1e53d654903475, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 703316910080
+    m_Localized: Explorez le palais
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703421767680
+    m_Localized: "Cr\xE9dits"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703425961984
+    m_Localized: Langue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703425961985
+    m_Localized: Entrer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703430156288
+    m_Localized: Retour
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703430156289
+    m_Localized: Palais de Carondelet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703430156290
+    m_Localized: Visite virtuelle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703430156291
+    m_Localized: "Ext\xE9rieur du palais"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703430156292
+    m_Localized: "Points d'int\xE9r\xEAt"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703430156293
+    m_Localized: "Appuyez sur \"Tab\" pour passer en mode de contr\xF4le accessible"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703430156294
+    m_Localized: "Utilisez le pav\xE9 num\xE9rique pour contr\xF4ler l'exp\xE9rience"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703430156295
+    m_Localized: Histoire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703430156296
+    m_Localized: "Fa\xE7ade avant"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703430156297
+    m_Localized: "Pierre and\xE9site"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703430156298
+    m_Localized: Covachas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703430156299
+    m_Localized: Appuyez
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1403073334632448
+    m_Localized: pour en savoir plus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1782739975299072
+    m_Localized: "Cr\xE9dits"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1787492230782976
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1787492230782977
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1787492230782978
+    m_Localized: "Utilisez W, A, S, D et la souris pour vous d\xE9placer dans le
+      palais"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1787492230782979
+    m_Localized: "Utilisez les joysticks virtuels pour vous d\xE9placer dans le palais"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1787492230782980
+    m_Localized: Instructions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1787492230782981
+    m_Localized: "D\xE9placement"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1787492230782982
+    m_Localized: "Cam\xE9ra"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1787492230782983
+    m_Localized: Tutoriel 5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1787492230782984
+    m_Localized: "Pour vous d\xE9placer, utilisez les touches :"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1787492230782985
+    m_Localized: "Se d\xE9placer"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1787492230782986
+    m_Localized: "Vous pouvez d\xE9placer la cam\xE9ra avec le curseur de la souris"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1787492230782987
+    m_Localized: Interagir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8021916886786048
+    m_Localized: Pause
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8021916966477825
+    m_Localized: Appuyez sur "P" pour ouvrir le menu des options
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8021916966477824
+    m_Localized: Chargement...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8021916966477826
+    m_Localized: "pour passer \xE0 la pi\xE8ce suivante"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8021916966477827
+    m_Localized: "Passer l\u2019introduction"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8021916970672128
+    m_Localized: "Mode accessibilit\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8021916970672129
+    m_Localized: Afficher le curseur
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8021916970672130
+    m_Localized: Couloir principal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8023108891205632
+    m_Localized: "Mus\xE9e"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8023108891205633
+    m_Localized: Oratoire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8023108891205634
+    m_Localized: "Cour int\xE9rieure"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8023108891205635
+    m_Localized: Pavillon des Drapeaux
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8023108891205636
+    m_Localized: "Cabinet pr\xE9sidentiel"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8023108891205637
+    m_Localized: Salle de banquet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8023108891205638
+    m_Localized: "Salle des Pr\xE9sidents"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8023108891205639
+    m_Localized: "Balcon pr\xE9sidentiel"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8023108891205640
+    m_Localized: "Bureau pr\xE9sidentiel"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9720862927511552
+    m_Localized: Accueil
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9724622428987392
+    m_Localized: Regarder
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9748559976226816
+    m_Localized: "Utilisez le joystick gauche pour vous d\xE9placer"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9748559980421120
+    m_Localized: "Utilisez le joystick droit pour d\xE9placer la cam\xE9ra"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9748559980421121
+    m_Localized: Appuyez pour interagir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9748559980421122
+    m_Localized: Appuyez pour mettre en pause ou ouvrir le menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10496847495061504
+    m_Localized: Faire tourner le palais
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10496847583141888
+    m_Localized: 'Maintenez le clic gauche sur le palais :'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10496847583141889
+    m_Localized: "D\xE9placer la cam\xE9ra"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10496847583141890
+    m_Localized: 'Maintenez le clic droit sur le palais :'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10496847583141891
+    m_Localized: Zoom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10496847583141892
+    m_Localized: "Zoomez ou d\xE9zoomez avec la molette de la souris."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10496847583141893
+    m_Localized: Interagir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10496847587336192
+    m_Localized: "Cliquez sur l'ic\xF4ne pour afficher les informations"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10496847587336193
+    m_Localized: 'Appuyez et maintenez avec un doigt sur le palais :'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10496847587336194
+    m_Localized: 'Appuyez et maintenez avec deux doigts sur le palais :'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10496847587336195
+    m_Localized: "Pincez avec deux doigts sur l\u2019\xE9cran."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10496847587336196
+    m_Localized: "Appuyez sur l'ic\xF4ne pour afficher les informations."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12290566338666496
+    m_Localized: Cour principale et le Pavillon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12290566435135488
+    m_Localized: "Hall du deuxi\xE8me \xE9tage"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13748028564594688
+    m_Localized: 'Dirige ton point de vue avec :'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13814940317278208
+    m_Localized: "Vous pouvez maintenant utiliser le clavier pour contr\xF4ler toute
+      l\u2019exp\xE9rience"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16281058290196480
+    m_Localized: aller vers la Cour principale et le Pavillon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16281058374082560
+    m_Localized: aller vers la Salle d'expositions permanentes et temporaires
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16281058374082561
+    m_Localized: "aller vers la Salle des sessions du Cabinet minist\xE9riel"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16281058378276864
+    m_Localized: aller vers la Salle des banquets
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16281058378276865
+    m_Localized: "aller vers la Salle des pr\xE9sidents"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16281058378276866
+    m_Localized: "aller vers le Balcon pr\xE9sidentiel"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16281058378276867
+    m_Localized: "aller vers le Bureau pr\xE9sidentiel"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16281058378276868
+    m_Localized: "aller vers le Hall du deuxi\xE8me \xE9tage"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16281058378276869
+    m_Localized: aller vers le Couloir principal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16285495314374656
+    m_Localized: entrer dans l'Oratoire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17128319949758464
+    m_Localized: Continuer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54507358703837184
+    m_Localized: para wi wi salon azul
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

@@ -1,0 +1,464 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7200780691820126258
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97c23e3b12dc18c42a140437e53d3951, type: 3}
+  m_Name: Tonemapping
+  m_EditorClassIdentifier: 
+  active: 1
+  mode:
+    m_OverrideState: 1
+    m_Value: 1
+  neutralHDRRangeReductionMode:
+    m_OverrideState: 0
+    m_Value: 2
+  acesPreset:
+    m_OverrideState: 0
+    m_Value: 3
+  hueShiftAmount:
+    m_OverrideState: 0
+    m_Value: 0
+  detectPaperWhite:
+    m_OverrideState: 0
+    m_Value: 0
+  paperWhite:
+    m_OverrideState: 0
+    m_Value: 300
+  detectBrightnessLimits:
+    m_OverrideState: 0
+    m_Value: 1
+  minNits:
+    m_OverrideState: 0
+    m_Value: 0.005
+  maxNits:
+    m_OverrideState: 0
+    m_Value: 1000
+--- !u!114 &-5492184597847706782
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b2db86121404754db890f4c8dfe81b2, type: 3}
+  m_Name: Bloom
+  m_EditorClassIdentifier: 
+  active: 1
+  skipIterations:
+    m_OverrideState: 0
+    m_Value: 1
+  threshold:
+    m_OverrideState: 1
+    m_Value: 0.9
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0.01
+  scatter:
+    m_OverrideState: 0
+    m_Value: 0.7
+  clamp:
+    m_OverrideState: 0
+    m_Value: 65472
+  tint:
+    m_OverrideState: 0
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
+  highQualityFiltering:
+    m_OverrideState: 0
+    m_Value: 0
+  downscale:
+    m_OverrideState: 0
+    m_Value: 0
+  maxIterations:
+    m_OverrideState: 0
+    m_Value: 6
+  dirtTexture:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+    dimension: 1
+  dirtIntensity:
+    m_OverrideState: 0
+    m_Value: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
+  m_Name: GVT_PatioBANDERA
+  m_EditorClassIdentifier: 
+  components:
+  - {fileID: -7200780691820126258}
+  - {fileID: 4873164883725571923}
+  - {fileID: 1369715423266401549}
+  - {fileID: -5492184597847706782}
+  - {fileID: 714355906417084881}
+  - {fileID: 4984758826797746353}
+--- !u!114 &714355906417084881
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 558a8e2b6826cf840aae193990ba9f2e, type: 3}
+  m_Name: ShadowsMidtonesHighlights
+  m_EditorClassIdentifier: 
+  active: 1
+  shadows:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 1, z: 1, w: 0}
+  midtones:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 1, z: 1, w: 0}
+  highlights:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: -0.10493181}
+  shadowsStart:
+    m_OverrideState: 0
+    m_Value: 0
+  shadowsEnd:
+    m_OverrideState: 0
+    m_Value: 0.3
+  highlightsStart:
+    m_OverrideState: 0
+    m_Value: 0.55
+  highlightsEnd:
+    m_OverrideState: 0
+    m_Value: 1
+--- !u!114 &1369715423266401549
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 221518ef91623a7438a71fef23660601, type: 3}
+  m_Name: WhiteBalance
+  m_EditorClassIdentifier: 
+  active: 1
+  temperature:
+    m_OverrideState: 1
+    m_Value: -11
+  tint:
+    m_OverrideState: 1
+    m_Value: -8
+--- !u!114 &4873164883725571923
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66f335fb1ffd8684294ad653bf1c7564, type: 3}
+  m_Name: ColorAdjustments
+  m_EditorClassIdentifier: 
+  active: 1
+  postExposure:
+    m_OverrideState: 1
+    m_Value: 8
+  contrast:
+    m_OverrideState: 1
+    m_Value: 5
+  colorFilter:
+    m_OverrideState: 0
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
+  hueShift:
+    m_OverrideState: 0
+    m_Value: 0
+  saturation:
+    m_OverrideState: 0
+    m_Value: 0
+--- !u!114 &4984758826797746353
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cad00e0c748434bbb89ed2d571f9309d, type: 3}
+  m_Name: ShinyScreenSpaceRaytracedReflections
+  m_EditorClassIdentifier: 
+  active: 0
+  reflectionStyle:
+    m_OverrideState: 1
+    m_Value: 0
+  reflectionsMultiplier:
+    m_OverrideState: 0
+    m_Value: 0
+  showInSceneView:
+    m_OverrideState: 0
+    m_Value: 1
+  reflectionsWorkflow:
+    m_OverrideState: 1
+    m_Value: 10
+  sampleCount:
+    m_OverrideState: 1
+    m_Value: 128
+  maxRayLength:
+    m_OverrideState: 1
+    m_Value: 48
+  thickness:
+    m_OverrideState: 1
+    m_Value: 0.5
+  binarySearchIterations:
+    m_OverrideState: 1
+    m_Value: 7
+  refineThickness:
+    m_OverrideState: 1
+    m_Value: 1
+  thicknessFine:
+    m_OverrideState: 1
+    m_Value: 0.05
+  jitter:
+    m_OverrideState: 1
+    m_Value: 0.3
+  animatedJitter:
+    m_OverrideState: 0
+    m_Value: 0
+  computeBackFaces:
+    m_OverrideState: 1
+    m_Value: 0
+  thicknessMinimum:
+    m_OverrideState: 0
+    m_Value: 0.16
+  computeBackFacesLayerMask:
+    m_OverrideState: 0
+    m_Value:
+      serializedVersion: 2
+      m_Bits: 4294967295
+  downsampling:
+    m_OverrideState: 1
+    m_Value: 1
+  depthBias:
+    m_OverrideState: 0
+    m_Value: 0.03
+  temporalFilter:
+    m_OverrideState: 1
+    m_Value: 1
+  temporalFilterResponseSpeed:
+    m_OverrideState: 0
+    m_Value: 1
+  smoothnessThreshold:
+    m_OverrideState: 0
+    m_Value: 0
+  reflectionsMinIntensity:
+    m_OverrideState: 0
+    m_Value: 0
+  reflectionsMaxIntensity:
+    m_OverrideState: 0
+    m_Value: 1
+  reflectionsIntensityCurve:
+    m_OverrideState: 0
+    m_Value:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  reflectionsSmoothnessCurve:
+    m_OverrideState: 0
+    m_Value:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0.166666
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.5
+        value: 0.25
+        inSlope: 0.833333
+        outSlope: 1.166666
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1.833333
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  fresnel:
+    m_OverrideState: 0
+    m_Value: 0.75
+  decay:
+    m_OverrideState: 0
+    m_Value: 2
+  metallicBoost:
+    m_OverrideState: 0
+    m_Value: 0
+  metallicBoostThreshold:
+    m_OverrideState: 0
+    m_Value: 0
+  specularControl:
+    m_OverrideState: 0
+    m_Value: 1
+  specularSoftenPower:
+    m_OverrideState: 0
+    m_Value: 15
+  skyboxIntensity:
+    m_OverrideState: 0
+    m_Value: 0
+  skyboxResolution:
+    m_OverrideState: 0
+    m_Value: 6
+  skyboxUpdateMode:
+    m_OverrideState: 0
+    m_Value: 0
+  skyboxUpdateInterval:
+    m_OverrideState: 0
+    m_Value: 3
+  skyboxContributionPass:
+    m_OverrideState: 0
+    m_Value: 1
+  skyboxCustomCubemap:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+    dimension: 1
+  skyboxHDR:
+    m_OverrideState: 0
+    m_Value: 0
+  skyboxCullingMask:
+    m_OverrideState: 0
+    m_Value:
+      serializedVersion: 2
+      m_Bits: 0
+  nearCameraAttenuationStart:
+    m_OverrideState: 0
+    m_Value: 0
+  nearCameraAttenuationRange:
+    m_OverrideState: 0
+    m_Value: 1
+  farCameraAttenuationStart:
+    m_OverrideState: 0
+    m_Value: 900
+  farCameraAttenuationRange:
+    m_OverrideState: 0
+    m_Value: 100
+  useCustomBounds:
+    m_OverrideState: 0
+    m_Value: 0
+  boundsMin:
+    m_OverrideState: 0
+    m_Value: {x: -10000, y: -10000, z: -10000}
+  boundsMax:
+    m_OverrideState: 0
+    m_Value: {x: 10000, y: 10000, z: 10000}
+  vignetteSize:
+    m_OverrideState: 0
+    m_Value: 1.1
+  vignettePower:
+    m_OverrideState: 0
+    m_Value: 1.5
+  fuzzyness:
+    m_OverrideState: 0
+    m_Value: 0
+  contactHardening:
+    m_OverrideState: 0
+    m_Value: 0
+  minimumBlur:
+    m_OverrideState: 0
+    m_Value: 0.25
+  blurDownsampling:
+    m_OverrideState: 0
+    m_Value: 1
+  blurStrength:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 1}
+  edgeAwareBlur:
+    m_OverrideState: 0
+    m_Value: 0
+  outputMode:
+    m_OverrideState: 0
+    m_Value: 0
+  separationPos:
+    m_OverrideState: 0
+    m_Value: 0.5
+  lowPrecision:
+    m_OverrideState: 0
+    m_Value: 0
+  stopNaN:
+    m_OverrideState: 0
+    m_Value: 0
+  stencilCheck:
+    m_OverrideState: 0
+    m_Value: 0
+  stencilValue:
+    m_OverrideState: 0
+    m_Value: 1
+  stencilCompareFunction:
+    m_OverrideState: 0
+    m_Value: 6
+  useReflectionsScripts:
+    m_OverrideState: 0
+    m_Value: 0
+  reflectionsScriptsLayerMask:
+    m_OverrideState: 0
+    m_Value:
+      serializedVersion: 2
+      m_Bits: 4294967295
+  skipDeferredPass:
+    m_OverrideState: 0
+    m_Value: 0
+  opaqueReflectionsBlending:
+    m_OverrideState: 0
+    m_Value: 0
+  transparencySupport:
+    m_OverrideState: 0
+    m_Value: 0
+  transparentLayerMask:
+    m_OverrideState: 0
+    m_Value:
+      serializedVersion: 2
+      m_Bits: 1

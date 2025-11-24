@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Menus
+  m_EditorClassIdentifier: 
+  m_GroupName: Menus
+  m_GUID: 8cb6981ce9321024798976091afea260
+  m_SerializeEntries:
+  - m_GUID: 4f67d09f3fc25b94cbdc2c003d306bd2
+    m_Address: Assets/_Carondelet/Scenes/Escenario 1 - Exterior del palacio.unity
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6d6ff59c28656774aa82f9a115c686a0
+    m_Address: Assets/_Carondelet/Scenes/Escenario Dialogo inicial Baron.unity
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bcbf71102514c0e41869f8c522bbdd28
+    m_Address: SubEscenaMaqueta
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 7fcde95bc98c7fd4ca5f7ff6e63587a2, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 46fa84e39a9475f46bdd514dabb3d839, type: 2}
+    - {fileID: 11400000, guid: b1814d558152aa54cbdbbd4e7d38ad9d, type: 2}

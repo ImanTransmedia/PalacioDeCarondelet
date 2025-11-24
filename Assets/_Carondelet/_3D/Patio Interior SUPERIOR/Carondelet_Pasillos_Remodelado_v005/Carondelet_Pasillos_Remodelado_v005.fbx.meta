@@ -1,0 +1,277 @@
+fileFormatVersion: 2
+guid: 5f57c64e965fc4449b9cb3808441ca44
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Apoyamanos_Circular_Figuras
+    second: {fileID: 2100000, guid: 0a4b00b0e7fd20c48b564d7510480e57, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Apoyamanos_Circular_Metal
+    second: {fileID: 2100000, guid: 0f8a33ea9dc224f45a8ee7320d916a95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Apoyamanos_Circular_Metal_Negro
+    second: {fileID: 2100000, guid: 49cb9ffd192a3c64b85423d8e8e8ade4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Base_Columnas_Borde_Inf
+    second: {fileID: 2100000, guid: 832470e20e64a374fa43397626739fd3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Base_Columnas_Mid
+    second: {fileID: 2100000, guid: d839ff60afd77c24bad77d4f80b908f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Base_Columnas_Sup
+    second: {fileID: 2100000, guid: 628d1839aad30094db257d57351fa4ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Columna_Blanca
+    second: {fileID: 2100000, guid: f31df5d8636ab0b4cb990149ec6256bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Esquinero_Columna_Pasillos
+    second: {fileID: 2100000, guid: 8376151ac6d92f44fb24ac45d5996e19, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Paredes_Arcos_01
+    second: {fileID: 2100000, guid: 854e1b44b324208459e72b14f045d122, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Paredes_Arcos_02
+    second: {fileID: 2100000, guid: d9ed13f5b0c2789489e293bba84b88f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Paredes_Arcos_03
+    second: {fileID: 2100000, guid: 2a3aa37995b46b14b8ee05348699637d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Paredes_Arcos_04
+    second: {fileID: 2100000, guid: 0bf5b6ceee9cd174081990c6cbf12e5e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Paredes_Arcos_05
+    second: {fileID: 2100000, guid: 48ebc47090505fb489ca90c3c0364025, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Paredes_Arcos_06
+    second: {fileID: 2100000, guid: 8e56a2a72eada5c4f90eb33d4df10c55, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Paredes_Arcos_07
+    second: {fileID: 2100000, guid: 78480206bc768b848a82207b94270c9b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Paredes_Arcos_08
+    second: {fileID: 2100000, guid: f10f11e596e89ad48b4ef1b26768e088, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Paredes_Borde_Inferior
+    second: {fileID: 2100000, guid: 8b3efb37bc3d8be4fa6d59935b312010, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Paredes_Pasillos
+    second: {fileID: 2100000, guid: 57eaee470067cac45881c35ca9ed77c0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Piso_Pasillos
+    second: {fileID: 2100000, guid: 6fb26ae907792944c9d2baf6d619d733, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Puerta_Grande_Madera_01
+    second: {fileID: 2100000, guid: 0ba26267e52b4bf45ab629d562ead31b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Puerta_Grande_Manija_01
+    second: {fileID: 2100000, guid: eb43ba61804f2ba41bca46569aefcd6f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Puerta_Grande_Marco_01
+    second: {fileID: 2100000, guid: 6757d4437b65fa144823df65f16300ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Puerta_Low_Poly
+    second: {fileID: 2100000, guid: d962c30f2eb5a5c44a1c3882ddf13e21, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Puerta_Madera
+    second: {fileID: 2100000, guid: ddb3886a9abc0b045886d7978f00d8fa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Puerta_Manija
+    second: {fileID: 2100000, guid: 7876022eb9f2d7c4a8b1a90a1ae39c69, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Puerta_Marco
+    second: {fileID: 2100000, guid: e923143102041f149b4cbc1b54015b81, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Puerta_Principal_Cartel
+    second: {fileID: 2100000, guid: a1496c6cb37b0d04a9af16f102318e18, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Puerta_Principal_Madera
+    second: {fileID: 2100000, guid: 75ce78d87c57580458867285341948b3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Puerta_Principal_Manija
+    second: {fileID: 2100000, guid: 582987ad9dccc45418db0a3a5b7bd4fc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Puerta_Principal_Marco
+    second: {fileID: 2100000, guid: abf7a73e11b4d8543a2fef08f1ce0b7b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Techo_Pasillos
+    second: {fileID: 2100000, guid: f3e2da6d47dc9074da46a2791aaad1b2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Ventana_Pasillo_Madera
+    second: {fileID: 2100000, guid: d844421744a14ef4394b35a3b0e9a7c2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Ventana_Pasillo_Marco
+    second: {fileID: 2100000, guid: f276eb59f129c2b4e9011f6a1572b93f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Ventana_Pasillo_Vidrio
+    second: {fileID: 2100000, guid: 5ae20d624641a714db7a02ea3ea0a955, type: 2}
+  materials:
+    materialImportMode: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 0
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 0
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

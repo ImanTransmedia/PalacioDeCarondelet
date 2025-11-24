@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M_Palacio_Amarillo_Techo
+  m_Shader: {fileID: -6465566751694194690, guid: c7a31a031552d0e428d982093bd6606c, type: 3}
+  m_Parent: {fileID: 2100000, guid: 1088e67ea8fc29b4eb79e454e03fc36c, type: 2}
+  m_ModifiedSerializedProperties: 26
+  m_ValidKeywords:
+  - _ALPHATEST_ON
+  - _COLORMAP
+  - _MAPPING1_UV
+  - _ROUGHNESSMAP
+  m_InvalidKeywords:
+  - _EMISSION
+  - _TYPEMATERIAL_STANDAR
+  - _USECOLORMAP
+  m_LightmapFlags: 6
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2450
+  stringTagMap:
+    RenderType: TransparentCutout
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: df96d7739780ab44792c52e608022531, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 719d8d00344636e448c1111ca019083b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _R_M_AO:
+        m_Texture: {fileID: 2800000, guid: a9f08bfa9f06f3a44b7b483821f7d483, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaClip: 1
+    - _AlphaToMask: 1
+    - _BlendRoughness: 0
+    - _Brillo: 0.68
+    - _BrilloRoughness: 0.62
+    - _Cull: 2
+    - _Fuzzi: 2.3
+    - _FuzziPower: 1.9
+    - _Glossiness: 0.5
+    - _Mix: 1
+    - _MixRoughness: 0
+    - _NormalDetails: 2
+    - _NormalStrenght: 2
+    - _Saturacion: 0.3
+    - _Threshold: 0.38
+    - _UseAoMap: 0
+    - _UseMetallicMap: 0
+    m_Colors:
+    - _BlancosYNegros: {r: 0.25, g: 1, b: 0, a: 0}
+    - _ColorFuzzi: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
+--- !u!114 &3211382941788900500
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 10

@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
+  m_Name: dialogue_video_table
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: 8b11e40beb3a3dc49881c1680cbd77f5, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: 848775e27c8562b4abbd37b8d032db8d, type: 2}
+  - {fileID: 11400000, guid: d30172fc8b70f0a4790695452342bd93, type: 2}
+  - {fileID: 11400000, guid: 5652000dbe3c2984b926fd70613f9ebc, type: 2}
+  - {fileID: 11400000, guid: 0975058860cc2be49b7707d8a0af5f3c, type: 2}
+  m_Extensions:
+  - rid: 6962753643845255309
+  m_Group: String Table
+  references:
+    version: 2
+    RefIds:
+    - rid: 6962753643845255309
+      type: {class: CsvExtension, ns: UnityEditor.Localization.Plugins.CSV, asm: Unity.Localization.Editor}
+      data:
+        m_Collection: {fileID: 11400000}
+        m_ColumnsList:
+        - rid: 6962753643845255310
+        - rid: 6962753643845255311
+        - rid: 6962753643845255312
+        - rid: 6962753643845255313
+        - rid: 6962753643845255314
+        m_ConnectedFile: Assets/_Carondelet/Localization/Tables/dialogue_video_table_mp4.csv
+    - rid: 6962753643845255310
+      type: {class: KeyIdColumns, ns: UnityEditor.Localization.Plugins.CSV.Columns, asm: Unity.Localization.Editor}
+      data:
+        m_IncludeId: 1
+        m_IncludeSharedComments: 1
+        m_KeyFieldName: Key
+        m_IdFieldName: Id
+        m_CommentFieldName: Shared Comments
+    - rid: 6962753643845255311
+      type: {class: LocaleColumns, ns: UnityEditor.Localization.Plugins.CSV.Columns, asm: Unity.Localization.Editor}
+      data:
+        m_LocaleIdentifier:
+          m_Code: es
+        m_FieldName: Spanish(es)
+        m_CommentFieldName: Spanish(es) Comments
+        m_IncludeComments: 1
+    - rid: 6962753643845255312
+      type: {class: LocaleColumns, ns: UnityEditor.Localization.Plugins.CSV.Columns, asm: Unity.Localization.Editor}
+      data:
+        m_LocaleIdentifier:
+          m_Code: fr
+        m_FieldName: French(fr)
+        m_CommentFieldName: French(fr) Comments
+        m_IncludeComments: 1
+    - rid: 6962753643845255313
+      type: {class: LocaleColumns, ns: UnityEditor.Localization.Plugins.CSV.Columns, asm: Unity.Localization.Editor}
+      data:
+        m_LocaleIdentifier:
+          m_Code: es-EC
+        m_FieldName: Spanish (Ecuador)(es-EC)
+        m_CommentFieldName: Spanish (Ecuador)(es-EC) Comments
+        m_IncludeComments: 1
+    - rid: 6962753643845255314
+      type: {class: LocaleColumns, ns: UnityEditor.Localization.Plugins.CSV.Columns, asm: Unity.Localization.Editor}
+      data:
+        m_LocaleIdentifier:
+          m_Code: en
+        m_FieldName: English(en)
+        m_CommentFieldName: English(en) Comments
+        m_IncludeComments: 1

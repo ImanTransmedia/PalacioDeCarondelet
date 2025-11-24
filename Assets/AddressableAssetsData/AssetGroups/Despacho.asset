@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Despacho
+  m_EditorClassIdentifier: 
+  m_GroupName: Despacho
+  m_GUID: ee5f7f2628482d04b8d58dce68ed6d63
+  m_SerializeEntries:
+  - m_GUID: 5a2c3859b6c63a4458cd84fcd7ce49fe
+    m_Address: DP_Principal
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 94ed2a2ae5ec10a40afaaabd8f02f346
+    m_Address: DP_Interacciones
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 7fcde95bc98c7fd4ca5f7ff6e63587a2, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 409b2c44028247e46b28de5da92fc52c, type: 2}
+    - {fileID: 11400000, guid: f53b7a447b2995d49a39010f86f31d5e, type: 2}

@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5751074233223628936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 377369838918285880}
+  - component: {fileID: 5550851148367323796}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: BDC
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &377369838918285880
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5751074233223628936}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.95635223, y: 1.2989216, z: -9.416185}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5550851148367323796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5751074233223628936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f45f3f12fa0db449bcf60750fc79f8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: 535bcbcff16714b42b0ea2bf6b27f006, type: 2}
+  musicGroup: {fileID: 3389234826149062555, guid: 535bcbcff16714b42b0ea2bf6b27f006, type: 2}
+  sfxGroup: {fileID: 4525218066393891628, guid: 535bcbcff16714b42b0ea2bf6b27f006, type: 2}
+  masterVolParam: MasterVol
+  musicVolParam: MusicVol
+  sfxVolParam: SFXVol
+  musicClips:
+  - id: SuperBDC1
+    clip: {fileID: 8300000, guid: 33b54bf076bc27d4a9d5e766069efebf, type: 3}
+  - id: SuperBDC2
+    clip: {fileID: 8300000, guid: d0599c3521e509244a8ccd2e95774b03, type: 3}
+  sfxClips:
+  - id: PlayerShoot
+    clip: {fileID: 8300000, guid: a9e81f579ccffb8428aed92ed6453ce0, type: 3}
+  - id: EnemyDeath
+    clip: {fileID: 8300000, guid: 6de7e87c5eb6e2d429e42c477dfbb81e, type: 3}
+  - id: BulletPop
+    clip: {fileID: 8300000, guid: 2c2c2aab6e9049f4f827348462c7de9b, type: 3}
+  defaultMusicFade: 0.75
+  musicSpatialBlend: 0
+  initialSfxPool: 10
+  maxSfxPool: 32
+  sfxSpatialBlend: 0

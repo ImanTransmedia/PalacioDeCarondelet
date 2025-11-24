@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <!-- Meta etiquetas para previsualización al compartir -->
+    <meta
+      property="og:title"
+      content="Palacio de Carondelet - Tour Virtual 360"
+    />
+    <meta
+      property="og:description"
+      content="Explora el Palacio de Carondelet en un tour virtual inmersivo 360°."
+    />
+    <meta
+      property="og:image"
+      content="/TemplateData/og-thumbnail.jpg"
+    />
+    <meta
+      property="og:url"
+      content="/"
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <title>{{{ PRODUCT_NAME }}}</title>
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no"
+    />
+    <script src="TemplateData/pleaserotate.js"></script>
+
+    <!-- SVG como favicon principal -->
+    <link rel="icon" type="image/svg+xml" href="TemplateData/favicon.svg" />
+
+    <!-- PNG como fallback -->
+    <link
+      rel="alternate icon"
+      type="image/png"
+      href="TemplateData/favicon.png"
+    />
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-WSGR86HC1Z"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-WSGR86HC1Z");
+    </script>
+
+    <style>
+      @font-face {
+        font-family: "Barlow Condensed";
+        src: url("TemplateData/BarlowCondensed-Medium.ttf") format("truetype");
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle, white 0%, #999999 100%);
+        font-family: "Barlow Condensed", sans-serif;
+      }
+
+      #unity-canvas {
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle, white 0%, #999999 100%);
+        display: block;
+      }
+
+      #unity-loading-bar {
+        position: absolute;
+        width: 100%;
+        bottom: 10%;
+        text-align: center;
+        z-index: 999;
+      }
+
+      /* Estilos para el contenedor de la animación */
+      #bandera-animacion-container {
+        position: absolute;
+        top: 2%;
+        left: 50%;
+        transform: translate(0, -40%);
+        z-index: 1000;
+      }
+
+      #bandera-animacion {
+        width: 8vh;
+        height: auto;
+      }
+
+      #unity-progress-bar-empty {
+        width: 20%;
+        height: 30px;
+        margin: 10px auto;
+        background: #a5a5a5;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      }
+
+      #unity-progress-bar-full {
+        width: 0%;
+        height: 100%;
+        background: #ffffff;
+      }
+
+      #unity-progress-text {
+        color: #4d4d4d;
+        font-size: 1rem;
+        font-family: "Barlow Condensed", sans-serif;
+      }
+
+      #unity-logo {
+        width: 75vh;
+        height: auto;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="unity-loading-bar">
+      <div id="bandera-animacion-container">
+        <img
+          id="bandera-animacion"
+          src="TemplateData/bandera_00000.png"
+          alt="Animación Bandera"
+        />
+      </div>
+      <img id="unity-logo" src="TemplateData/LogoActual.svg" alt="Logo" />
+      <div id="unity-progress-bar-empty">
+        <div id="unity-progress-bar-full"></div>
+      </div>
+      <div id="unity-progress-text">Cargando 0%</div>
+    </div>
+    <canvas id="unity-canvas" tabindex="-1"></canvas>
+
+    <script>
+            const canvas = document.getElementById("unity-canvas");
+            const animacionBandera = document.getElementById("bandera-animacion");
+            const numFrames = 6;
+            let currentFrame = 0;
+
+            function actualizarFrame() {
+              const frameNumber = currentFrame.toString().padStart(5, "0");
+              animacionBandera.src = `TemplateData/bandera_${frameNumber}.png`;
+              currentFrame = (currentFrame + 1) % numFrames;
+            }
+
+            let animacionIntervalo = setInterval(actualizarFrame, 100);
+
+            function resizeCanvas() {
+              const dpr = window.devicePixelRatio || 1;
+              canvas.width = window.innerWidth * dpr;
+              canvas.height = window.innerHeight * dpr;
+              canvas.style.width = window.innerWidth + "px";
+              canvas.style.height = window.innerHeight + "px";
+            }
+
+            function hideRotateMessage() {
+              document
+                .querySelectorAll('[id^="pleaserotate-backdrop"]')
+                .forEach((el) => (el.style.display = "none"));
+              if (window.PleaseRotate) {
+                PleaseRotate.stop();
+              }
+            }
+
+            function showRotateMessage() {
+              document
+                .querySelectorAll('[id^="pleaserotate-backdrop"]')
+                .forEach((el) => (el.style.display = "block"));
+              if (window.PleaseRotate) {
+                PleaseRotate.stop();
+                PleaseRotate.start({
+                  forcePortrait: false,
+                  allowClickBypass: false,
+                  message: "",
+                  subMessage: "",
+                });
+              }
+            }
+
+            function checkOrientation() {
+              console.log("Revisando orientación...");
+              if (window.innerWidth > window.innerHeight) {
+                console.log("Landscape → oculto");
+                hideRotateMessage();
+              } else {
+                console.log("Portrait → muestro");
+                showRotateMessage();
+              }
+              resizeCanvas();
+            }
+
+            window.addEventListener("load", () => {
+              resizeCanvas();
+
+              const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+              if (isMobile) {
+                checkOrientation();
+                window.addEventListener("orientationchange", checkOrientation);
+                window.addEventListener("resize", checkOrientation);
+              } else {
+                window.addEventListener("resize", () =>
+                  setTimeout(resizeCanvas, 300)
+                );
+              }
+
+              // Bandera
+      // ---------- Animación de bandera optimizada ----------
+      // Pre-carga de frames para evitar hits repetidos a disco/red
+      const frames = Array.from({ length: numFrames }, (_, i) => {
+      const img = new Image();
+      img.decoding = "async";
+      img.src = `TemplateData/bandera_${String(i).padStart(5, "0")}.png`;
+      return img;
+      });
+
+
+      let rafId = null;
+      let running = false;
+      let last = 0;
+      let frame = 0;
+
+
+      function tick(ts) {
+      if (!running) return;
+      if (ts - last >= frameInterval) {
+      // Usamos el frame pre-cargado, sin re-solicitar el archivo
+      banner.src = frames[frame].src;
+      frame = (frame + 1) % numFrames;
+      last = ts;
+      }
+      rafId = requestAnimationFrame(tick);
+      }
+
+
+      function startFlag() {
+      if (!running) {
+      running = true;
+      last = performance.now();
+      rafId = requestAnimationFrame(tick);
+      }
+      }
+
+
+      function stopFlag() {
+      running = false;
+      if (rafId) {
+      cancelAnimationFrame(rafId);
+      rafId = null;
+      }
+      }
+
+              // Unity
+
+            const config = {
+              dataUrl: "Build/{{{ DATA_FILENAME }}}",
+              frameworkUrl: "Build/{{{ FRAMEWORK_FILENAME }}}",
+              codeUrl: "Build/{{{ CODE_FILENAME }}}",
+              streamingAssetsUrl: "StreamingAssets",
+              companyName: {{{ JSON.stringify(COMPANY_NAME) }}},
+              productName: {{{ JSON.stringify(PRODUCT_NAME) }}},
+              productVersion: {{{ JSON.stringify(PRODUCT_VERSION) }}},
+            };
+              const loader = document.createElement("script");
+              loader.src = "Build/"+{{{ JSON.stringify(LOADER_FILENAME) }}};
+              loader.onload = () => {
+                createUnityInstance(canvas, config, (p) => {
+                  const pct = Math.round(p * 100);
+                  document.getElementById(
+                    "unity-progress-text"
+                  ).textContent = `Cargando ${pct}%`;
+                  document.getElementById("unity-progress-bar-full").style.width =
+                    pct + "%";
+                })
+                  .then(() => {
+                    document.getElementById("unity-loading-bar").style.display =
+                      "none";
+                    clearInterval(animacionIntervalo);
+                  })
+                  .catch(alert);
+              };
+              document.body.appendChild(loader);
+            });
+    </script>
+  </body>
+</html>
