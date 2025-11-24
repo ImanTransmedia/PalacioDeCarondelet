@@ -5,9 +5,16 @@ namespace StarterAssets
     public class UICanvasControllerInput : MonoBehaviour
     {
 
+        
+
         [Header("Output")]
         public StarterAssetsInputs starterAssetsInputs;
 
+
+        private void Start()
+        {
+            starterAssetsInputs = FindAnyObjectByType<StarterAssetsInputs>(); 
+        }
         public void VirtualMoveInput(Vector2 virtualMoveDirection)
         {
             starterAssetsInputs.MoveInput(virtualMoveDirection);
