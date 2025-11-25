@@ -34,6 +34,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _BackFaceTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 2800000, guid: 847f7666806b0b7419d2df3e5e244653, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -114,6 +118,8 @@ Material:
     - _Alpha: 1
     - _AlphaClip: 1
     - _AlphaToMask: 0
+    - _BackFace: 0
+    - _BackFaceTex_1: 0
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _BlendRoughness: 1
@@ -129,8 +135,11 @@ Material:
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
+    - _Displacement: 0
+    - _Distance: 0.6
     - _DstBlend: 10
-    - _DstBlendAlpha: 0
+    - _DstBlendAlpha: 10
+    - _EdgePower: 2.5
     - _EnvironmentReflections: 1
     - _FABRIC: 0
     - _FRESNELREFLECTION: 0
@@ -147,6 +156,7 @@ Material:
     - _InvertRoughness: 0
     - _MAPPING1: 0
     - _METALLICMAP: 0
+    - _MaxRoughness: 1
     - _Metallic: 0
     - _MetallicBrillo: 1
     - _MetallicContraste: 1
@@ -159,6 +169,7 @@ Material:
     - _NormalStrenght: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _Power: 1
     - _PowerAO: 1
     - _PowerFresnel: 1
     - _PowerFresnelBC: 1
@@ -197,17 +208,24 @@ Material:
     - _UseNormalMap: 1
     - _UseRoughnessMap: 1
     - _UseSSS: 0
+    - _Wind: 0
+    - _WindNoiseScale: 0.2
     - _WorkflowMode: 1
     - _ZTest: 4
     - _ZWrite: 0
     - _ZWriteControl: 0
     m_Colors:
     - _AOClamp: {r: 0, g: 1, b: 0, a: 0}
+    - _BackFaceColor: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BlancosYNegros: {r: 0, g: 1, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorClamp: {r: 0, g: 1, b: 0, a: 0}
     - _ColorFuzzi: {r: 1, g: 1, b: 1, a: 0}
+    - _ColorSSS: {r: 0, g: 0, b: 0, a: 0}
+    - _Direction: {r: 0.3, g: 1, b: 0, a: 0}
+    - _EdgeOffset: {r: 0, g: 0, b: 0, a: 0}
+    - _EdgeTilling: {r: 1, g: 1, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _M_B_N: {r: 0, g: 1, b: 0, a: 0}
     - _Offset: {r: 0, g: 0, b: 0, a: 0}
