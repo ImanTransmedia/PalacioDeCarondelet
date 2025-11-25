@@ -70,7 +70,7 @@ public class DialogueController : MonoBehaviour
     IEnumerator WaitForSceneThenShowDialogue()
     {
         yield return new WaitUntil(() => LoadingScreen.IsSceneReady);
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(3f);
         Debug.Log("Subescenas listas y iniciando Baron");
         ShowDialogue(dialogueIndexToShow);
     }
