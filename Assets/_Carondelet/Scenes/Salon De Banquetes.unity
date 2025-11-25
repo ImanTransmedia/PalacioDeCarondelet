@@ -5303,6 +5303,7 @@ GameObject:
   - component: {fileID: 855782905}
   - component: {fileID: 855782907}
   - component: {fileID: 855782906}
+  - component: {fileID: 855782908}
   m_Layer: 0
   m_Name: DialogoOratioPC
   m_TagString: Untagged
@@ -5319,8 +5320,8 @@ Transform:
   m_GameObject: {fileID: 855782904}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.06, y: 1.471, z: 1.12}
-  m_LocalScale: {x: 4.4, y: 1, z: 1.19}
+  m_LocalPosition: {x: -11.03, y: 1.471, z: 1.33}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 436002885}
@@ -5358,8 +5359,21 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.34, y: 3, z: 3.67}
+  m_Size: {x: 0.5, y: 4, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &855782908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855782904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10ce534971f5b0d4ca478401694cee22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPcElement: 1
 --- !u!1 &884383678
 GameObject:
   m_ObjectHideFlags: 0
@@ -10934,6 +10948,7 @@ GameObject:
   - component: {fileID: 2118142947}
   - component: {fileID: 2118142950}
   - component: {fileID: 2118142948}
+  - component: {fileID: 2118142951}
   m_Layer: 0
   m_Name: DialogoOratioMovil
   m_TagString: Untagged
@@ -10950,8 +10965,8 @@ Transform:
   m_GameObject: {fileID: 2118142946}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.6, y: 1.471, z: 0.694}
-  m_LocalScale: {x: 3.2, y: 1, z: 1}
+  m_LocalPosition: {x: -11.03, y: 1.471, z: 1.33}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 436002885}
@@ -10989,8 +11004,21 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.34, y: 3, z: 3.67}
+  m_Size: {x: 0.5, y: 4, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2118142951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118142946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10ce534971f5b0d4ca478401694cee22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPcElement: 0
 --- !u!1 &2133149700
 GameObject:
   m_ObjectHideFlags: 0
