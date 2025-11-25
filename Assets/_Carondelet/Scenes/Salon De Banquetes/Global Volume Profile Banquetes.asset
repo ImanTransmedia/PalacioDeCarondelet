@@ -15,7 +15,7 @@ MonoBehaviour:
   active: 1
   postExposure:
     m_OverrideState: 1
-    m_Value: 2.36
+    m_Value: 2.6
   contrast:
     m_OverrideState: 1
     m_Value: 5
@@ -207,6 +207,14 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: {fileID: 0}
     dimension: 1
+  skyboxHDR:
+    m_OverrideState: 0
+    m_Value: 0
+  skyboxCullingMask:
+    m_OverrideState: 0
+    m_Value:
+      serializedVersion: 2
+      m_Bits: 0
   nearCameraAttenuationStart:
     m_OverrideState: 0
     m_Value: 0
@@ -249,6 +257,9 @@ MonoBehaviour:
   blurStrength:
     m_OverrideState: 0
     m_Value: {x: 1, y: 1}
+  edgeAwareBlur:
+    m_OverrideState: 0
+    m_Value: 0
   outputMode:
     m_OverrideState: 0
     m_Value: 0
@@ -279,6 +290,9 @@ MonoBehaviour:
       serializedVersion: 2
       m_Bits: 4294967295
   skipDeferredPass:
+    m_OverrideState: 0
+    m_Value: 0
+  opaqueReflectionsBlending:
     m_OverrideState: 0
     m_Value: 0
   transparencySupport:

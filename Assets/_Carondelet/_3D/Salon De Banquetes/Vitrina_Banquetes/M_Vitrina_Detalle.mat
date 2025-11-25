@@ -130,8 +130,11 @@ Material:
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
+    - _Displacement: 0
+    - _Distance: 0.6
     - _DstBlend: 0
-    - _DstBlendAlpha: 10
+    - _DstBlendAlpha: 0
+    - _EdgePower: 2.5
     - _EnvironmentReflections: 1
     - _FABRIC: 0
     - _FresnelReflection: 0
@@ -146,6 +149,7 @@ Material:
     - _InvertRoughness: 1
     - _MAPPING1: 0
     - _METALLICMAP: 1
+    - _MaxRoughness: 1
     - _Metallic: 0.1
     - _MetallicBrillo: 0.66
     - _MetallicContraste: 1
@@ -155,6 +159,7 @@ Material:
     - _OcclusionStrength: 1
     - _Opacity: 0.02
     - _Parallax: 0.005
+    - _Power: 1
     - _PowerFresnel: 1
     - _PowerFresnelBC: 1
     - _PowerTint: 0
@@ -188,6 +193,8 @@ Material:
     - _UseOpacityMap: 0
     - _UseRoughnessMap: 0
     - _UseSSS: 0
+    - _Wind: 0
+    - _WindNoiseScale: 0.2
     - _WorkflowMode: 1
     - _ZTest: 4
     - _ZWrite: 1
@@ -201,6 +208,9 @@ Material:
     - _ColorClamp: {r: 0, g: 1, b: 0, a: 0}
     - _ColorFuzzi: {r: 1, g: 1, b: 1, a: 0}
     - _ColorSSS: {r: 0, g: 0, b: 0, a: 0}
+    - _Direction: {r: 0.3, g: 1, b: 0, a: 0}
+    - _EdgeOffset: {r: 0, g: 0, b: 0, a: 0}
+    - _EdgeTilling: {r: 1, g: 1, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _M_B_N: {r: 0, g: 1, b: 0, a: 0}
     - _Offset: {r: 0, g: 0, b: 0, a: 0}
