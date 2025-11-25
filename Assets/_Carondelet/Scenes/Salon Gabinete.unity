@@ -8,8 +8,8 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: 48ffa247f9df74841a2de029a4a16272
+  m_OcclusionCullingData: {fileID: 36300000, guid: d157be35ef40e7441983a2aaf4f2f301, type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -16769,15 +16769,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6426491872536969739, guid: 3c259bceb365a304db5bb2368be451e7, type: 3}
       propertyPath: m_Size.y
-      value: 0.7766635
+      value: 0.8092876
       objectReference: {fileID: 0}
     - target: {fileID: 6426491872536969739, guid: 3c259bceb365a304db5bb2368be451e7, type: 3}
       propertyPath: m_Center.y
-      value: 0.11166826
+      value: 0.09535618
       objectReference: {fileID: 0}
     - target: {fileID: 6426491872536969739, guid: 3c259bceb365a304db5bb2368be451e7, type: 3}
       propertyPath: m_Center.z
-      value: 1.110223e-15
+      value: -1.3322676e-15
       objectReference: {fileID: 0}
     - target: {fileID: 6661303075506201244, guid: 3c259bceb365a304db5bb2368be451e7, type: 3}
       propertyPath: m_LocalScale.x
@@ -16861,7 +16861,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7538594881620229811, guid: 3c259bceb365a304db5bb2368be451e7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.14
+      value: 2.98
       objectReference: {fileID: 0}
     - target: {fileID: 7751165296549958270, guid: 3c259bceb365a304db5bb2368be451e7, type: 3}
       propertyPath: m_Name
@@ -16905,7 +16905,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8454380118474293019, guid: 3c259bceb365a304db5bb2368be451e7, type: 3}
       propertyPath: m_Size.z
-      value: 0.34814566
+      value: 0.36495963
       objectReference: {fileID: 0}
     - target: {fileID: 8454380118474293019, guid: 3c259bceb365a304db5bb2368be451e7, type: 3}
       propertyPath: m_Center.x
@@ -16913,7 +16913,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8454380118474293019, guid: 3c259bceb365a304db5bb2368be451e7, type: 3}
       propertyPath: m_Center.z
-      value: 0.0026132641
+      value: 0.011020331
       objectReference: {fileID: 0}
     - target: {fileID: 8694089622300454513, guid: 3c259bceb365a304db5bb2368be451e7, type: 3}
       propertyPath: m_Name
