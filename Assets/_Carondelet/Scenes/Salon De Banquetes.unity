@@ -3567,7 +3567,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5935724636094023965, guid: df06df849913cb7409ec387ec94f49e9, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 102.63
+      value: 124.01
       objectReference: {fileID: 0}
     - target: {fileID: 5935724636094023965, guid: df06df849913cb7409ec387ec94f49e9, type: 3}
       propertyPath: m_SizeDelta.y
@@ -11211,6 +11211,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 242093726}
     m_Modifications:
+    - target: {fileID: 388780785138627586, guid: 55de570b79d2ffb4282ebe7de4c796fd, type: 3}
+      propertyPath: m_Name
+      value: Piso
+      objectReference: {fileID: 0}
     - target: {fileID: 1901037291501555934, guid: 55de570b79d2ffb4282ebe7de4c796fd, type: 3}
       propertyPath: m_Name
       value: ---Colliders---
@@ -11282,6 +11286,10 @@ PrefabInstance:
     - target: {fileID: 8869369490935685295, guid: 55de570b79d2ffb4282ebe7de4c796fd, type: 3}
       propertyPath: m_Center.z
       value: 1.3984168e-11
+      objectReference: {fileID: 0}
+    - target: {fileID: 9118403588578560666, guid: 55de570b79d2ffb4282ebe7de4c796fd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 18.819
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5248856821191816700
 Transform:
   m_ObjectHideFlags: 0
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 3360492681182539010}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.1799, y: 0.143, z: 0.205}
+  m_LocalPosition: {x: -0.1397, y: 0.1073, z: 0.1346}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -44,8 +44,8 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.3
-  m_Range: 0.6
+  m_Intensity: 0.05
+  m_Range: 0.55436397
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -86,8 +86,8 @@ Light:
   m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 2
-  m_ColorTemperature: 5800
+  m_BounceIntensity: 1
+  m_ColorTemperature: 2400
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: NaN, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -138,7 +138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4078387146279073875
 Transform:
   m_ObjectHideFlags: 0
@@ -148,7 +148,7 @@ Transform:
   m_GameObject: {fileID: 4717499374267884093}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.183, y: 0.143, z: 0.205}
+  m_LocalPosition: {x: 0.126, y: 0.1073, z: 0.1346}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -165,8 +165,8 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.3
-  m_Range: 0.6
+  m_Intensity: 0.05
+  m_Range: 0.554364
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -207,8 +207,8 @@ Light:
   m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 2
-  m_ColorTemperature: 5800
+  m_BounceIntensity: 1
+  m_ColorTemperature: 2400
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: NaN, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -259,7 +259,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7000644238221459723
 Transform:
   m_ObjectHideFlags: 0
@@ -269,7 +269,7 @@ Transform:
   m_GameObject: {fileID: 6810840547099437536}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.22, z: 0}
+  m_LocalPosition: {x: 0, y: 0.1843, z: -0.0704}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -286,8 +286,8 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.033
-  m_Range: 0.6
+  m_Intensity: 0.025
+  m_Range: 0.5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -328,8 +328,8 @@ Light:
   m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 2
-  m_ColorTemperature: 5800
+  m_BounceIntensity: 1
+  m_ColorTemperature: 2400
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: NaN, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -426,7 +426,7 @@ PrefabInstance:
     - target: {fileID: -6465006681976833153, guid: 5b33923f342dcd04b8031c61a990dbae, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 4dc2e697b1d9f924495de1e4636db126, type: 2}
+      objectReference: {fileID: 2100000, guid: 78f4abbdd3fed5f40b9616de5da06075, type: 2}
     - target: {fileID: -5461993411196172505, guid: 5b33923f342dcd04b8031c61a990dbae, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -466,7 +466,7 @@ PrefabInstance:
     - target: {fileID: -1964615513703277653, guid: 5b33923f342dcd04b8031c61a990dbae, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 4dc2e697b1d9f924495de1e4636db126, type: 2}
+      objectReference: {fileID: 2100000, guid: 78f4abbdd3fed5f40b9616de5da06075, type: 2}
     - target: {fileID: -1280311276666130706, guid: 5b33923f342dcd04b8031c61a990dbae, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -546,7 +546,7 @@ PrefabInstance:
     - target: {fileID: 6872284537179947284, guid: 5b33923f342dcd04b8031c61a990dbae, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 4dc2e697b1d9f924495de1e4636db126, type: 2}
+      objectReference: {fileID: 2100000, guid: 78f4abbdd3fed5f40b9616de5da06075, type: 2}
     - target: {fileID: 8536482221662345804, guid: 5b33923f342dcd04b8031c61a990dbae, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
