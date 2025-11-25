@@ -8,8 +8,8 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: 02cf1bbabcd8c20429da2a81b66ab6b9
+  m_OcclusionCullingData: {fileID: 36300000, guid: 9eb857d4046402142a5f98fc6eb460ce, type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -6479,7 +6479,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5935724636094023965, guid: df06df849913cb7409ec387ec94f49e9, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 47.44
+      value: 102.63
       objectReference: {fileID: 0}
     - target: {fileID: 5935724636094023965, guid: df06df849913cb7409ec387ec94f49e9, type: 3}
       propertyPath: m_SizeDelta.y
@@ -35288,8 +35288,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1088999537}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.1305271, z: 0, w: 0.99144477}
-  m_LocalPosition: {x: -16.940338, y: 1.313, z: 4.4047837}
+  m_LocalRotation: {x: 0, y: 0.7071048, z: 0, w: 0.70710886}
+  m_LocalPosition: {x: -22.99, y: 1.56, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
