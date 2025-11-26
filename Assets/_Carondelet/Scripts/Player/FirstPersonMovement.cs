@@ -15,6 +15,10 @@ public class FirstPersonMovement : MonoBehaviour
     [Header("Valores de control")]
     public InputSystem_Actions inputActions;
 
+    [Header("Opciones de entrada")]
+    [SerializeField]
+    private bool usePointerLook = true;
+
     Vector2 moveInput;
     Vector2 lookInput;
 
@@ -53,25 +57,37 @@ public class FirstPersonMovement : MonoBehaviour
     {
         isInteracting = false;
         inputActions = new InputSystem_Actions();
+
     }
 
     private void OnEnable()
     {
+        usePointerLook = Application.isMobilePlatform;
         inputActions.Player.Enable();
         inputActions.Player.Move.performed += OnMove;
         inputActions.Player.Move.canceled += OnMove;
-        inputActions.Player.Look.performed += OnLook;
-        inputActions.Player.Look.canceled += OnLook;
+
+        if (!usePointerLook)
+        {
+            inputActions.Player.Look.performed += OnLook;
+            inputActions.Player.Look.canceled += OnLook;
+        }
     }
 
     private void OnDisable()
     {
         inputActions.Player.Move.performed -= OnMove;
         inputActions.Player.Move.canceled -= OnMove;
-        inputActions.Player.Look.performed -= OnLook;
-        inputActions.Player.Look.canceled -= OnLook;
+
+        if (!usePointerLook)
+        {
+            inputActions.Player.Look.performed -= OnLook;
+            inputActions.Player.Look.canceled -= OnLook;
+        }
+
         inputActions.Player.Disable();
     }
+
 
     private void OnMove(InputAction.CallbackContext context)
     {
@@ -213,6 +229,16 @@ public class FirstPersonMovement : MonoBehaviour
 
         cameraHolder.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         transform.Rotate(Vector3.up * mouseX);
+    }
+
+    public void SetMoveInput(Vector2 input)
+    {
+        moveInput = input;
+    }
+
+    public void SetLookInput(Vector2 input)
+    {
+        lookInput = input;
     }
 
     public void SetSensibility(float speed)
