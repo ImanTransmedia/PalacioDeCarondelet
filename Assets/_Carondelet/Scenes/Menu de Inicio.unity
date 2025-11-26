@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 3409327}
   - component: {fileID: 3409326}
   - component: {fileID: 3409325}
+  - component: {fileID: 3409329}
   m_Layer: 5
   m_Name: Iman
   m_TagString: Untagged
@@ -189,7 +190,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9, g: 0.9, b: 0.9, a: 0.7607843}
@@ -264,6 +265,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3409323}
   m_CullTransparentMesh: 1
+--- !u!114 &3409329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3409323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed51370efe2e2a34eab6b79b5c697fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalScale: 1
+  hoverScale: 1.05
+  selectedScale: 1.1
+  scaleSpeed: 10
+  useSelected: 0
 --- !u!1 &4034282
 GameObject:
   m_ObjectHideFlags: 0
@@ -1823,6 +1841,7 @@ GameObject:
   - component: {fileID: 141720368}
   - component: {fileID: 141720367}
   - component: {fileID: 141720366}
+  - component: {fileID: 141720370}
   m_Layer: 5
   m_Name: OEI
   m_TagString: Untagged
@@ -1880,7 +1899,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9, g: 0.9, b: 0.9, a: 0.7607843}
@@ -1955,6 +1974,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 141720364}
   m_CullTransparentMesh: 1
+--- !u!114 &141720370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141720364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed51370efe2e2a34eab6b79b5c697fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalScale: 1
+  hoverScale: 1.05
+  selectedScale: 1.1
+  scaleSpeed: 10
+  useSelected: 0
 --- !u!1001 &165506273
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17018,6 +17054,7 @@ GameObject:
   - component: {fileID: 1885989541}
   - component: {fileID: 1885989540}
   - component: {fileID: 1885989539}
+  - component: {fileID: 1885989543}
   m_Layer: 5
   m_Name: PRESIDENCIA
   m_TagString: Untagged
@@ -17075,7 +17112,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9, g: 0.9, b: 0.9, a: 0.7607843}
@@ -17150,6 +17187,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1885989537}
   m_CullTransparentMesh: 1
+--- !u!114 &1885989543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885989537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed51370efe2e2a34eab6b79b5c697fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalScale: 1
+  hoverScale: 1.05
+  selectedScale: 1.1
+  scaleSpeed: 10
+  useSelected: 0
 --- !u!1 &1927492021
 GameObject:
   m_ObjectHideFlags: 0

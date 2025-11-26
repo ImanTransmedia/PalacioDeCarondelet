@@ -391,7 +391,7 @@ public class GameManager : MonoBehaviour
     public IEnumerator ResolveVideoUrl(string videoBaseName, Action<string> onSuccess, Action<string> onError = null, bool isVideoSA = false)
     {
         string baseName = System.IO.Path.GetFileNameWithoutExtension(videoBaseName);
-        string[] exts = { ".mp4" };
+        string[] exts = { ".mp4" , ".webm" };
 
         foreach (var ext in exts)
         {
