@@ -116,6 +116,7 @@ Material:
     - _Rotation: 0
     - _RotationRandomOffset: 1
     - _RotationSpeed: -30
+    - _Roughness: 1
     - _SoftEdges: 0
     - _SrcBlend: 5
     - _SrcBlendAlpha: 1
@@ -146,12 +147,12 @@ Material:
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmitterDimensions: {r: 0.02, g: 0.02, b: 0.02, a: 0}
-    - _EndColor: {r: 0.68124783, g: 0.764151, b: 0.7486066, a: 1}
+    - _EndColor: {r: 0.70838094, g: 0.7264151, b: 0.640753, a: 1}
     - _FlipbookDimensions: {r: 8, g: 4, b: 0, a: 0}
     - _Gravity: {r: 0, g: -9.8, b: 0, a: 0}
     - _ParticleDirection: {r: 0, g: 1, b: 0, a: 0}
     - _SpawnerSize: {r: 0.5, g: 0.5, b: 0.5, a: 0}
-    - _StartColor: {r: 1, g: 1, b: 1, a: 1}
+    - _StartColor: {r: 0.88623416, g: 0.8962264, b: 0.84126914, a: 1}
     - _Wind: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
