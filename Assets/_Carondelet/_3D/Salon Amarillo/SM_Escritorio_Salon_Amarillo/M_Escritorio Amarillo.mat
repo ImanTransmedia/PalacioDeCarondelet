@@ -163,7 +163,7 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _HUE: 5
-    - _InvertRoughness: 0
+    - _InvertRoughness: 1
     - _MAPPING1: 0
     - _METALLICMAP: 0
     - _MaxRoughness: 1
@@ -174,8 +174,8 @@ Material:
     - _MixMetallic: 0
     - _MixRoughness: 1
     - _NoiseScale: 0
-    - _NormalDetails: 3.92
-    - _NormalStrenght: 0.58
+    - _NormalDetails: 0.8
+    - _NormalStrenght: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _Power: 1
@@ -191,7 +191,7 @@ Material:
     - _RandomHue: 0
     - _ReceiveShadows: 1
     - _Rotation: 0
-    - _RoughnessContrast: -2.27
+    - _RoughnessContrast: 1.17
     - _SSS_Direct: 0.5
     - _SSS_Indirect: 0.5
     - _SSS_Intensity: 0
@@ -226,7 +226,7 @@ Material:
     - _AOClamp: {r: 0, g: 1, b: 0, a: 0}
     - _BackFaceColor: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _BlancosYNegros: {r: 0.95, g: 1, b: 0, a: 0}
+    - _BlancosYNegros: {r: 0.6, g: 1, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorClamp: {r: 0, g: 1, b: 0, a: 0}
     - _ColorFuzzi: {r: 1, g: 1, b: 1, a: 0}
