@@ -109,6 +109,7 @@ Material:
     - _Displacement: 0
     - _Distance: 0.6
     - _DstBlend: 0
+    - _DstBlendAlpha: 0
     - _EdgePower: 2.5
     - _FABRIC: 1
     - _FresnelReflection: 0
@@ -131,7 +132,7 @@ Material:
     - _Power: 1
     - _PowerFresnel: 1
     - _PowerFresnelBC: 1
-    - _PowerTint: 0.434
+    - _PowerTint: 0.233
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ROUGHNESSMAP: 1
@@ -146,6 +147,7 @@ Material:
     - _Saturacion: 0.82
     - _Seed: 0
     - _SrcBlend: 1
+    - _SrcBlendAlpha: 1
     - _Surface: 0
     - _Threshold: 0
     - _UseAlphaMap: 0
