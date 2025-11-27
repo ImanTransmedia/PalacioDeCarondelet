@@ -2936,7 +2936,7 @@ MonoBehaviour:
   bakedScaleOffsetTerrain: []
   assetList: []
   uvOverlapAssetList: 
-  idremap: 6a0000006b0000006c0000006d0000006e0000006f0000007000000071000000720000007300000074000000750000007600000077000000
+  idremap: 660000006700000068000000690000006a0000006b0000006c0000006d0000006e0000006f00000070000000710000007200000073000000
   usesRealtimeGI: 0
   emptyDirectionTex: {fileID: 0}
   anyVolumes: 0
@@ -5597,6 +5597,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1213904066675821251, guid: 9085259beb35d204297f8fb48ac6c5f5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3747252019572640825, guid: 9085259beb35d204297f8fb48ac6c5f5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -27.773
@@ -5637,18 +5641,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5376982980607404376, guid: 9085259beb35d204297f8fb48ac6c5f5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.022632837
+      objectReference: {fileID: 0}
+    - target: {fileID: 5376982980607404376, guid: 9085259beb35d204297f8fb48ac6c5f5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.014376626
+      objectReference: {fileID: 0}
+    - target: {fileID: 5376982980607404376, guid: 9085259beb35d204297f8fb48ac6c5f5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.00812898
+      objectReference: {fileID: 0}
     - target: {fileID: 6191446220289111950, guid: 9085259beb35d204297f8fb48ac6c5f5, type: 3}
       propertyPath: m_Name
       value: Pileta_Patios (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6449016340146663768, guid: 9085259beb35d204297f8fb48ac6c5f5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.019667404
+      objectReference: {fileID: 0}
+    - target: {fileID: 6449016340146663768, guid: 9085259beb35d204297f8fb48ac6c5f5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 6449016340146663768, guid: 9085259beb35d204297f8fb48ac6c5f5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.023144979
+      objectReference: {fileID: 0}
     - target: {fileID: 7621732563644191347, guid: 9085259beb35d204297f8fb48ac6c5f5, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 4043b4d39a68e424b9c148d12c9d654b, type: 2}
+      objectReference: {fileID: 2100000, guid: df1cf73b58107ed4d847c347219e1f67, type: 2}
     - target: {fileID: 7770332355677312528, guid: 9085259beb35d204297f8fb48ac6c5f5, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 4043b4d39a68e424b9c148d12c9d654b, type: 2}
+      objectReference: {fileID: 2100000, guid: df1cf73b58107ed4d847c347219e1f67, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
