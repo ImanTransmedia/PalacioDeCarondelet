@@ -10,6 +10,7 @@ public class UIVirtualTouchZone : MonoBehaviour, IPointerDownHandler, IDragHandl
     [Header("Rect References")]
     public RectTransform containerRect;
     public RectTransform handleRect;
+    public RectTransform backgroundRect;
 
     [Header("Settings")]
     public bool clampToMagnitude;
@@ -33,7 +34,8 @@ public class UIVirtualTouchZone : MonoBehaviour, IPointerDownHandler, IDragHandl
     {
         if(handleRect)
         {
-            SetObjectActiveState(handleRect.gameObject, false); 
+            SetObjectActiveState(handleRect.gameObject, false);
+            SetObjectActiveState(backgroundRect.gameObject, true);
         }
     }
 
@@ -45,6 +47,7 @@ public class UIVirtualTouchZone : MonoBehaviour, IPointerDownHandler, IDragHandl
         if(handleRect)
         {
             SetObjectActiveState(handleRect.gameObject, true);
+            SetObjectActiveState(backgroundRect.gameObject, false);
             UpdateHandleRectPosition(pointerDownPosition);
         }
     }
@@ -73,6 +76,7 @@ public class UIVirtualTouchZone : MonoBehaviour, IPointerDownHandler, IDragHandl
         if(handleRect)
         {
             SetObjectActiveState(handleRect.gameObject, false);
+            SetObjectActiveState(backgroundRect.gameObject, true);
             UpdateHandleRectPosition(Vector2.zero);
         }
     }
