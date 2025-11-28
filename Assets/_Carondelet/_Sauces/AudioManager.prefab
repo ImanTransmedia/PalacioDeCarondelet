@@ -55,6 +55,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 33b54bf076bc27d4a9d5e766069efebf, type: 3}
   - id: SuperBDC2
     clip: {fileID: 8300000, guid: d0599c3521e509244a8ccd2e95774b03, type: 3}
+  - id: AmbientPatios
+    clip: {fileID: 8300000, guid: ca7927cce29d29141aa35d8bce926082, type: 3}
   sfxClips:
   - id: PlayerShoot
     clip: {fileID: 8300000, guid: a9e81f579ccffb8428aed92ed6453ce0, type: 3}
@@ -62,8 +64,28 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 6de7e87c5eb6e2d429e42c477dfbb81e, type: 3}
   - id: BulletPop
     clip: {fileID: 8300000, guid: 2c2c2aab6e9049f4f827348462c7de9b, type: 3}
+  - id: NoAmmo
+    clip: {fileID: 8300000, guid: 23ca5667922a9cf49ab4baf048097886, type: 3}
+  - id: BDC
+    clip: {fileID: 8300000, guid: 47fecb73e6af3e849b55621eea15140a, type: 3}
+  - id: MenuWoosh
+    clip: {fileID: 8300000, guid: 5f19c88df8969534b8abc6a1c744ffd3, type: 3}
+  - id: MenuWooshOut
+    clip: {fileID: 8300000, guid: 78b0e2fba0dff0d4ba29ac55c88c36c1, type: 3}
+  - id: StartGame
+    clip: {fileID: 8300000, guid: 47fecb73e6af3e849b55621eea15140a, type: 3}
+  - id: HardTap
+    clip: {fileID: 8300000, guid: 47fecb73e6af3e849b55621eea15140a, type: 3}
+  - id: SoftTap
+    clip: {fileID: 8300000, guid: 47fecb73e6af3e849b55621eea15140a, type: 3}
+  - id: OpenInteract
+    clip: {fileID: 8300000, guid: 47fecb73e6af3e849b55621eea15140a, type: 3}
+  - id: CloseInteract
+    clip: {fileID: 8300000, guid: 47fecb73e6af3e849b55621eea15140a, type: 3}
   defaultMusicFade: 0.75
   musicSpatialBlend: 0
   initialSfxPool: 10
   maxSfxPool: 32
   sfxSpatialBlend: 0
+  loopPlaylist: 1
+  crossfadeBetweenTracks: 1
