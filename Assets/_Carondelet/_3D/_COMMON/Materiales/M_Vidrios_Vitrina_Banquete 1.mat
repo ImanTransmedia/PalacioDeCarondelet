@@ -16,6 +16,7 @@ Material:
   - _ALPHATEST_ON
   - _MAPPING1_UV
   - _RECEIVE_SHADOWS_OFF
+  - _ROUGHNESSMAP
   - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -64,7 +65,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _HueMask:
-        m_Texture: {fileID: 2800000, guid: 66d8f706d6fdbce419461185755defb5, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -109,10 +110,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AOBrillo: 1
+    - _AOBrillo: 0.15
     - _AOContraste: 1
     - _AddPrecomputedVelocity: 0
-    - _Alpha: 0.022
+    - _Alpha: 0.1
     - _AlphaClip: 1
     - _AlphaToMask: 0
     - _BackFace: 0
@@ -120,7 +121,7 @@ Material:
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _Brillo: 1
-    - _BrilloRoughness: 1
+    - _BrilloRoughness: 0.83
     - _BumpScale: 1
     - _COLORMAP: 0
     - _CastShadows: 1
@@ -132,8 +133,10 @@ Material:
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _Displacement: 0
+    - _Distance: 0.6
     - _DstBlend: 10
     - _DstBlendAlpha: 10
+    - _EdgePower: 2.5
     - _EnvironmentReflections: 1
     - _FABRIC: 0
     - _FresnelReflection: 0
@@ -142,12 +145,13 @@ Material:
     - _FuzzyBias: 0
     - _FuzzyScale: 1
     - _GlossMapScale: 0
-    - _Glossiness: 0.859
+    - _Glossiness: 0.821
     - _GlossyReflections: 0
     - _HUE: 0
     - _InvertRoughness: 0
     - _MAPPING1: 0
     - _METALLICMAP: 0
+    - _MaxRoughness: 1
     - _Metallic: 1
     - _MetallicBrillo: 1
     - _MetallicContraste: 1
@@ -156,16 +160,17 @@ Material:
     - _NormalStrenght: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.005
+    - _Power: 1
     - _PowerFresnel: 1
     - _PowerFresnelBC: 1
     - _PowerTint: 0
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _ROUGHNESSMAP: 0
+    - _ROUGHNESSMAP: 1
     - _RandomHUE: 0
     - _ReceiveShadows: 0
     - _Rotation: 0
-    - _RoughnessContrast: 1
+    - _RoughnessContrast: 1.11
     - _SSS_Direct: 0.5
     - _SSS_Indirect: 0.5
     - _SSS_Intensity: 0
@@ -180,7 +185,7 @@ Material:
     - _Surface: 1
     - _Threshold: 0
     - _UseAlphaMap: 0
-    - _UseAoMap: 0
+    - _UseAoMap: 1
     - _UseDither: 0
     - _UseEmissiveMap: 0
     - _UseNormalMap: 0
@@ -196,11 +201,13 @@ Material:
     - _BackFaceColor: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 0.3, g: 0.3, b: 0.3, a: 0.4509804}
     - _BlancosYNegros: {r: 0, g: 1, b: 0, a: 0}
-    - _Color: {r: 0.2264151, g: 0.2264151, b: 0.2264151, a: 0.4509804}
+    - _Color: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 0.4509804}
     - _ColorClamp: {r: 0, g: 1, b: 0, a: 0}
     - _ColorFuzzi: {r: 1, g: 1, b: 1, a: 0}
     - _ColorSSS: {r: 0, g: 0, b: 0, a: 0}
     - _Direction: {r: 0.3, g: 1, b: 0, a: 0}
+    - _EdgeOffset: {r: 0, g: 0, b: 0, a: 0}
+    - _EdgeTilling: {r: 1, g: 1, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _M_B_N: {r: 0, g: 1, b: 0, a: 0}
     - _Offset: {r: 0, g: 0, b: 0, a: 0}
