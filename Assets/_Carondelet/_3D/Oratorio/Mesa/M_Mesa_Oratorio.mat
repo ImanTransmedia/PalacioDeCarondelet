@@ -84,8 +84,8 @@ Material:
     - _BackFaceTex_1: 0
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
-    - _Brillo: 1
-    - _BrilloRoughness: 4.62
+    - _Brillo: 2.18
+    - _BrilloRoughness: 0.87
     - _COLORMAP: 1
     - _CastShadows: 1
     - _Contraste: 1
@@ -108,7 +108,7 @@ Material:
     - _METALLICMAP: 1
     - _MaxRoughness: 1
     - _Metallic: 0
-    - _MetallicBrillo: 0.88
+    - _MetallicBrillo: 1
     - _MetallicContraste: 1
     - _NoiseScale: 0
     - _NormalDetails: 0
@@ -123,7 +123,7 @@ Material:
     - _RandomHUE: 0
     - _ReceiveShadows: 1
     - _Rotation: 0
-    - _RoughnessContrast: 0.22
+    - _RoughnessContrast: 2.66
     - _SSS_Direct: 0.5
     - _SSS_Indirect: 0.5
     - _SSS_Intensity: 0
@@ -149,7 +149,7 @@ Material:
     m_Colors:
     - _AOClamp: {r: 0, g: 1, b: 0, a: 0}
     - _BackFaceColor: {r: 0, g: 0, b: 0, a: 0}
-    - _BlancosYNegros: {r: 0.3, g: 1, b: 0, a: 0}
+    - _BlancosYNegros: {r: 0.5, g: 1, b: 0, a: 0}
     - _Color: {r: 0.8, g: 0.8, b: 0.8, a: 0}
     - _ColorClamp: {r: 0, g: 1, b: 0, a: 0}
     - _ColorFuzzi: {r: 1, g: 1, b: 1, a: 0}
