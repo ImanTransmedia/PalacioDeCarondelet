@@ -106,6 +106,7 @@ MonoBehaviour:
   - {fileID: -5492184597847706782}
   - {fileID: 714355906417084881}
   - {fileID: 4984758826797746353}
+  - {fileID: 9152750428276696217}
 --- !u!114 &714355906417084881
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -171,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66f335fb1ffd8684294ad653bf1c7564, type: 3}
   m_Name: ColorAdjustments
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   postExposure:
     m_OverrideState: 1
     m_Value: 8
@@ -462,3 +463,96 @@ MonoBehaviour:
     m_Value:
       serializedVersion: 2
       m_Bits: 1
+--- !u!114 &9152750428276696217
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c276c365a884f5a4293f9acd7b9ea680, type: 3}
+  m_Name: AutoExposureOverride
+  m_EditorClassIdentifier: 
+  active: 1
+  mode:
+    m_OverrideState: 1
+    m_Value: 1
+  evMin:
+    m_OverrideState: 0
+    m_Value: 0
+  evMax:
+    m_OverrideState: 0
+    m_Value: 12
+  evCompensation:
+    m_OverrideState: 0
+    m_Value: 0
+  compensationCurveParameter:
+    m_OverrideState: 0
+    m_Value:
+      <length>k__BackingField: 2
+      m_Loop: 0
+      m_ZeroValue: 0
+      m_Range: 1
+      m_Curve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+  adaptationMode:
+    m_OverrideState: 0
+    m_Value: 0
+  darkToLightSpeed:
+    m_OverrideState: 0
+    m_Value: 3
+  lightToDarkSpeed:
+    m_OverrideState: 0
+    m_Value: 1
+  meteringMaskMode:
+    m_OverrideState: 0
+    m_Value: 0
+  meteringMaskTexture:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+    dimension: 1
+  meteringProceduralFalloff:
+    m_OverrideState: 0
+    m_Value: 2
+  renderingMode:
+    m_OverrideState: 0
+    m_Value: 0
+  sampleCount:
+    m_OverrideState: 0
+    m_Value: 30
+  animateSamplePositions:
+    m_OverrideState: 0
+    m_Value: 0
+  response:
+    m_OverrideState: 0
+    m_Value: 0.03
+  clampingEnabled:
+    m_OverrideState: 0
+    m_Value: 0
+  clampingBracket:
+    m_OverrideState: 0
+    m_Value: 2
