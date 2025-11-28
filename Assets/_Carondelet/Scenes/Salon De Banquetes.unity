@@ -961,8 +961,8 @@ ReflectionProbe:
   m_TimeSlicingMode: 0
   m_Resolution: 128
   m_UpdateFrequency: 0
-  m_BoxSize: {x: 2.7128901, y: 0.81459963, z: 1}
-  m_BoxOffset: {x: 0, y: -0.12677407, z: 0}
+  m_BoxSize: {x: 2.7931814, y: 1.0010045, z: 0.6363554}
+  m_BoxOffset: {x: 0.01016283, y: -0.40775448, z: 0.1818223}
   m_NearClip: 0.01
   m_FarClip: 1000
   m_ShadowDistance: 100
@@ -972,7 +972,7 @@ ReflectionProbe:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IntensityMultiplier: 1
-  m_BlendDistance: 0.04
+  m_BlendDistance: 0.2
   m_HDR: 1
   m_BoxProjection: 1
   m_RenderDynamicObjects: 0
@@ -1527,8 +1527,8 @@ ReflectionProbe:
   m_TimeSlicingMode: 0
   m_Resolution: 128
   m_UpdateFrequency: 0
-  m_BoxSize: {x: 2.7627919, y: 0.81459963, z: 1}
-  m_BoxOffset: {x: 0, y: -0.12677407, z: 0}
+  m_BoxSize: {x: 2.8562913, y: 0.9738767, z: 0.6689377}
+  m_BoxOffset: {x: -0.043555498, y: -0.46286678, z: 0.16553116}
   m_NearClip: 0.01
   m_FarClip: 1000
   m_ShadowDistance: 100
@@ -1543,7 +1543,7 @@ ReflectionProbe:
   m_BoxProjection: 1
   m_RenderDynamicObjects: 0
   m_UseOcclusionCulling: 1
-  m_Importance: 1
+  m_Importance: 4
   m_CustomBakedTexture: {fileID: 0}
 --- !u!1 &219113660
 GameObject:
@@ -3026,8 +3026,8 @@ ReflectionProbe:
   m_TimeSlicingMode: 0
   m_Resolution: 128
   m_UpdateFrequency: 0
-  m_BoxSize: {x: 3.62119, y: 0.81459963, z: 1}
-  m_BoxOffset: {x: 0, y: -0.12677407, z: 0}
+  m_BoxSize: {x: 3.5574222, y: 1.0291173, z: 0.6768756}
+  m_BoxOffset: {x: -0.0076811314, y: -0.3968041, z: 0.1615622}
   m_NearClip: 0.01
   m_FarClip: 1000
   m_ShadowDistance: 100
@@ -3037,7 +3037,7 @@ ReflectionProbe:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IntensityMultiplier: 1
-  m_BlendDistance: 0.04
+  m_BlendDistance: 0.2
   m_HDR: 1
   m_BoxProjection: 1
   m_RenderDynamicObjects: 0
@@ -9205,7 +9205,7 @@ ReflectionProbe:
   m_Mode: 0
   m_RefreshMode: 0
   m_TimeSlicingMode: 0
-  m_Resolution: 256
+  m_Resolution: 64
   m_UpdateFrequency: 0
   m_BoxSize: {x: 19.862091, y: 1.891386, z: 2.6116242}
   m_BoxOffset: {x: 0.07041359, y: 0, z: -0.044992447}

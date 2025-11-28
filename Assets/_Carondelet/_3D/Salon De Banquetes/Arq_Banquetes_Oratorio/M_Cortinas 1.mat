@@ -28,6 +28,7 @@ Material:
   - _COLORMAP
   - _FABRIC
   - _MAPPING1_PLANAR
+  - _METALLICMAP
   - _ROUGHNESSMAP
   m_InvalidKeywords:
   - _EMISSION
@@ -134,7 +135,7 @@ Material:
     - _BlendModePreserveSpecular: 1
     - _BlendRoughness: 0
     - _Brillo: 1
-    - _BrilloRoughness: 0.29
+    - _BrilloRoughness: 0.09
     - _BumpScale: 1
     - _COLORMAP: 1
     - _CastShadows: 1
@@ -165,16 +166,16 @@ Material:
     - _HUE: 0
     - _InvertRoughness: 0
     - _MAPPING1: 1
-    - _METALLICMAP: 0
+    - _METALLICMAP: 1
     - _MaxRoughness: 1
     - _Metallic: 0
-    - _MetallicBrillo: 1
-    - _MetallicContraste: 1
+    - _MetallicBrillo: 0.54
+    - _MetallicContraste: 0.94
     - _Mix: 0
     - _MixMetallic: 0
     - _MixRoughness: 0
     - _NoiseScale: 0
-    - _NormalDetails: 2.92
+    - _NormalDetails: 15
     - _NormalStrenght: 2
     - _OcclusionStrength: 1
     - _Parallax: 0.005
@@ -226,7 +227,7 @@ Material:
     - _BackFaceColor: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BlancosYNegros: {r: 0, g: 1, b: 0, a: 0}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.78823537, g: 0.68235296, b: 0.5764706, a: 1}
     - _ColorClamp: {r: 0, g: 1, b: 0, a: 0}
     - _ColorFuzzi: {r: 1, g: 1, b: 1, a: 0}
     - _ColorSSS: {r: 0, g: 0, b: 0, a: 0}
