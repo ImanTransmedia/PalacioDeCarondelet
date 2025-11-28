@@ -1,0 +1,125 @@
+#pragma kernel AutoExposure
+#pragma kernel UpdateTargetLum
+#pragma kernel AdjustExposure
+
+#pragma only_renderers d3d11 ps4 ps5 xboxone vulkan metal switch
+
+
+#define THREADSIZE 32
+#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+#include "AutoExposureCommon.hlsl"
+
+
+struct ModifiableData
+{
+	uint Result;
+	uint Importance;
+	float PastEv;
+	float Exposure;
+};
+
+struct ConstantData
+{
+	float evMin;
+	float evMax;
+	float evCompensation;
+	int adaptationMode;
+	float darkToLightSpeed;
+	float lightToDarkSpeed;
+	float deltaTime;
+	uint _SCREENSIZE_X;
+	uint _SCREENSIZE_Y;
+	int _ISFIRSTFRAME;
+	int meteringMaskMode;
+	float meteringProceduralFalloff;
+};
+
+
+Texture2D<float4> MeteringMaskTexture;
+Texture2D<half> ExposureCompensationCurve;
+
+RWStructuredBuffer<ModifiableData> Data;
+
+RWTexture2D<float4> _AutoExposureTarget;
+
+StructuredBuffer<ConstantData> Constants;
+
+
+
+[numthreads(THREADSIZE, THREADSIZE, 1)]
+void AutoExposure (uint3 id : SV_DispatchThreadID)
+{
+	// Initialize without an init kernel
+	if (!any(id.xy))
+	{
+		Data[0].Result = 0;
+		Data[0].Importance = 0;
+	}
+	
+	// Early exit if out of range
+	if (id.x >= Constants[0]._SCREENSIZE_X || id.y >= Constants[0]._SCREENSIZE_Y)
+		return;
+	
+	
+	half2 screenDimensions = half2(Constants[0]._SCREENSIZE_X, Constants[0]._SCREENSIZE_Y);
+	half2 uv = id.xy / screenDimensions;
+	
+	half importance = CalculateImportance(uv, Constants[0].meteringMaskMode, Constants[0].meteringProceduralFalloff, MeteringMaskTexture);
+	
+	float3 screenColor = _AutoExposureTarget[id.xy].rgb;
+	uint lum = uint(100.0 * GetLuminance(screenColor) * importance);
+	uint imp = uint(100.0 * importance);
+	
+	InterlockedAdd(Data[0].Result, lum);
+    InterlockedAdd(Data[0].Importance, imp);
+}
+
+[numthreads(1, 1, 1)]
+void UpdateTargetLum()
+{
+	float avgLuminance = float((0.01 * Data[0].Result) / (0.01 * Data[0].Importance));
+	float targetEv = CalculateTargetEv(avgLuminance, Data[0].PastEv, Constants[0]._ISFIRSTFRAME, Constants[0].adaptationMode, Constants[0].lightToDarkSpeed, Constants[0].darkToLightSpeed, Constants[0].evMin, Constants[0].evMax, Constants[0].deltaTime);
+	Data[0].PastEv = targetEv;
+	
+	float targetEv01 = Map(targetEv, Constants[0].evMin, Constants[0].evMax, 0.0, 1.0);
+	float compensationCurve = ExposureCompensationCurve.SampleLevel(linear_clamp_sampler, half2(targetEv01, 0), 0).r;
+	
+	targetEv -= compensationCurve;
+	targetEv -= Constants[0].evCompensation;
+	targetEv += _MIDDLE_GRAY_ADJ_50_PCT; 
+	// If the average scene luminance is ~0.5, this algorithm suggests doubling the brightness. 
+	// In fact, we generally prefer that the scene rests around 0.5 after compensation (i.e., 50/50 split between "bright" and "dark").
+	// Therefore, so we use this term to adjust the default recommendation to leaving the brightness as-is when the scene luminance is 0.5.
+	
+	Data[0].Exposure = ConvertEVToExposureMultiplier(targetEv);
+}
+
+
+
+[numthreads(THREADSIZE, THREADSIZE, 1)]
+void AdjustExposure(uint3 id : SV_DispatchThreadID)
+{
+	float3 screenColor = _AutoExposureTarget[id.xy].rgb;
+	_AutoExposureTarget[id.xy].rgba = float4(screenColor * Data[0].Exposure, 1.0);
+	
+	#if DEBUG_MODE_ENABLED
+	half2 screenDimensions = half2(Constants[0]._SCREENSIZE_X, Constants[0]._SCREENSIZE_Y);
+	half2 uv = id.xy / screenDimensions;
+	if(uv.y > 0.9)
+	{
+		if(uv.x < 0.3)
+		{
+			_AutoExposureTarget[id.xy].rgba = float4(Map(Data[0].Exposure, Constants[0].evMin, Constants[0].evMax, 0.0, 1.0).rrr, 1);
+		}   
+		if(uv.x < 0.2)
+		{
+			_AutoExposureTarget[id.xy].rgba = float4(Map(Data[0].PastEv, Constants[0].evMin, Constants[0].evMax, 0.0, 1.0).rrr, 1);	
+		}   
+		if(uv.x < 0.1)
+		{
+			_AutoExposureTarget[id.xy].rgba = float4(float((0.01 * Data[0].Result) / (0.01 * Data[0].Importance)).rrr, 1);
+		}   
+	}
+	#endif
+}
+ 

@@ -1,0 +1,19 @@
+{
+  "displayName": "Auto Exposure",
+  "name": "com.occasoftware.auto-exposure",
+  "version": "3.2.2",
+  "unity": "2022.3",
+  "description": "Auto Exposure for Unity URP.",
+  "packageType": "package",
+  "author": {
+    "name": "OccaSoftware",
+    "email": "hello@occasoftware.com",
+    "url": "https://www.occasoftware.com/"
+  },
+  "documentationUrl": "https://occasoftware.com/manual/auto-exposure",
+  "unityRelease": "0f1",
+  "hideInEditor": false,
+  "dependencies": {
+    "com.unity.render-pipelines.universal": "14.0.7"
+  }
+}

@@ -205,6 +205,51 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 47500750}
   m_Mesh: {fileID: -334463092638766726, guid: 8e15aa98617ee1945bb8499b55fe16e0, type: 3}
+--- !u!114 &50774236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec0b4dd729a12d046982652f834580a2, type: 3}
+  m_Name: patio_superior_subescena4_LMA99
+  m_EditorClassIdentifier: 
+  resolution: 512
+  bitmask: 1
+  id: 75
+  sortingID: 100
+  isImplicit: 1
+  area: 0
+  totalVertexCount: 0
+  vertexCounter: 0
+  sceneLodLevel: -1
+  autoResolution: 0
+  sceneName: patio_superior_subescena4
+  tag: -1
+  containsTerrains: 0
+  probes: 0
+  mode: 1
+  renderMode: 1000
+  renderDirMode: 1000
+  atlasPacker: 1000
+  holeFilling: 0
+  vertexSamplingDensity: 0
+  computeSSS: 0
+  sssSamples: 16
+  sssDensity: 10
+  sssColor: {r: 1, g: 1, b: 1, a: 1}
+  sssScale: 1
+  fakeShadowBias: 0
+  transparentSelfShadow: 0
+  flipNormal: 0
+  parentName: 
+  overridePath: 
+  fixPos3D: 0
+  voxelSize: {x: 1, y: 1, z: 1}
+  passedFilter: 0
 --- !u!1 &146755769
 GameObject:
   m_ObjectHideFlags: 1
@@ -327,17 +372,17 @@ MonoBehaviour:
   enlightenWarningShown2: 0
   uniqueLights: []
   implicitGroups:
-  - {fileID: 891596226}
-  - {fileID: 1051027049}
-  - {fileID: 891596226}
-  - {fileID: 891596226}
-  - {fileID: 1051027049}
-  - {fileID: 1635528963}
-  - {fileID: 891596226}
-  - {fileID: 1051027049}
-  - {fileID: 1051027049}
-  - {fileID: 1051027049}
-  - {fileID: 891596226}
+  - {fileID: 1201832862}
+  - {fileID: 1056610806}
+  - {fileID: 1201832862}
+  - {fileID: 1201832862}
+  - {fileID: 1056610806}
+  - {fileID: 50774236}
+  - {fileID: 1201832862}
+  - {fileID: 1056610806}
+  - {fileID: 1056610806}
+  - {fileID: 1056610806}
+  - {fileID: 1201832862}
   implicitGroupedObjects:
   - {fileID: 303191006}
   - {fileID: 303191007}
@@ -634,14 +679,26 @@ MonoBehaviour:
   nonBakedRenderers: []
   bakedLights: []
   bakedRenderersTerrain: []
-  maps: []
+  maps:
+  - {fileID: 2800000, guid: 81328a5a7bdcfa0409eefe542f59060f, type: 3}
+  - {fileID: 2800000, guid: 753025854020cdc49827767fcf845267, type: 3}
+  - {fileID: 2800000, guid: 2df5c11bf006a1c49b529b50795bf95a, type: 3}
   masks: []
   dirMaps: []
-  rnmMaps0: []
-  rnmMaps1: []
-  rnmMaps2: []
-  mapsMode: 
-  bakedIDs: 1a000000320000001a0000001a000000320000004b0000001a0000003200000032000000320000001a000000
+  rnmMaps0:
+  - {fileID: 2800000, guid: 8c5942c3383dcd04a8118f7fdccc4041, type: 3}
+  - {fileID: 2800000, guid: bbbd2771672e00049bd774ab1e7a3929, type: 3}
+  - {fileID: 2800000, guid: 940326f3407debb4495f7502bac48917, type: 3}
+  rnmMaps1:
+  - {fileID: 2800000, guid: 28b4a245084ebb74a91ef4c0f57fd8c7, type: 3}
+  - {fileID: 2800000, guid: 8dd3fefa72a325a45abdf84862170275, type: 3}
+  - {fileID: 2800000, guid: dbaf098d766c8bf4eb644f774a43beb3, type: 3}
+  rnmMaps2:
+  - {fileID: 2800000, guid: 746ee8bda05f28a4491946cb9d8b6924, type: 3}
+  - {fileID: 2800000, guid: a2fac042c5f8df94bab99bf048ca829c, type: 3}
+  - {fileID: 2800000, guid: a97c3def86e9ff54c9766d1d802c3086, type: 3}
+  mapsMode: 030000000300000003000000
+  bakedIDs: 0000000001000000000000000000000001000000020000000000000001000000010000000100000000000000
   bakedScaleOffset:
   - {x: 0.1519238, y: 0.14476615, z: 0.8484849, w: 0.7839644}
   - {x: 0.7172685, y: 0.6448514, z: -0.000000008629808, w: 0.0000000053633795}
@@ -672,32 +729,20 @@ MonoBehaviour:
   bakedScaleOffsetTerrain: []
   assetList: []
   uvOverlapAssetList: 
-  idremap: 
+  idremap: 620000006300000064000000
   usesRealtimeGI: 0
   emptyDirectionTex: {fileID: 0}
   anyVolumes: 0
   compressedVolumes: 0
   sectors:
   - name: $G
-    maps:
-    - {fileID: 2800000, guid: 8ad1b987260212044b4a1f1cf8bb3ea6, type: 3}
-    - {fileID: 2800000, guid: a1d8bec051ab3e44c85b4c66e37ff70e, type: 3}
-    - {fileID: 2800000, guid: f0addcbbbae862f4e9616fa133586c37, type: 3}
+    maps: []
     masks: []
     dirMaps: []
-    rnmMaps0:
-    - {fileID: 2800000, guid: b9092b378b11e614ba369970f09ecb17, type: 3}
-    - {fileID: 2800000, guid: 8b32f0c86186d5f4da0b736d2166ca68, type: 3}
-    - {fileID: 2800000, guid: e8a3103cfbac9cd4c9e00b4701777884, type: 3}
-    rnmMaps1:
-    - {fileID: 2800000, guid: 1fb7d5d6809891f49b2dd9f197c38152, type: 3}
-    - {fileID: 2800000, guid: 4ac15d7390c133e4bb6d37ae4dbfc041, type: 3}
-    - {fileID: 2800000, guid: 16d231ad841bf4149aed39873261620f, type: 3}
-    rnmMaps2:
-    - {fileID: 2800000, guid: d94229d2c9158a04bb65d84ba1070fb7, type: 3}
-    - {fileID: 2800000, guid: 138761b633bf8b147b3fcdb6eb696d6b, type: 3}
-    - {fileID: 2800000, guid: fa50c40ff0dad4f449c873b293d4a1ab, type: 3}
-    mapsMode: 030000000300000003000000
+    rnmMaps0: []
+    rnmMaps1: []
+    rnmMaps2: []
+    mapsMode: 
     bakedRenderers:
     - {fileID: 303191003}
     - {fileID: 303191004}
@@ -710,7 +755,7 @@ MonoBehaviour:
     - {fileID: 1783523381}
     - {fileID: 1956073534}
     - {fileID: 2143689848}
-    bakedIDs: 0000000001000000000000000000000001000000020000000000000001000000010000000100000000000000
+    bakedIDs: 1a000000320000001a0000001a000000320000004b0000001a0000003200000032000000320000001a000000
     bakedScaleOffset:
     - {x: 0.1519238, y: 0.14476615, z: 0.8484849, w: 0.7839644}
     - {x: 0.7172685, y: 0.6448514, z: -0.000000008629808, w: 0.0000000053633795}
@@ -3328,51 +3373,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 824085821}
   m_Mesh: {fileID: 6178686203242990240, guid: 8e15aa98617ee1945bb8499b55fe16e0, type: 3}
---- !u!114 &891596226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec0b4dd729a12d046982652f834580a2, type: 3}
-  m_Name: patio_superior_subescena3_LMA98
-  m_EditorClassIdentifier: 
-  resolution: 512
-  bitmask: 1
-  id: 26
-  sortingID: 99
-  isImplicit: 1
-  area: 0
-  totalVertexCount: 0
-  vertexCounter: 0
-  sceneLodLevel: -1
-  autoResolution: 0
-  sceneName: patio_superior_subescena4
-  tag: -1
-  containsTerrains: 0
-  probes: 0
-  mode: 1
-  renderMode: 1000
-  renderDirMode: 1000
-  atlasPacker: 1000
-  holeFilling: 0
-  vertexSamplingDensity: 0
-  computeSSS: 0
-  sssSamples: 16
-  sssDensity: 10
-  sssColor: {r: 1, g: 1, b: 1, a: 1}
-  sssScale: 1
-  fakeShadowBias: 0
-  transparentSelfShadow: 0
-  flipNormal: 0
-  parentName: 
-  overridePath: 
-  fixPos3D: 0
-  voxelSize: {x: 1, y: 1, z: 1}
-  passedFilter: 0
 --- !u!1 &1043672898
 GameObject:
   m_ObjectHideFlags: 0
@@ -3404,7 +3404,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1051027049
+--- !u!114 &1056610806
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3645,6 +3645,51 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1155510884}
   m_Mesh: {fileID: -4388940120035981080, guid: 8e15aa98617ee1945bb8499b55fe16e0, type: 3}
+--- !u!114 &1201832862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec0b4dd729a12d046982652f834580a2, type: 3}
+  m_Name: patio_superior_subescena3_LMA98
+  m_EditorClassIdentifier: 
+  resolution: 512
+  bitmask: 1
+  id: 26
+  sortingID: 99
+  isImplicit: 1
+  area: 0
+  totalVertexCount: 0
+  vertexCounter: 0
+  sceneLodLevel: -1
+  autoResolution: 0
+  sceneName: patio_superior_subescena4
+  tag: -1
+  containsTerrains: 0
+  probes: 0
+  mode: 1
+  renderMode: 1000
+  renderDirMode: 1000
+  atlasPacker: 1000
+  holeFilling: 0
+  vertexSamplingDensity: 0
+  computeSSS: 0
+  sssSamples: 16
+  sssDensity: 10
+  sssColor: {r: 1, g: 1, b: 1, a: 1}
+  sssScale: 1
+  fakeShadowBias: 0
+  transparentSelfShadow: 0
+  flipNormal: 0
+  parentName: 
+  overridePath: 
+  fixPos3D: 0
+  voxelSize: {x: 1, y: 1, z: 1}
+  passedFilter: 0
 --- !u!1001 &1511941297
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3834,51 +3879,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1524960895}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1635528963
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec0b4dd729a12d046982652f834580a2, type: 3}
-  m_Name: patio_superior_subescena4_LMA99
-  m_EditorClassIdentifier: 
-  resolution: 512
-  bitmask: 1
-  id: 75
-  sortingID: 100
-  isImplicit: 1
-  area: 0
-  totalVertexCount: 0
-  vertexCounter: 0
-  sceneLodLevel: -1
-  autoResolution: 0
-  sceneName: patio_superior_subescena4
-  tag: -1
-  containsTerrains: 0
-  probes: 0
-  mode: 1
-  renderMode: 1000
-  renderDirMode: 1000
-  atlasPacker: 1000
-  holeFilling: 0
-  vertexSamplingDensity: 0
-  computeSSS: 0
-  sssSamples: 16
-  sssDensity: 10
-  sssColor: {r: 1, g: 1, b: 1, a: 1}
-  sssScale: 1
-  fakeShadowBias: 0
-  transparentSelfShadow: 0
-  flipNormal: 0
-  parentName: 
-  overridePath: 
-  fixPos3D: 0
-  voxelSize: {x: 1, y: 1, z: 1}
-  passedFilter: 0
 --- !u!1 &1735942106
 GameObject:
   m_ObjectHideFlags: 0
