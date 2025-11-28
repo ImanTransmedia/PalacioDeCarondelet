@@ -303,6 +303,11 @@ public class AudioManagerBDC : MonoBehaviour
         }
     }
 
+    public void PlaySFXBetweenScenes(string id, float volume = 1f, float pitch = 1f)
+    {
+        PlaySFX(id, exclusive: true, volume: volume, pitch: pitch);
+    }
+
     private IEnumerator PlaylistCoroutine()
     {
         if (_playlist == null || _playlist.Count == 0) yield break;
