@@ -84,6 +84,7 @@ public class Interact : MonoBehaviour
             {
                 if (IsOccluded(finalPosition, hit.collider))
                 {
+                    //AudioManagerBDC.I.PlaySFX("InteractFail");
                     return;
                 }
             }
@@ -93,24 +94,29 @@ public class Interact : MonoBehaviour
             if ((hitLayerMask & layer3D) != 0)
             {
                 firstPerson.isInteracting = true;
+                AudioManagerBDC.I.PlaySFX("Interact");
                 hit.collider.GetComponent<ItemDisplay>()?.OnInteract();
             }
             else if ((hitLayerMask & layerTexture) != 0)
             {
                 firstPerson.isInteracting = true;
+                AudioManagerBDC.I.PlaySFX("Interact");
                 hit.collider.GetComponent<textureDisplay>()?.OnInteract();
             }
             else if ((hitLayerMask & layerPainting) != 0)
             {
                 firstPerson.isInteracting = true;
+                AudioManagerBDC.I.PlaySFX("Interact");
                 hit.collider.GetComponent<paintingDisplay>()?.OnInteract();
             }
             else if ((hitLayerMask & layerVideo) != 0)
             {
+                AudioManagerBDC.I.PlaySFX("Interact");
                 hit.collider.GetComponent<VideoPlayerController>()?.OnInteract();
             }
             else if ((hitLayerMask & layerDoor) != 0)
             {
+                AudioManagerBDC.I.PlaySFX("OpenDoor");
                 hit.collider.GetComponent<DoorSceneLoader>()?.LoadNewScene();
             }
         }
