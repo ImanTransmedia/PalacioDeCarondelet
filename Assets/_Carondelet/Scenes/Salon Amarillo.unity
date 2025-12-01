@@ -3496,7 +3496,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4662084954408441173, guid: db2dc603ce201344782641709ad66277, type: 3}
       propertyPath: m_Importance
-      value: 4
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662084954408441173, guid: db2dc603ce201344782641709ad66277, type: 3}
+      propertyPath: m_Resolution
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 4662084954408441173, guid: db2dc603ce201344782641709ad66277, type: 3}
       propertyPath: m_BoxOffset.x
@@ -3532,7 +3536,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4662084954408441173, guid: db2dc603ce201344782641709ad66277, type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 1
+      value: 2072383
       objectReference: {fileID: 0}
     - target: {fileID: 4662084954408441173, guid: db2dc603ce201344782641709ad66277, type: 3}
       propertyPath: m_CustomBakedTexture
@@ -3650,11 +3654,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4662084954408441173, guid: db2dc603ce201344782641709ad66277, type: 3}
       propertyPath: m_BlendDistance
-      value: 0.12
+      value: 0.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662084954408441173, guid: db2dc603ce201344782641709ad66277, type: 3}
+      propertyPath: m_BoxProjection
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4662084954408441173, guid: db2dc603ce201344782641709ad66277, type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 4294967295
+      value: 2072383
       objectReference: {fileID: 0}
     - target: {fileID: 4662084954408441173, guid: db2dc603ce201344782641709ad66277, type: 3}
       propertyPath: m_CustomBakedTexture
@@ -3662,7 +3670,7 @@ PrefabInstance:
       objectReference: {fileID: 8900000, guid: 95a5661fe767a3048b8477b2ab5e0806, type: 3}
     - target: {fileID: 4662084954408441173, guid: db2dc603ce201344782641709ad66277, type: 3}
       propertyPath: m_IntensityMultiplier
-      value: 0.97
+      value: 1.11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3796,6 +3804,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4662084954408441173, guid: db2dc603ce201344782641709ad66277, type: 3}
+      propertyPath: m_Resolution
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662084954408441173, guid: db2dc603ce201344782641709ad66277, type: 3}
       propertyPath: m_BoxOffset.x
       value: -0.10650611
       objectReference: {fileID: 0}
@@ -3829,7 +3841,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4662084954408441173, guid: db2dc603ce201344782641709ad66277, type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 1
+      value: 2072383
       objectReference: {fileID: 0}
     - target: {fileID: 4662084954408441173, guid: db2dc603ce201344782641709ad66277, type: 3}
       propertyPath: m_CustomBakedTexture
@@ -4267,11 +4279,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4662084954408441173, guid: db2dc603ce201344782641709ad66277, type: 3}
       propertyPath: m_BlendDistance
-      value: 0.5
+      value: 1.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662084954408441173, guid: db2dc603ce201344782641709ad66277, type: 3}
+      propertyPath: m_BoxProjection
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4662084954408441173, guid: db2dc603ce201344782641709ad66277, type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 4294967295
+      value: 2072383
       objectReference: {fileID: 0}
     - target: {fileID: 4662084954408441173, guid: db2dc603ce201344782641709ad66277, type: 3}
       propertyPath: m_CustomBakedTexture
@@ -4279,7 +4295,7 @@ PrefabInstance:
       objectReference: {fileID: 8900000, guid: 95a5661fe767a3048b8477b2ab5e0806, type: 3}
     - target: {fileID: 4662084954408441173, guid: db2dc603ce201344782641709ad66277, type: 3}
       propertyPath: m_IntensityMultiplier
-      value: 1
+      value: 1.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8657,7 +8673,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3996921901648949194, guid: db2dc603ce201344782641709ad66277, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.95
+      value: -6.004
       objectReference: {fileID: 0}
     - target: {fileID: 3996921901648949194, guid: db2dc603ce201344782641709ad66277, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8720,6 +8736,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4662084954408441173, guid: db2dc603ce201344782641709ad66277, type: 3}
+      propertyPath: m_Resolution
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662084954408441173, guid: db2dc603ce201344782641709ad66277, type: 3}
       propertyPath: m_BoxOffset.x
       value: -0.10650611
       objectReference: {fileID: 0}
@@ -8753,7 +8773,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4662084954408441173, guid: db2dc603ce201344782641709ad66277, type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 1
+      value: 2072383
       objectReference: {fileID: 0}
     - target: {fileID: 4662084954408441173, guid: db2dc603ce201344782641709ad66277, type: 3}
       propertyPath: m_CustomBakedTexture
