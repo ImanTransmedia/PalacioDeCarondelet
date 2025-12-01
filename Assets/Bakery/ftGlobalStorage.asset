@@ -23,7 +23,11 @@ MonoBehaviour:
     1.fbx
   - Assets/_Carondelet/_3D/Patio Interior SUPERIOR/Pabellon_Nacional/Pabellon_Nacional.fbx
   - Assets/_Carondelet/_3D/Comunes_Patios/Pileta/Pileta_Patios.fbx
-  modifiedAssetPaddingHash: d6a958ff323b8033df4dfff0465031ee6d67e2a81c7e9363f166e2a8bb09ecc010815a18
+  - Assets/_Carondelet/_3D/Oratorio/Silla_Oratorio.fbx
+  - Assets/_Carondelet/_3D/Salon De Banquetes/LamparaDePared/LamparaDePared.fbx
+  - Assets/GabineteLampara.fbx
+  - Assets/_Carondelet/_3D/Salon De Banquetes/Silla_Presidencial/Silla_Presidencial_Banquetes.fbx
+  modifiedAssetPaddingHash: d6a958ff323b8033df4dfff0465031ee6d67e2a81c7e9363f166e2a8bb09ecc010815a181528c115fee2df8bfa5999641428c115
   modifiedMeshList: []
   modifiedMeshPaddingList: 
   modifiedAssets:
@@ -442,6 +446,44 @@ MonoBehaviour:
     - Tierra
     padding: 15000000070000002d0000005b00000013000000
     unwrapper: 0000000000000000000000000000000000000000
+  - meshName:
+    - Silla_Oratorio.018
+    padding: cc000000
+    unwrapper: 01000000
+  - meshName:
+    - Metal
+    - Cristal
+    - Chains
+    - BaseVelas
+    - pCylinder7
+    - pCylinder6
+    - pCylinder5
+    - AdornosColgantes
+    padding: 0001000000010000000100000001000000010000000100000001000000010000
+    unwrapper: 0100000001000000010000000100000001000000010000000100000001000000
+  - meshName:
+    - Plane.071
+    - Pendientes
+    - Focos
+    - Cylinder.045
+    - Cylinder.013
+    - Cylinder.012
+    - Cylinder.010
+    - Cylinder.008
+    - CuerpoVidrio
+    - Circle.017
+    - Circle.013
+    - Brazos
+    - BaseP2
+    - Base
+    - ArosMetal1
+    - Aros
+    padding: 00010000da00000000010000000100000001000000010000000100000001000000010000a700000000010000b700000000010000000100000001000000010000
+    unwrapper: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  - meshName:
+    - Silla_Presidencial_Banquete
+    padding: cd000000
+    unwrapper: 01000000
   assetList:
   - Assets/Bakery/examples/content/sponza/bush.FBX
   - Assets/Bakery/examples/content/floor_lamp.FBX
@@ -513,8 +555,19 @@ MonoBehaviour:
   - Assets/_Carondelet/_3D/Salon Amarillo/SM_Jarron_Vietnamita/Jarron_Vietnamita.fbx
   - Assets/_Carondelet/_3D/Patio y Pasillos/SM_Patios_Y_Pasillos.fbx
   - Assets/_Carondelet/_3D/Salon Amarillo/Arq_Amarillo/Arq_Amarillo V2.fbx
-  uvOverlapAssetList: 00000000ffffffff010100000000000000000000010100000000000001010000010100000000000001010000010100000000000001010000000000000000000001010000000000000101000001010000000000000000000001010000000000000000000001010000000000000101000000000000000000000000000001010000010100000101000000000000010100000000000001010000ffffffff010100000101000000000000010100000101000001010000ffffffff000000000000000001010000010100000101000000000000000000000101000001010000010100000000000001010000000000000101000001010000000000000000000000000000010100000101000000000000000000000101000001010000
-  xatlasWarningShown: 0
+  - Assets/_Carondelet/_3D/Salon De Banquetes/Vitrina_Oratorio/SM_Vitrina_Oratorio.fbx
+  - Assets/_Carondelet/_3D/Oratorio/Cuadro_Maria_Oratorio.fbx
+  - Assets/_Carondelet/_3D/Oratorio/Cristo_Vitrina_Oratorio.fbx
+  - Assets/_Carondelet/_3D/Salon De Banquetes/SM_Placa_Oratorio_UVChannel_02/SM_Placa_Oratorio_UVChannel_02.fbx
+  - Assets/_Carondelet/_3D/Salon De Banquetes/SalonBanquetes_Aparador2/Consola_Central.fbx
+  - Assets/_Carondelet/_3D/Salon De Banquetes/SM_Cortina_Pasillo/SM_Cortina_Pasillo.fbx
+  - Assets/_Carondelet/_3D/Salon De Banquetes/SalaBanquetes/SM_Cuadros_Banquetes.fbx
+  - Assets/_Carondelet/_3D/_COMMON/Objetos/SalonBanquetes_JarronTurquesa.fbx
+  - Assets/_Carondelet/_3D/Salon De Banquetes/SalonBanquetes_Plato/SalonBanquetes_Plato.fbx
+  - Assets/_Carondelet/_3D/Salon De Banquetes/SalonBanquetes_Sopero/SalonBanquetes_Sopero.fbx
+  - Assets/_Carondelet/_3D/Salon De Banquetes/Arq_Banquetes_Oratorio/Arq_Banquete_Oratorio.fbx
+  uvOverlapAssetList: 00000000ffffffff010100000000000000000000010100000000000001010000010100000000000001010000010100000000000001010000000000000000000001010000000000000101000001010000000000000000000001010000000000000000000001010000000000000101000000000000000000000000000001010000010100000101000000000000010100000000000001010000ffffffff010100000101000000000000010100000101000001010000ffffffff0000000000000000010100000101000001010000000000000000000001010000010100000101000000000000010100000000000001010000010100000000000000000000000000000101000001010000000000000000000001010000010100000101000000000000000000000000000000000000010100000101000000000000000000000101000001010000
+  xatlasWarningShown: 1
   foundCompatibleSetup: 1
   gpuName: NVIDIA GeForce RTX 3080
   runsNonRTX: 0
@@ -613,5 +666,5 @@ MonoBehaviour:
   renderSettingsRTPVExposure: 1
   renderSettingsRemoveDuplicateLightmaps: 0
   tagOverrides: []
-  modifiedMeshPaddingArray: 15000000070000002d0000005b00000013000000
-  modifiedMeshUnwrapperArray: 0000000000000000000000000000000000000000
+  modifiedMeshPaddingArray: cc000000
+  modifiedMeshUnwrapperArray: 01000000
