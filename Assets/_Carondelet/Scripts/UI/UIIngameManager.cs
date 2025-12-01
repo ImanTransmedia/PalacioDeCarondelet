@@ -45,6 +45,7 @@ public class UIIngameManager : MonoBehaviour
     [SerializeField]
     private VideoPlayer videoPlayer;
 
+
     [SerializeField] private CanvasGroup itemVideoCanvasGroup;
     [SerializeField] private int framesBeforeShow = 10;
     [SerializeField] private float videoFadeInDuration = 0.5f;
@@ -110,7 +111,8 @@ public class UIIngameManager : MonoBehaviour
     private float SinCount = 0;
     bool OscilationMode = false;
     bool StuckMode = false;
-
+    private bool _isFirstVideoPlay = true;
+    private bool _showLoaderThisCycle = false;
     private string _videoUrlForward;
     private string _videoUrlReverse;
     private bool _playForwardNext = true;
@@ -257,6 +259,7 @@ public class UIIngameManager : MonoBehaviour
         _videoUrlForward = urlForward;
         _videoUrlReverse = string.IsNullOrWhiteSpace(urlReverse) ? null : urlReverse;
         _playForwardNext = true;
+        _isFirstVideoPlay = true;
 
         ShowObjLoader(true);
         itemVideoPlayer.gameObject.SetActive(true);
@@ -305,29 +308,36 @@ public class UIIngameManager : MonoBehaviour
     private void PrepareAndPlayCurrent()
     {
         _receivedFrames = 0;
-        if (itemVideoCanvasGroup != null)
-            itemVideoCanvasGroup.alpha = 0f;
-        itemVideoPlayer.enabled = false;
-
         _waitingFirstFrame = true;
+
+        _showLoaderThisCycle = _isFirstVideoPlay;
+        _isFirstVideoPlay = false;
+
+        if (_showLoaderThisCycle)
+        {
+            if (itemVideoCanvasGroup != null)
+                itemVideoCanvasGroup.alpha = 0f;
+            itemVideoPlayer.enabled = false;
+            ShowObjLoader(true);
+        }
+
         string nextUrl = _playForwardNext || string.IsNullOrEmpty(_videoUrlReverse)
             ? _videoUrlForward
             : _videoUrlReverse;
 
-        ShowObjLoader(true);
         videoPlayer.url = nextUrl;
         videoPlayer.Prepare();
     }
 
+
+
     private void OnVideoPrepared(VideoPlayer vp)
     {
         _receivedFrames = 0;
-        if (itemVideoCanvasGroup != null)
-            itemVideoCanvasGroup.alpha = 0f;
-        itemVideoPlayer.enabled = false;
-        ShowObjLoader(true);
         vp.Play();
     }
+
+
 
     private int _receivedFrames = 0;
 
@@ -336,11 +346,17 @@ public class UIIngameManager : MonoBehaviour
         if (_waitingFirstFrame)
         {
             _waitingFirstFrame = false;
+
             itemVideoPlayer.enabled = true;
-            if (itemVideoCanvasGroup != null) itemVideoCanvasGroup.alpha = 1f;
-            ShowObjLoader(false);
+            if (itemVideoCanvasGroup != null)
+                itemVideoCanvasGroup.alpha = 1f;
+
+            if (_showLoaderThisCycle)
+                ShowObjLoader(false);
         }
     }
+
+
 
     private void OnVideoFinished(VideoPlayer vp)
     {
