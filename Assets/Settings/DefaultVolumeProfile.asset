@@ -741,6 +741,7 @@ MonoBehaviour:
   - {fileID: 7518938298396184218}
   - {fileID: -1410297666881709256}
   - {fileID: -8239322226461290918}
+  - {fileID: 6617089710798309890}
 --- !u!114 &853819529557874667
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1129,6 +1130,99 @@ MonoBehaviour:
   intensity:
     m_OverrideState: 1
     m_Value: 0
+--- !u!114 &6617089710798309890
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c276c365a884f5a4293f9acd7b9ea680, type: 3}
+  m_Name: AutoExposureOverride
+  m_EditorClassIdentifier: 
+  active: 1
+  mode:
+    m_OverrideState: 1
+    m_Value: 0
+  evMin:
+    m_OverrideState: 1
+    m_Value: 0
+  evMax:
+    m_OverrideState: 1
+    m_Value: 12
+  evCompensation:
+    m_OverrideState: 1
+    m_Value: 0
+  compensationCurveParameter:
+    m_OverrideState: 1
+    m_Value:
+      <length>k__BackingField: 2
+      m_Loop: 0
+      m_ZeroValue: 0
+      m_Range: 1
+      m_Curve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+  adaptationMode:
+    m_OverrideState: 1
+    m_Value: 0
+  darkToLightSpeed:
+    m_OverrideState: 1
+    m_Value: 3
+  lightToDarkSpeed:
+    m_OverrideState: 1
+    m_Value: 1
+  meteringMaskMode:
+    m_OverrideState: 1
+    m_Value: 0
+  meteringMaskTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+    dimension: 1
+  meteringProceduralFalloff:
+    m_OverrideState: 1
+    m_Value: 2
+  renderingMode:
+    m_OverrideState: 1
+    m_Value: 0
+  sampleCount:
+    m_OverrideState: 1
+    m_Value: 30
+  animateSamplePositions:
+    m_OverrideState: 1
+    m_Value: 0
+  response:
+    m_OverrideState: 1
+    m_Value: 0.03
+  clampingEnabled:
+    m_OverrideState: 1
+    m_Value: 0
+  clampingBracket:
+    m_OverrideState: 1
+    m_Value: 2
 --- !u!114 &6940869943325143175
 MonoBehaviour:
   m_ObjectHideFlags: 3

@@ -826,6 +826,7 @@ PlayerSettings:
   webGLCloseOnQuit: 0
   webWasm2023: 0
   scriptingDefineSymbols:
+    Android: BAKERY_INCLUDED;BAKERY_NOREIMPORT
     Standalone: BAKERY_INCLUDED;BAKERY_NOREIMPORT
     WebGL: UNITY_PIPELINE_URP;BAKERY_INCLUDED;BAKERY_NOREIMPORT
   additionalCompilerArguments: {}
