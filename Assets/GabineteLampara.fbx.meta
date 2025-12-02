@@ -28,8 +28,7 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    extraUserProperties:
-    - '#BAKERY{"meshName":["Plane.071","Pendientes","Focos","Cylinder.045","Cylinder.013","Cylinder.012","Cylinder.010","Cylinder.008","CuerpoVidrio","Circle.017","Circle.013","Brazos","BaseP2","Base","ArosMetal1","Aros"],"padding":[256,218,256,256,256,256,256,256,256,167,256,183,256,256,256,256],"unwrapper":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}'
+    extraUserProperties: []
     clipAnimations: []
     isReadable: 0
   meshes:
@@ -47,7 +46,7 @@ ModelImporter:
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
@@ -60,12 +59,12 @@ ModelImporter:
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
-    secondaryUVAreaDistortion: 15
+    secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
-    secondaryUVMarginMethod: 0
+    secondaryUVMarginMethod: 1
     secondaryUVMinLightmapResolution: 40
     secondaryUVMinObjectScale: 1
-    secondaryUVPackMargin: 8
+    secondaryUVPackMargin: 4
     useFileScale: 1
     strictVertexDataChecks: 0
   tangentSpace:
@@ -92,7 +91,7 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
