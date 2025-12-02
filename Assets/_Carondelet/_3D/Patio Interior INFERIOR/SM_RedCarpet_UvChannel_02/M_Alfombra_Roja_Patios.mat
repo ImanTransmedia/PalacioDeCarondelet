@@ -20,14 +20,14 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Alfombra_Roja_Patio
+  m_Name: M_Alfombra_Roja_Patios
   m_Shader: {fileID: -6465566751694194690, guid: c7a31a031552d0e428d982093bd6606c, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _COLORMAP
   - _FABRIC
-  - _MAPPING1_UV
+  - _MAPPING1_TRIPLANAR
   - _ROUGHNESSMAP
   m_InvalidKeywords:
   - _EMISSION
@@ -168,7 +168,7 @@ Material:
     - _GlossyReflections: 0
     - _HUE: 357
     - _InvertRoughness: 0
-    - _MAPPING1: 0
+    - _MAPPING1: 2
     - _MAPPINGTYPE: 0
     - _METALLICMAP: 0
     - _MaxRoughness: 1
