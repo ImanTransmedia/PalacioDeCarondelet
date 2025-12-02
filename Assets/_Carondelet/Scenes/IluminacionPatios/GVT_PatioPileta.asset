@@ -137,13 +137,13 @@ MonoBehaviour:
     m_Value: 1
   evMin:
     m_OverrideState: 1
-    m_Value: -1.43
+    m_Value: 0.57
   evMax:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 3.05
   evCompensation:
     m_OverrideState: 1
-    m_Value: -2.62
+    m_Value: 0
   compensationCurveParameter:
     m_OverrideState: 0
     m_Value:
@@ -195,8 +195,8 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 2
   renderingMode:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 1
   sampleCount:
     m_OverrideState: 0
     m_Value: 30
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66f335fb1ffd8684294ad653bf1c7564, type: 3}
   m_Name: ColorAdjustments
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   postExposure:
     m_OverrideState: 1
     m_Value: 3
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97c23e3b12dc18c42a140437e53d3951, type: 3}
   m_Name: Tonemapping
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   mode:
     m_OverrideState: 1
     m_Value: 1
