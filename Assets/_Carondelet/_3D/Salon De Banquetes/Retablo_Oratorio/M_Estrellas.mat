@@ -14,7 +14,6 @@ Material:
   m_ValidKeywords:
   - _COLORMAP
   - _MAPPING1_UV
-  - _METALLICMAP
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -100,11 +99,11 @@ Material:
     - _FuzziPower: 1.61
     - _FuzzyBias: -0.3
     - _FuzzyScale: 0.82
-    - _Glossiness: 1
+    - _Glossiness: 0
     - _HUE: 0
     - _InvertRoughness: 0
     - _MAPPING1: 0
-    - _METALLICMAP: 1
+    - _METALLICMAP: 0
     - _MaxRoughness: 1
     - _Metallic: 0
     - _MetallicBrillo: 2.72
