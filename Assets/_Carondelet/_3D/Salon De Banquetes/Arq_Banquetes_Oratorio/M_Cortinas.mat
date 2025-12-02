@@ -26,6 +26,7 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _COLORMAP
+  - _FABRIC
   - _MAPPING1_PLANAR
   - _ROUGHNESSMAP
   m_InvalidKeywords:
@@ -150,7 +151,7 @@ Material:
     - _DstBlendAlpha: 0
     - _EdgePower: 2.5
     - _EnvironmentReflections: 1
-    - _FABRIC: 0
+    - _FABRIC: 1
     - _FRESNELREFLECTION: 0
     - _Fabric: 1
     - _FresnelReflection: 0
