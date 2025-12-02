@@ -2913,6 +2913,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 407704179}
     m_Modifications:
+    - target: {fileID: 5875873200326365956, guid: 7264a18f28914b04c8cf611992fcad24, type: 3}
+      propertyPath: localizedVideo.m_TableEntryReference.m_KeyId
+      value: 79675158922010624
+      objectReference: {fileID: 0}
+    - target: {fileID: 5875873200326365956, guid: 7264a18f28914b04c8cf611992fcad24, type: 3}
+      propertyPath: localizedString.m_TableEntryReference.m_KeyId
+      value: 86150755235930112
+      objectReference: {fileID: 0}
     - target: {fileID: 8012751718710212352, guid: 7264a18f28914b04c8cf611992fcad24, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
