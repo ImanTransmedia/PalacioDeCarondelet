@@ -480,16 +480,16 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 1
   evMin:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: -5.79
   evMax:
-    m_OverrideState: 0
-    m_Value: 12
+    m_OverrideState: 1
+    m_Value: 0.15
   evCompensation:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   compensationCurveParameter:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value:
       <length>k__BackingField: 2
       m_Loop: 0
@@ -520,30 +520,30 @@ MonoBehaviour:
         m_PostInfinity: 2
         m_RotationOrder: 4
   adaptationMode:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   darkToLightSpeed:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 3
   lightToDarkSpeed:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   meteringMaskMode:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   meteringMaskTexture:
     m_OverrideState: 0
     m_Value: {fileID: 0}
     dimension: 1
   meteringProceduralFalloff:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 2
   renderingMode:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 1
   sampleCount:
-    m_OverrideState: 0
-    m_Value: 30
+    m_OverrideState: 1
+    m_Value: 10
   animateSamplePositions:
     m_OverrideState: 0
     m_Value: 0
@@ -551,8 +551,8 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0.03
   clampingEnabled:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 1
   clampingBracket:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 2
