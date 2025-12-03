@@ -5,7 +5,7 @@ OcclusionCullingSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_OcclusionBakeSettings:
-    smallestOccluder: 5
+    smallestOccluder: 6
     smallestHole: 0.25
     backfaceThreshold: 100
   m_SceneGUID: 02cf1bbabcd8c20429da2a81b66ab6b9
@@ -51267,6 +51267,22 @@ PrefabInstance:
     - target: {fileID: 3574084360118455600, guid: 2488a9604a782684d9f0a3724a2be09b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579595271724068929, guid: 2488a9604a782684d9f0a3724a2be09b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 100.329994
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579595271724068929, guid: 2488a9604a782684d9f0a3724a2be09b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 29.1542
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579595271724068929, guid: 2488a9604a782684d9f0a3724a2be09b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.1199
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579595271724068929, guid: 2488a9604a782684d9f0a3724a2be09b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.4923
       objectReference: {fileID: 0}
     - target: {fileID: 3618736675897655363, guid: 2488a9604a782684d9f0a3724a2be09b, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
