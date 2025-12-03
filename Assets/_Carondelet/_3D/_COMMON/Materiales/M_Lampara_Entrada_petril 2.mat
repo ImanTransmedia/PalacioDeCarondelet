@@ -27,6 +27,7 @@ Material:
   m_ValidKeywords:
   - _COLORMAP
   - _MAPPING1_UV
+  - _METALLICMAP
   - _ROUGHNESSMAP
   m_InvalidKeywords:
   - _EMISSION
@@ -170,7 +171,7 @@ Material:
     - _InvertRoughness: 1
     - _MAPPING1: 0
     - _MAPPINGTYPE: 0
-    - _METALLICMAP: 0
+    - _METALLICMAP: 1
     - _MaxRoughness: 1
     - _Metallic: 0
     - _MetallicBrillo: 1
@@ -196,7 +197,7 @@ Material:
     - _RandomHue: 0
     - _ReceiveShadows: 1
     - _Rotation: 0
-    - _RoughnessContrast: 0.58
+    - _RoughnessContrast: 1
     - _SSS_Direct: 0.5
     - _SSS_Indirect: 0.5
     - _SSS_Intensity: 0
@@ -233,7 +234,7 @@ Material:
     - _AOClamp: {r: 0, g: 1, b: 0, a: 0}
     - _BackFaceColor: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _BlancosYNegros: {r: 0, g: 1, b: 0, a: 0}
+    - _BlancosYNegros: {r: 0, g: 0.7, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorClamp: {r: 0, g: 1, b: 0, a: 0}
     - _ColorFuzzi: {r: 1, g: 1, b: 1, a: 0}
