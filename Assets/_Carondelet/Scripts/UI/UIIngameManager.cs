@@ -2,7 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.Localization.Plugins.XLIFF.V20;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 using UnityEngine.Video;
@@ -44,6 +46,10 @@ public class UIIngameManager : MonoBehaviour
     private RawImage itemVideoPlayer;
     [SerializeField]
     private VideoPlayer videoPlayer;
+
+    [SerializeField] private Material OriginalMat;
+
+    public  UnityEvent CustomClose;
 
 
     [SerializeField] private CanvasGroup itemVideoCanvasGroup;
@@ -163,6 +169,15 @@ public class UIIngameManager : MonoBehaviour
             slideshow3DRawImage.gameObject.SetActive(false);
     }
 
+    public void ResetMaterial()
+    {
+        if (itemVideoPlayer != null && OriginalMat != null)
+        {
+            Debug.Log("Resetting material");
+            itemVideoPlayer.material = OriginalMat;
+        }
+    }
+
     public void ShowPaintingLoader(bool show)
     {
         if (paintingLoader != null)
@@ -242,6 +257,7 @@ public class UIIngameManager : MonoBehaviour
             StopCoroutine(fadeCoroutine);
             fadeCoroutine = StartCoroutine(FadeCanvasGroup(canvasGroup, 1f, 0f, false, itemPanel));
         }
+        CustomClose?.Invoke();
     }
 
     public void ShowVideoPanel(
@@ -707,6 +723,7 @@ public class UIIngameManager : MonoBehaviour
                 if (itemPanel != null && itemPanel.activeSelf)
                 {
                     HideItemPanel();
+                    
                 }
                 else if (texturePanel != null && texturePanel.activeSelf)
                 {

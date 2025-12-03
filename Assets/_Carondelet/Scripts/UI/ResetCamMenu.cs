@@ -32,36 +32,36 @@ public class ResetCamMenu : MonoBehaviour
 
     private void Update()
     {
-        // Detectar clic izquierdo
-        if (Input.GetMouseButtonDown(0))
-        {
-            TryTriggerFromScreenPoint(Input.mousePosition, -1);
-        }
+        //// Detectar clic izquierdo
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    TryTriggerFromScreenPoint(Input.mousePosition, -1);
+        //}
 
-        // Detectar toques en pantalla
-        if (Input.touchCount > 0)
-        {
-            if (anyTouchTriggers)
-            {
-                for (int i = 0; i < Input.touchCount; i++)
-                {
-                    Touch t = Input.GetTouch(i);
-                    if (t.phase == TouchPhase.Began)
-                    {
-                        if (TryTriggerFromScreenPoint(t.position, t.fingerId))
-                            break;
-                    }
-                }
-            }
-            else
-            {
-                Touch t0 = Input.GetTouch(0);
-                if (t0.phase == TouchPhase.Began)
-                {
-                    TryTriggerFromScreenPoint(t0.position, t0.fingerId);
-                }
-            }
-        }
+        //// Detectar toques en pantalla
+        //if (Input.touchCount > 0)
+        //{
+        //    if (anyTouchTriggers)
+        //    {
+        //        for (int i = 0; i < Input.touchCount; i++)
+        //        {
+        //            Touch t = Input.GetTouch(i);
+        //            if (t.phase == TouchPhase.Began)
+        //            {
+        //                if (TryTriggerFromScreenPoint(t.position, t.fingerId))
+        //                    break;
+        //            }
+        //        }
+        //    }
+        //    else
+        //    {
+        //        Touch t0 = Input.GetTouch(0);
+        //        if (t0.phase == TouchPhase.Began)
+        //        {
+        //            TryTriggerFromScreenPoint(t0.position, t0.fingerId);
+        //        }
+        //    }
+        //}
 
         // Detectar tecla ESC
         if (Input.GetKeyDown(KeyCode.Escape))

@@ -583,126 +583,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.2, y: 0.75, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &528591793
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 528591794}
-  - component: {fileID: 528591797}
-  - component: {fileID: 528591796}
-  - component: {fileID: 528591795}
-  m_Layer: 3
-  m_Name: I_Reja
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &528591794
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 528591793}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.9497818, y: -16.33, z: 124.47032}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2140762858}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &528591795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 528591793}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77b2ded2c7d0c7244aabec323ea7176e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectName: Rejas
-  itemName:
-    m_TableReference:
-      m_TableCollectionName: GUID:e6909cd5edeaea74aab924612974dffc
-    m_TableEntryReference:
-      m_KeyId: 6903966339457026
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
-  itemDescription:
-    m_TableReference:
-      m_TableCollectionName: GUID:e6909cd5edeaea74aab924612974dffc
-    m_TableEntryReference:
-      m_KeyId: 6903966339457027
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
-  eyeOffset: {x: 0, y: 1, z: -0.25}
-  oscilate: 0
-  stuck: 0
-  isVideoDisplay: 0
-  videoName: video
-  videoReverse: videoReverse
-  videoPosition: {x: 0, y: 0}
-  videoScale: {x: 1, y: 1, z: 1}
-  isSlideShow: 0
-  showSlideOnly: 0
-  salon: 0
-  imageNames: []
-  onDisplayStart:
-    m_PersistentCalls:
-      m_Calls: []
-  onDisplayEnd:
-    m_PersistentCalls:
-      m_Calls: []
-  references:
-    version: 2
-    RefIds: []
---- !u!114 &528591796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 528591793}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58893d659e920c4438026939647011fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objeto: Rejas
---- !u!65 &528591797
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 528591793}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 7.3, y: 1.63, z: 0.5624852}
-  m_Center: {x: 0, y: 0, z: 0.21875739}
 --- !u!1 &876980258
 GameObject:
   m_ObjectHideFlags: 0
@@ -1004,7 +884,19 @@ MonoBehaviour:
   imageScale: {x: 1, y: 1, z: 1}
   onDisplayStart:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onDisplayEnd:
     m_PersistentCalls:
       m_Calls: []
@@ -1551,7 +1443,6 @@ Transform:
   - {fileID: 267361502}
   - {fileID: 309820177}
   - {fileID: 2071826615}
-  - {fileID: 528591794}
   - {fileID: 1705321864}
   - {fileID: 16575926}
   m_Father: {fileID: 0}

@@ -1941,7 +1941,7 @@ Camera:
   m_ShutterSpeed: 0.005
   m_Aperture: 16
   m_FocusDistance: 10
-  m_FocalLength: 0.3501038
+  m_FocalLength: 0.23315383
   m_BladeCount: 5
   m_Curvature: {x: 2, y: 11}
   m_BarrelClipping: 0.25
@@ -1956,7 +1956,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 110
+  field of view: 130
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -3065,7 +3065,7 @@ Camera:
   m_ShutterSpeed: 0.005
   m_Aperture: 16
   m_FocusDistance: 10
-  m_FocalLength: 0.3501038
+  m_FocalLength: 0.23315383
   m_BladeCount: 5
   m_Curvature: {x: 2, y: 11}
   m_BarrelClipping: 0.25
@@ -3080,7 +3080,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 110
+  field of view: 130
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -3745,7 +3745,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5935724636094023965, guid: df06df849913cb7409ec387ec94f49e9, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 102.63
+      value: 63.71
       objectReference: {fileID: 0}
     - target: {fileID: 5935724636094023965, guid: df06df849913cb7409ec387ec94f49e9, type: 3}
       propertyPath: m_SizeDelta.y
@@ -4581,6 +4581,10 @@ PrefabInstance:
       propertyPath: detectionLayers.m_Bits
       value: 263944
       objectReference: {fileID: 0}
+    - target: {fileID: 1303354386294779346, guid: 4a992afaa1cc44f4fa22586a28e94cd1, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1584643175598670708, guid: 4a992afaa1cc44f4fa22586a28e94cd1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4623,7 +4627,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2366456367411128761, guid: 4a992afaa1cc44f4fa22586a28e94cd1, type: 3}
       propertyPath: m_Lens.FieldOfView
-      value: 110
+      value: 130
       objectReference: {fileID: 0}
     - target: {fileID: 2802976015485976203, guid: 4a992afaa1cc44f4fa22586a28e94cd1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'

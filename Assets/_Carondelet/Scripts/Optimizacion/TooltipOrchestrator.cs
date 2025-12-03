@@ -41,7 +41,7 @@ public class ToolTipOrchestrator : MonoBehaviour
         for (int i = 0; i < buttons.Length; i++)
         {
             bool isSelected = (i == index);
-            SetButtonEnabled(i, !isSelected);       
+            //SetButtonEnabled(i, !isSelected);       
         }
     }
 

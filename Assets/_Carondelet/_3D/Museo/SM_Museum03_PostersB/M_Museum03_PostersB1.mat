@@ -80,7 +80,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: c5a93da0697cefa4488daee63db22be3, type: 3}
+        m_Texture: {fileID: 2800000, guid: 58728e3345792a54181289ab06abaadd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -145,8 +145,10 @@ Material:
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _Displacement: 0
+    - _Distance: 0.6
     - _DstBlend: 0
     - _DstBlendAlpha: 0
+    - _EdgePower: 2.5
     - _EnvironmentReflections: 1
     - _FABRIC: 0
     - _FRESNELREFLECTION: 0
@@ -164,6 +166,7 @@ Material:
     - _MAPPING1: 0
     - _MAPPINGTYPE: 0
     - _METALLICMAP: 0
+    - _MaxRoughness: 1
     - _Metallic: 0
     - _MetallicBrillo: 1
     - _MetallicContraste: 1
@@ -175,6 +178,7 @@ Material:
     - _NormalStrenght: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.005
+    - _Power: 1
     - _PowerAO: 1
     - _PowerFresnel: 1
     - _PowerFresnelBC: 1
@@ -230,6 +234,8 @@ Material:
     - _ColorFuzzi: {r: 1, g: 1, b: 1, a: 0}
     - _ColorSSS: {r: 0, g: 0, b: 0, a: 0}
     - _Direction: {r: 0.3, g: 1, b: 0, a: 0}
+    - _EdgeOffset: {r: 0, g: 0, b: 0, a: 0}
+    - _EdgeTilling: {r: 1, g: 1, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _M_B_N: {r: 0, g: 1, b: 0, a: 0}
     - _Offset: {r: 0, g: 0, b: 0, a: 0}
