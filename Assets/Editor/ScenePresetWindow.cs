@@ -129,7 +129,7 @@ public class ScenePresetWindow : EditorWindow
             if (GUILayout.Button("Eliminar Preset"))
             {
                 if (EditorUtility.DisplayDialog("Eliminar Preset",
-                    "¿Seguro que quieres eliminar este preset?", "Sí", "No"))
+                    "Seguro que quieres eliminar este preset?", "S", "No"))
                 {
                     database.presets.RemoveAt(selectedPresetIndex);
                     selectedPresetIndex = -1;
@@ -157,7 +157,7 @@ public class ScenePresetWindow : EditorWindow
 
         ScenePreset preset = database.presets[selectedPresetIndex];
 
-        // === BOTÓN GRANDE PARA CARGAR EL PRESET ===
+        // === BOTï¿½N GRANDE PARA CARGAR EL PRESET ===
         GUI.enabled = preset.mainScene != null;
         GUIStyle bigButtonStyle = new GUIStyle(GUI.skin.button);
         bigButtonStyle.fontSize = 14;
@@ -220,7 +220,7 @@ public class ScenePresetWindow : EditorWindow
 
         EditorGUILayout.Space();
 
-        // Añadir nueva subescena
+        // Aï¿½adir nueva subescena
         EditorGUILayout.BeginHorizontal();
         newSubSceneToAdd = (SceneAsset)EditorGUILayout.ObjectField(
             "Agregar Sub Scene",
@@ -287,7 +287,7 @@ public class ScenePresetWindow : EditorWindow
         string mainPath = AssetDatabase.GetAssetPath(preset.mainScene);
         if (string.IsNullOrEmpty(mainPath))
         {
-            EditorUtility.DisplayDialog("Error", "No se encontró la ruta de la main scene.", "Ok");
+            EditorUtility.DisplayDialog("Error", "No se encontr la ruta de la main scene.", "Ok");
             return;
         }
 
