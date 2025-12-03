@@ -13,6 +13,7 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _ALPHAPREMULTIPLY_ON
+  - _ALPHATEST_ON
   - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -69,7 +70,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Mascara:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: c4534c767113ff840b8d1f13b0113bca, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -101,7 +102,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _T_Transparencia:
-        m_Texture: {fileID: 2800000, guid: c4534c767113ff840b8d1f13b0113bca, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -122,7 +123,7 @@ Material:
     - _AOContraste: 1
     - _AddPrecomputedVelocity: 0
     - _Alpha: 1
-    - _AlphaClip: 0
+    - _AlphaClip: 1
     - _AlphaClipping: 0
     - _AlphaToMask: 0
     - _BackFace: 0
@@ -157,15 +158,16 @@ Material:
     - _InvertRoughness: 0
     - _MAPPING1: 0
     - _METALLICMAP: 0
-    - _Metallic: 0.87
+    - _MaxRoughness: 1.45
+    - _Metallic: 0.89
     - _MetallicBrillo: 1
     - _MetallicContraste: 1
     - _NoiseScale: 0
     - _NormalDetails: 0
-    - _NormalStrenght: 0
+    - _NormalStrenght: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.005
-    - _PowerAlpha: 0.84
+    - _PowerAlpha: 1.93
     - _PowerFresnel: 1
     - _PowerFresnelBC: 1
     - _PowerTint: 0.598
@@ -177,6 +179,7 @@ Material:
     - _Rotation: 0
     - _Roughness: 1.54
     - _RoughnessContrast: 1
+    - _RoughnessFresnel: 1
     - _SSS_Direct: 0.5
     - _SSS_Indirect: 0.5
     - _SSS_Intensity: 0
@@ -190,8 +193,8 @@ Material:
     - _SrcBlendAlpha: 1
     - _Surface: 1
     - _Threshold: 0
-    - _Transparencia: 0.21
-    - _TransparencyTex: 1
+    - _Transparencia: 0
+    - _TransparencyTex: 0
     - _UseAlphaMap: 1
     - _UseAoMap: 0
     - _UseDither: 0
