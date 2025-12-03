@@ -162,6 +162,8 @@ public class DiegeticObjectInspector : MonoBehaviour
                 tooltip.state = false;
         }
 
+        gameObject.GetComponent<ToolTipOrchestrator>().ResetAll();
+
     }
 
     private IEnumerator MoveToTarget(Transform target, float zoomDistance)

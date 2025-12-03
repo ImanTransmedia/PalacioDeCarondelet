@@ -54,8 +54,8 @@ public class IntereactiveTooltip : MonoBehaviour, IPointerEnterHandler, IPointer
 
     panelCanvasGroup.alpha = targetAlpha;
 
-   panelCanvasGroup.interactable = targetAlpha == 1f;
-panelCanvasGroup.blocksRaycasts = targetAlpha == 1f;
+    panelCanvasGroup.interactable = targetAlpha == 1f;
+    panelCanvasGroup.blocksRaycasts = targetAlpha == 1f;
 }
 
     public void OnPointerEnter(PointerEventData eventData) { }
