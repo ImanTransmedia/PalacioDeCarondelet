@@ -27,7 +27,6 @@ Material:
   m_ValidKeywords:
   - _COLORMAP
   - _MAPPING1_UV
-  - _ROUGHNESSMAP
   m_InvalidKeywords:
   - _EMISSION
   - _TYPEMATERIAL_STANDAR
@@ -133,14 +132,14 @@ Material:
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _BlendRoughness: 0.624
-    - _Brillo: 0.97
+    - _Brillo: 0.61
     - _BrilloRoughness: 1
     - _BumpScale: 1
     - _COLORMAP: 1
     - _CastShadows: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
-    - _Contraste: 1.28
+    - _Contraste: 1
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
@@ -160,7 +159,7 @@ Material:
     - _FuzzyBias: 0
     - _FuzzyScale: 1
     - _GlossMapScale: 0
-    - _Glossiness: 0.421
+    - _Glossiness: 0.8
     - _GlossyReflections: 0
     - _HUE: 0
     - _InvertRoughness: 1
@@ -186,7 +185,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _RANDOMHUE: 0
-    - _ROUGHNESSMAP: 1
+    - _ROUGHNESSMAP: 0
     - _RandomHUE: 0
     - _RandomHue: 0
     - _ReceiveShadows: 1
@@ -196,7 +195,7 @@ Material:
     - _SSS_Indirect: 0.5
     - _SSS_Intensity: 0
     - _SSS_ShadowStrenght: 1
-    - _Saturacion: 1.12
+    - _Saturacion: 1
     - _Seed: 0
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
