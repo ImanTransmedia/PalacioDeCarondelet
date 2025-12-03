@@ -17787,6 +17787,22 @@ MonoBehaviour:
   itemDescriptionText: {fileID: 7535765901446049203}
   itemVideoPlayer: {fileID: 8343196302646910565}
   videoPlayer: {fileID: 2364230436285843129}
+  OriginalMat: {fileID: 2100000, guid: d7acbb13c604ca842a8b9dc4c241925a, type: 2}
+  CustomClose:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2702144370315608083}
+        m_TargetAssemblyTypeName: UIIngameManager, Assembly-CSharp
+        m_MethodName: ResetMaterial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   itemVideoCanvasGroup: {fileID: 2965048336033446277}
   framesBeforeShow: 10
   videoFadeInDuration: 0.5
