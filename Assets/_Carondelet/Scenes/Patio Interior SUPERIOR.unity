@@ -575,6 +575,30 @@ PrefabInstance:
       propertyPath: textureTitleText1
       value: 
       objectReference: {fileID: 64971496}
+    - target: {fileID: 2703128687609560091, guid: df06df849913cb7409ec387ec94f49e9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2828341721814146444, guid: df06df849913cb7409ec387ec94f49e9, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3336944403182498560, guid: df06df849913cb7409ec387ec94f49e9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3336944403182498560, guid: df06df849913cb7409ec387ec94f49e9, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3336944403182498560, guid: df06df849913cb7409ec387ec94f49e9, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3336944403182498560, guid: df06df849913cb7409ec387ec94f49e9, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3519214134194512736, guid: df06df849913cb7409ec387ec94f49e9, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -669,7 +693,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4435864125951944283, guid: df06df849913cb7409ec387ec94f49e9, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 84.99
+      value: 94.73
       objectReference: {fileID: 0}
     - target: {fileID: 4435864125951944283, guid: df06df849913cb7409ec387ec94f49e9, type: 3}
       propertyPath: m_SizeDelta.y
@@ -685,7 +709,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4435864125951944283, guid: df06df849913cb7409ec387ec94f49e9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 99.99
+      value: 109.73
       objectReference: {fileID: 0}
     - target: {fileID: 4435864125951944283, guid: df06df849913cb7409ec387ec94f49e9, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -793,7 +817,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5935724636094023965, guid: df06df849913cb7409ec387ec94f49e9, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 112.4
+      value: 135.08
       objectReference: {fileID: 0}
     - target: {fileID: 5935724636094023965, guid: df06df849913cb7409ec387ec94f49e9, type: 3}
       propertyPath: m_SizeDelta.y
@@ -913,6 +937,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7463314997926510007, guid: df06df849913cb7409ec387ec94f49e9, type: 3}
       propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7559770194714078935, guid: df06df849913cb7409ec387ec94f49e9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7559770194714078935, guid: df06df849913cb7409ec387ec94f49e9, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7559770194714078935, guid: df06df849913cb7409ec387ec94f49e9, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7559770194714078935, guid: df06df849913cb7409ec387ec94f49e9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7559770194714078935, guid: df06df849913cb7409ec387ec94f49e9, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7600136818663526011, guid: df06df849913cb7409ec387ec94f49e9, type: 3}
@@ -2653,7 +2697,7 @@ Transform:
   m_GameObject: {fileID: 210568439}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 28.68, y: 0.24861097, z: -2.8}
+  m_LocalPosition: {x: 28.68, y: 1.301, z: -2.718}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2680,7 +2724,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 2.9928112, y: 4, z: 0.5710745}
-  m_Center: {x: 0, y: 1.5, z: -0.12667179}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &210568442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2705,7 +2749,7 @@ MonoBehaviour:
   doorID: SalonAzul
   spawnPoint: {fileID: 894400010}
   sceneAddress: AZ_Principal
-  doorIconOffset: {x: 0.1, y: -0.55, z: 0}
+  doorIconOffset: {x: 0, y: 0, z: 0}
   references:
     version: 2
     RefIds: []
@@ -3806,7 +3850,7 @@ GameObject:
   - component: {fileID: 291426186}
   - component: {fileID: 291426185}
   - component: {fileID: 291426184}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: ParticlesefectoBandera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3907,7 +3951,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -10551,7 +10595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e471a14a9393c1340a7773a7de361f4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueIndexToShow: 1
+  dialogueIndexToShow: 2
   dialogueController: {fileID: 64971495}
 --- !u!65 &466295523
 BoxCollider:
@@ -11879,19 +11923,19 @@ Camera:
   serializedVersion: 2
   m_ClearFlags: 4
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
+  m_projectionMatrixMode: 2
   m_GateFitMode: 2
   m_FOVAxisMode: 0
   m_Iso: 200
   m_ShutterSpeed: 0.005
   m_Aperture: 16
   m_FocusDistance: 10
-  m_FocalLength: 50
+  m_FocalLength: 0.6516127
   m_BladeCount: 5
   m_Curvature: {x: 2, y: 11}
   m_BarrelClipping: 0.25
   m_Anamorphism: 0
-  m_SensorSize: {x: 36, y: 24}
+  m_SensorSize: {x: 1, y: 1}
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -12691,7 +12735,7 @@ Transform:
   m_GameObject: {fileID: 625714259}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071058, z: -0, w: 0.7071078}
-  m_LocalPosition: {x: -26.08, y: 0.24861097, z: -2.66}
+  m_LocalPosition: {x: -26.08, y: 1.311, z: -2.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12722,7 +12766,7 @@ MonoBehaviour:
   doorID: Museo
   spawnPoint: {fileID: 798741689}
   sceneAddress: MU_Principal
-  doorIconOffset: {x: 0.1, y: -0.55, z: 0}
+  doorIconOffset: {x: 0, y: 0, z: 0}
   references:
     version: 2
     RefIds: []
@@ -12754,7 +12798,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 2.9928112, y: 4, z: 0.5710745}
-  m_Center: {x: 0, y: 1.5, z: -0.12667179}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &627237195
 GameObject:
   m_ObjectHideFlags: 0
@@ -13516,7 +13560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e471a14a9393c1340a7773a7de361f4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueIndexToShow: 2
+  dialogueIndexToShow: 4
   dialogueController: {fileID: 64971497}
 --- !u!65 &698559179
 BoxCollider:
@@ -14528,13 +14572,21 @@ PrefabInstance:
       propertyPath: m_Center.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1716759574617710206, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716759574617710206, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2041093726877414953, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.92
+      value: -2.99
       objectReference: {fileID: 0}
     - target: {fileID: 2041093726877414953, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.7
+      value: 6.8
       objectReference: {fileID: 0}
     - target: {fileID: 2041093726877414953, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14642,11 +14694,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8671275091516212424, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: doorIconOffset.x
-      value: 0.25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8671275091516212424, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: doorIconOffset.y
-      value: -0.55
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8671275091516212424, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: EscenaNoAdressable
@@ -14911,7 +14963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e471a14a9393c1340a7773a7de361f4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueIndexToShow: 0
+  dialogueIndexToShow: 1
   dialogueController: {fileID: 64971497}
 --- !u!65 &749479019
 BoxCollider:
@@ -15372,7 +15424,7 @@ GameObject:
   - component: {fileID: 789335904}
   - component: {fileID: 789335906}
   - component: {fileID: 789335905}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: particles_Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15488,7 +15540,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 1
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -23453,7 +23505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e471a14a9393c1340a7773a7de361f4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueIndexToShow: 2
+  dialogueIndexToShow: 4
   dialogueController: {fileID: 64971495}
 --- !u!65 &1034554119
 BoxCollider:
@@ -28836,19 +28888,19 @@ Camera:
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
+  m_projectionMatrixMode: 2
   m_GateFitMode: 2
   m_FOVAxisMode: 0
   m_Iso: 200
   m_ShutterSpeed: 0.005
   m_Aperture: 16
   m_FocusDistance: 10
-  m_FocalLength: 50
+  m_FocalLength: 0.6516127
   m_BladeCount: 5
   m_Curvature: {x: 2, y: 11}
   m_BarrelClipping: 0.25
   m_Anamorphism: 0
-  m_SensorSize: {x: 36, y: 24}
+  m_SensorSize: {x: 1, y: 1}
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -30416,13 +30468,21 @@ PrefabInstance:
       propertyPath: m_Center.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1716759574617710206, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716759574617710206, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2041093726877414953, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.29
+      value: -2.99
       objectReference: {fileID: 0}
     - target: {fileID: 2041093726877414953, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.75
+      value: 6.8
       objectReference: {fileID: 0}
     - target: {fileID: 2041093726877414953, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -30522,11 +30582,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8671275091516212424, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: doorIconOffset.x
-      value: 0.25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8671275091516212424, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: doorIconOffset.y
-      value: -0.55
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8671275091516212424, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: EscenaNoAdressable
@@ -32690,7 +32750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e471a14a9393c1340a7773a7de361f4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueIndexToShow: 0
+  dialogueIndexToShow: 1
   dialogueController: {fileID: 64971495}
 --- !u!65 &1364552757
 BoxCollider:
@@ -35180,7 +35240,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1516728701
 Transform:
   m_ObjectHideFlags: 0
@@ -42149,17 +42209,25 @@ PrefabInstance:
       propertyPath: m_Center.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1716759574617710206, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716759574617710206, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2041093726877414953, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.23
+      value: 10.26
       objectReference: {fileID: 0}
     - target: {fileID: 2041093726877414953, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.71
+      value: 6.8
       objectReference: {fileID: 0}
     - target: {fileID: 2041093726877414953, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 18.028
+      value: 17.907999
       objectReference: {fileID: 0}
     - target: {fileID: 2041093726877414953, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: m_LocalRotation.w
@@ -42219,11 +42287,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8671275091516212424, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: doorIconOffset.y
-      value: -0.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8671275091516212424, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: doorIconOffset.z
-      value: 0.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8671275091516212424, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: EscenaNoAdressable
@@ -42540,7 +42608,7 @@ Transform:
   m_GameObject: {fileID: 1778295651}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.70710576, z: -0, w: 0.70710784}
-  m_LocalPosition: {x: 28.199, y: 5.713, z: -2.36}
+  m_LocalPosition: {x: 28.199, y: 6.8, z: -2.4960003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -42571,7 +42639,7 @@ MonoBehaviour:
   doorID: SalonBanquetes1
   spawnPoint: {fileID: 1781667649}
   sceneAddress: SB_Principal
-  doorIconOffset: {x: 0.1, y: -0.3, z: 0}
+  doorIconOffset: {x: 0, y: 0, z: 0}
   references:
     version: 2
     RefIds: []
@@ -42595,7 +42663,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 2.9928112, y: 4, z: 0.5710745}
-  m_Center: {x: 0, y: 1.5, z: -0.12667179}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1781667648
 GameObject:
   m_ObjectHideFlags: 0
@@ -42815,13 +42883,25 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1716759574617710206, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716759574617710206, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716759574617710206, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2041093726877414953, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.42
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 2041093726877414953, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.24861115
+      value: 1.394
       objectReference: {fileID: 0}
     - target: {fileID: 2041093726877414953, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -43695,7 +43775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e471a14a9393c1340a7773a7de361f4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueIndexToShow: 1
+  dialogueIndexToShow: 2
   dialogueController: {fileID: 64971497}
 --- !u!65 &1869817611
 BoxCollider:
@@ -44806,17 +44886,25 @@ PrefabInstance:
       propertyPath: m_Center.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1716759574617710206, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716759574617710206, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2041093726877414953, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.83
+      value: 19.76
       objectReference: {fileID: 0}
     - target: {fileID: 2041093726877414953, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.71
+      value: 6.8
       objectReference: {fileID: 0}
     - target: {fileID: 2041093726877414953, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 17.92
+      value: 17.8
       objectReference: {fileID: 0}
     - target: {fileID: 2041093726877414953, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: m_LocalRotation.w
@@ -44884,11 +44972,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8671275091516212424, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: doorIconOffset.y
-      value: -0.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8671275091516212424, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: doorIconOffset.z
-      value: 0.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8671275091516212424, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: EscenaNoAdressable
@@ -45906,7 +45994,7 @@ Transform:
   m_GameObject: {fileID: 2017426947}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.70710576, z: -0, w: 0.70710784}
-  m_LocalPosition: {x: 28.01, y: 5.61, z: 8.71}
+  m_LocalPosition: {x: 28.01, y: 6.8, z: 8.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -45937,7 +46025,7 @@ MonoBehaviour:
   doorID: SalonBanquetes2
   spawnPoint: {fileID: 1115652071}
   sceneAddress: SB_Principal
-  doorIconOffset: {x: 0.1, y: -0.3, z: 0}
+  doorIconOffset: {x: 0, y: 0, z: 0}
   references:
     version: 2
     RefIds: []
@@ -45961,7 +46049,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 2.9928112, y: 4, z: 0.5710745}
-  m_Center: {x: 0, y: 1.5, z: -0.12667274}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2026008660
 GameObject:
   m_ObjectHideFlags: 1
@@ -57227,17 +57315,25 @@ PrefabInstance:
       propertyPath: m_Center.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1716759574617710206, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716759574617710206, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2041093726877414953, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.16
       objectReference: {fileID: 0}
     - target: {fileID: 2041093726877414953, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.71
+      value: 6.8
       objectReference: {fileID: 0}
     - target: {fileID: 2041093726877414953, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.08
+      value: -3.908
       objectReference: {fileID: 0}
     - target: {fileID: 2041093726877414953, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: m_LocalRotation.w
@@ -57297,7 +57393,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8671275091516212424, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: doorIconOffset.y
-      value: -0.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8671275091516212424, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: doorIconOffset.z
@@ -59407,6 +59503,10 @@ PrefabInstance:
     - target: {fileID: 6768759215061560082, guid: 4a992afaa1cc44f4fa22586a28e94cd1, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7168497010900668008, guid: 4a992afaa1cc44f4fa22586a28e94cd1, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7212095807420120818, guid: 4a992afaa1cc44f4fa22586a28e94cd1, type: 3}
       propertyPath: m_StaticEditorFlags
