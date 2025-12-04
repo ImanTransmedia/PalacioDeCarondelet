@@ -4359,7 +4359,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -188, y: 98}
+  m_AnchoredPosition: {x: -200, y: 116.69}
   m_SizeDelta: {x: 240, y: 240}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4849202167980452815
@@ -7852,7 +7852,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 196, y: 91}
+  m_AnchoredPosition: {x: 200, y: 116.69}
   m_SizeDelta: {x: 220, y: 220}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8308998013798416974
@@ -16361,9 +16361,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2702144370315608083}
-        m_TargetAssemblyTypeName: UIIngameManager, Assembly-CSharp
-        m_MethodName: HidePaintingPanel
+      - m_Target: {fileID: 2516468963588880816}
+        m_TargetAssemblyTypeName: PlaySounds, Assembly-CSharp
+        m_MethodName: PLaySound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16373,9 +16373,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2516468963588880816}
-        m_TargetAssemblyTypeName: PlaySounds, Assembly-CSharp
-        m_MethodName: PLaySound
+      - m_Target: {fileID: 2702144370315608083}
+        m_TargetAssemblyTypeName: UIIngameManager, Assembly-CSharp
+        m_MethodName: CloseCurrentPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17855,19 +17855,7 @@ MonoBehaviour:
   OriginalMat: {fileID: 2100000, guid: d7acbb13c604ca842a8b9dc4c241925a, type: 2}
   CustomClose:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2702144370315608083}
-        m_TargetAssemblyTypeName: UIIngameManager, Assembly-CSharp
-        m_MethodName: ResetMaterial
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   itemVideoCanvasGroup: {fileID: 2965048336033446277}
   framesBeforeShow: 10
   videoFadeInDuration: 0.5
@@ -21628,7 +21616,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4475312012745311020, guid: c82978c3789dad44da354dc354c782b2, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -25
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 4475312012745311020, guid: c82978c3789dad44da354dc354c782b2, type: 3}
       propertyPath: m_SizeDelta.y
@@ -21664,7 +21652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4475312012745311020, guid: c82978c3789dad44da354dc354c782b2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -7.5
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4475312012745311020, guid: c82978c3789dad44da354dc354c782b2, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -23708,30 +23696,30 @@ PrefabInstance:
     - target: {fileID: 4255686661239792285, guid: 43ece927a1f9b334996e3191132e5d14, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2702144370315608083}
+      objectReference: {fileID: 2516468963588880816}
     - target: {fileID: 4255686661239792285, guid: 43ece927a1f9b334996e3191132e5d14, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 2516468963588880816}
+      objectReference: {fileID: 2702144370315608083}
     - target: {fileID: 4255686661239792285, guid: 43ece927a1f9b334996e3191132e5d14, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4255686661239792285, guid: 43ece927a1f9b334996e3191132e5d14, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: HideItemPanel
-      objectReference: {fileID: 0}
-    - target: {fileID: 4255686661239792285, guid: 43ece927a1f9b334996e3191132e5d14, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: PLaySound
       objectReference: {fileID: 0}
     - target: {fileID: 4255686661239792285, guid: 43ece927a1f9b334996e3191132e5d14, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: CloseCurrentPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4255686661239792285, guid: 43ece927a1f9b334996e3191132e5d14, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UIIngameManager, Assembly-CSharp
+      value: PlaySounds, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4255686661239792285, guid: 43ece927a1f9b334996e3191132e5d14, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: PlaySounds, Assembly-CSharp
+      value: UIIngameManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4255686661239792285, guid: 43ece927a1f9b334996e3191132e5d14, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
@@ -24129,22 +24117,30 @@ PrefabInstance:
     - target: {fileID: 761025811139590784, guid: c955603015293e040863c615254875c5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2702144370315608083}
+      objectReference: {fileID: 2516468963588880816}
     - target: {fileID: 761025811139590784, guid: c955603015293e040863c615254875c5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 2516468963588880816}
+      objectReference: {fileID: 2702144370315608083}
     - target: {fileID: 761025811139590784, guid: c955603015293e040863c615254875c5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 761025811139590784, guid: c955603015293e040863c615254875c5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PLaySound
       objectReference: {fileID: 0}
     - target: {fileID: 761025811139590784, guid: c955603015293e040863c615254875c5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: CloseCurrentPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 761025811139590784, guid: c955603015293e040863c615254875c5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: PlaySounds, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 761025811139590784, guid: c955603015293e040863c615254875c5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UIIngameManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 761025811139590784, guid: c955603015293e040863c615254875c5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -25889,7 +25885,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4475312012745311020, guid: c82978c3789dad44da354dc354c782b2, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -74.99993
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 4475312012745311020, guid: c82978c3789dad44da354dc354c782b2, type: 3}
       propertyPath: m_SizeDelta.y
@@ -25925,7 +25921,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4475312012745311020, guid: c82978c3789dad44da354dc354c782b2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -17.500034
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 4475312012745311020, guid: c82978c3789dad44da354dc354c782b2, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -27288,30 +27284,30 @@ PrefabInstance:
     - target: {fileID: 4255686661239792285, guid: 43ece927a1f9b334996e3191132e5d14, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2702144370315608083}
+      objectReference: {fileID: 2516468963588880816}
     - target: {fileID: 4255686661239792285, guid: 43ece927a1f9b334996e3191132e5d14, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 2516468963588880816}
+      objectReference: {fileID: 2702144370315608083}
     - target: {fileID: 4255686661239792285, guid: 43ece927a1f9b334996e3191132e5d14, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4255686661239792285, guid: 43ece927a1f9b334996e3191132e5d14, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: HideItemPanel
-      objectReference: {fileID: 0}
-    - target: {fileID: 4255686661239792285, guid: 43ece927a1f9b334996e3191132e5d14, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: PLaySound
       objectReference: {fileID: 0}
     - target: {fileID: 4255686661239792285, guid: 43ece927a1f9b334996e3191132e5d14, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: CloseCurrentPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4255686661239792285, guid: 43ece927a1f9b334996e3191132e5d14, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UIIngameManager, Assembly-CSharp
+      value: PlaySounds, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4255686661239792285, guid: 43ece927a1f9b334996e3191132e5d14, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: PlaySounds, Assembly-CSharp
+      value: UIIngameManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4255686661239792285, guid: 43ece927a1f9b334996e3191132e5d14, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument

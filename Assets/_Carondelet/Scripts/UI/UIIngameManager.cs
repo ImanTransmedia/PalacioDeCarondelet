@@ -256,7 +256,6 @@ public class UIIngameManager : MonoBehaviour
             StopCoroutine(fadeCoroutine);
             fadeCoroutine = StartCoroutine(FadeCanvasGroup(canvasGroup, 1f, 0f, false, itemPanel));
         }
-        CustomClose?.Invoke();
     }
 
     public void ShowVideoPanel(
@@ -719,23 +718,7 @@ public class UIIngameManager : MonoBehaviour
 
             if (isAnyPanelOpen)
             {
-                if (itemPanel != null && itemPanel.activeSelf)
-                {
-                    HideItemPanel();
-                    
-                }
-                else if (texturePanel != null && texturePanel.activeSelf)
-                {
-                    HideTexturePanel();
-                }
-                else if (paintingPanel != null && paintingPanel.activeSelf)
-                {
-                    HidePaintingPanel();
-                }
-                else if (slideshowPanel != null && slideshowPanel.activeSelf)
-                {
-                    HideSlideShowPanel();
-                }
+                CloseCurrentPanel();
             }
             else
             {
@@ -755,6 +738,7 @@ public class UIIngameManager : MonoBehaviour
             }
         }
     }
+
 
     public void ShowTexturePanel(string name, string description, Sprite itemImage, Vector3 imageScale)
     {
@@ -814,6 +798,37 @@ public class UIIngameManager : MonoBehaviour
         }
 
         fadeCoroutine = StartCoroutine(FadeCanvasGroup(canvasGroup, 0f, 1f, true, paintingPanel));
+    }
+
+
+    // UIIngameManager.cs
+
+    public void CloseCurrentPanel()
+    {
+        bool isAnyPanelOpen = (itemPanel != null && itemPanel.activeSelf)
+                            || (texturePanel != null && texturePanel.activeSelf)
+                            || (paintingPanel != null && paintingPanel.activeSelf)
+                            || (slideshowPanel != null && slideshowPanel.activeSelf);
+
+        if (!isAnyPanelOpen)
+            return;
+
+        if (itemPanel != null && itemPanel.activeSelf)
+        {
+            CustomClose.Invoke();
+        }
+        else if (texturePanel != null && texturePanel.activeSelf)
+        {
+            CustomClose.Invoke();
+        }
+        else if (paintingPanel != null && paintingPanel.activeSelf)
+        {
+            CustomClose.Invoke();
+        }
+        else if (slideshowPanel != null && slideshowPanel.activeSelf)
+        {
+            CustomClose.Invoke();
+        }
     }
 
     public void HidePaintingPanel()

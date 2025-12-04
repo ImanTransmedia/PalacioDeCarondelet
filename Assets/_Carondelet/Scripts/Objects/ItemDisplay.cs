@@ -44,6 +44,10 @@ public class ItemDisplay : MonoBehaviour
     private void OnEnable()
     {
         TrySubscribeToConfigReady();
+
+        // 🔹 Me suscribo al evento global de cierre del UI
+        if (UIIngameManager.Instance != null)
+            UIIngameManager.Instance.CustomClose.AddListener(HandleUIClose);
     }
 
     private void OnDisable()
@@ -56,6 +60,17 @@ public class ItemDisplay : MonoBehaviour
             StopCoroutine(_waiter);
             _waiter = null;
         }
+
+        // 🔹 Me desuscribo del evento
+        if (UIIngameManager.Instance != null)
+            UIIngameManager.Instance.CustomClose.RemoveListener(HandleUIClose);
+    }
+
+    private void HandleUIClose()
+    {
+        if (!isUIOpen)
+            return; 
+        CloseVideoUI();
     }
 
     private void Start()
@@ -240,7 +255,6 @@ public class ItemDisplay : MonoBehaviour
         UIIngameManager.Instance.HideVideoPanel();
         isUIOpen = false;
         onDisplayEnd?.Invoke();
-        UIIngameManager.Instance.CustomClose?.Invoke();
     }
 
     private void ShowSlideShowUI()

@@ -36,6 +36,8 @@ public class textureDisplay : MonoBehaviour
     private void OnEnable()
     {
         TrySubscribeToConfigReady();
+        if (UIIngameManager.Instance != null)
+            UIIngameManager.Instance.CustomClose.AddListener(HandleUIClose);
     }
 
     private void OnDisable()
@@ -48,6 +50,15 @@ public class textureDisplay : MonoBehaviour
             StopCoroutine(_waiter);
             _waiter = null;
         }
+        if (UIIngameManager.Instance != null)
+            UIIngameManager.Instance.CustomClose.RemoveListener(HandleUIClose);
+    }
+
+    private void HandleUIClose()
+    {
+        if (!isUIOpen)
+            return;
+        CloseItemUI();
     }
 
     private void Start()
