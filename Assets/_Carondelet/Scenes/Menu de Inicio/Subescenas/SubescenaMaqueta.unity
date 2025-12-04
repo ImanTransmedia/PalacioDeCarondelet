@@ -93,7 +93,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: e41d81a11b70c4040a50acd1844bcb60, type: 2}
+  m_LightingDataAsset: {fileID: 112000002, guid: a1bda0a2dd25c8e4787a0a9f75cf2a61, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 4fddbe2339d73b340873aac7f7c866b9, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -15003,33 +15003,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1113397941816886379, guid: fed39fd9b37a33841897170c89884bad, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: e1dc1e8e89a30554d8e7bd794fa52a58, type: 2}
     - target: {fileID: 2871093938476425441, guid: fed39fd9b37a33841897170c89884bad, type: 3}
       propertyPath: m_Name
       value: _Carondelet_V2elet_V2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2871093938476425441, guid: fed39fd9b37a33841897170c89884bad, type: 3}
-      propertyPath: m_TagString
-      value: Maqueta
-      objectReference: {fileID: 0}
-    - target: {fileID: 2933214831712253448, guid: fed39fd9b37a33841897170c89884bad, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: ae1916d4715195840acbe4bd87e63c39, type: 2}
-    - target: {fileID: 3212188127260736091, guid: fed39fd9b37a33841897170c89884bad, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.050984446
-      objectReference: {fileID: 0}
-    - target: {fileID: 3212188127260736091, guid: fed39fd9b37a33841897170c89884bad, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.050984442
-      objectReference: {fileID: 0}
-    - target: {fileID: 3212188127260736091, guid: fed39fd9b37a33841897170c89884bad, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.050984442
       objectReference: {fileID: 0}
     - target: {fileID: 3212188127260736091, guid: fed39fd9b37a33841897170c89884bad, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15071,42 +15047,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.026
       objectReference: {fileID: 0}
-    - target: {fileID: 4063201334983549455, guid: fed39fd9b37a33841897170c89884bad, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 6486436697970942775, guid: fed39fd9b37a33841897170c89884bad, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 6549484748263828944, guid: fed39fd9b37a33841897170c89884bad, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 6e3c2447343c4e741888f749928e6260, type: 2}
-    - target: {fileID: 6549484748263828944, guid: fed39fd9b37a33841897170c89884bad, type: 3}
-      propertyPath: 'm_Materials.Array.data[1]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 6e3c2447343c4e741888f749928e6260, type: 2}
-    - target: {fileID: 7018596370801487311, guid: fed39fd9b37a33841897170c89884bad, type: 3}
-      propertyPath: m_ScaleInLightmap
-      value: 24
-      objectReference: {fileID: 0}
-    - target: {fileID: 7417598537481403033, guid: fed39fd9b37a33841897170c89884bad, type: 3}
-      propertyPath: m_ScaleInLightmap
-      value: 24
-      objectReference: {fileID: 0}
-    - target: {fileID: 8212534458700223427, guid: fed39fd9b37a33841897170c89884bad, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: e1dc1e8e89a30554d8e7bd794fa52a58, type: 2}
-    - target: {fileID: 9210311655221341561, guid: fed39fd9b37a33841897170c89884bad, type: 3}
-      propertyPath: m_ScaleInLightmap
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 9210311655221341561, guid: fed39fd9b37a33841897170c89884bad, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 6e3c2447343c4e741888f749928e6260, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
