@@ -16,7 +16,7 @@ Material:
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
+  m_DoubleSidedGI: 1
   m_CustomRenderQueue: 2450
   stringTagMap:
     RenderType: TransparentCutout
@@ -53,35 +53,35 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaClip: 1
-    - _AlphaClipping: 0.5
+    - _AlphaClipping: 0.09
     - _AlphaToMask: 1
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _CastShadows: 1
-    - _Cull: 2
+    - _Cull: 0
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _MaxRoughness: 1
-    - _Metallic: 0.41
+    - _Metallic: 0.42
     - _NormalStrenght: 1
-    - _PowerAlpha: 1
+    - _PowerAlpha: 1.33
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Roughness: 1
+    - _Roughness: 0.94
     - _RoughnessFresnel: 1
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
-    - _Transparencia: 1
-    - _TransparencyTex: 0
+    - _Transparencia: 0
+    - _TransparencyTex: 1
     - _UseNormalMap: 1
     - _WorkflowMode: 1
     - _ZTest: 4
     - _ZWrite: 1
     - _ZWriteControl: 0
     m_Colors:
-    - _BaseColor: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 0}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Clamp: {r: 0, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
