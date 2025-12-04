@@ -162,7 +162,7 @@ public class DiegeticObjectInspector : MonoBehaviour
                 tooltip.state = false;
         }
 
-        gameObject.GetComponent<ToolTipOrchestrator>().ResetAll();
+        //gameObject.GetComponent<ToolTipOrchestrator>().ResetAll();
 
     }
 
