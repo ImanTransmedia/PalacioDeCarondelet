@@ -3652,6 +3652,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4662084954408441173, guid: db2dc603ce201344782641709ad66277, type: 3}
+      propertyPath: m_Resolution
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662084954408441173, guid: db2dc603ce201344782641709ad66277, type: 3}
       propertyPath: m_BoxOffset.x
       value: -0.53334343
       objectReference: {fileID: 0}
@@ -3681,7 +3685,7 @@ PrefabInstance:
       objectReference: {fileID: 8900000, guid: 95a5661fe767a3048b8477b2ab5e0806, type: 3}
     - target: {fileID: 4662084954408441173, guid: db2dc603ce201344782641709ad66277, type: 3}
       propertyPath: m_IntensityMultiplier
-      value: 0.64
+      value: 0.96
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
