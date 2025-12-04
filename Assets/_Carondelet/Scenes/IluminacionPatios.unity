@@ -18689,10 +18689,10 @@ ReflectionProbe:
   m_Mode: 0
   m_RefreshMode: 0
   m_TimeSlicingMode: 0
-  m_Resolution: 512
+  m_Resolution: 128
   m_UpdateFrequency: 0
-  m_BoxSize: {x: 1.3461065, y: 1.7903247, z: 0.89938617}
-  m_BoxOffset: {x: -0.100596905, y: -0.113149405, z: 0.21127045}
+  m_BoxSize: {x: 0.6532147, y: 1.5279982, z: 0.38394314}
+  m_BoxOffset: {x: -0.100596905, y: -0.113149405, z: 0.12638208}
   m_NearClip: 0.3
   m_FarClip: 1000
   m_ShadowDistance: 100
@@ -18701,13 +18701,13 @@ ReflectionProbe:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IntensityMultiplier: 1
-  m_BlendDistance: 1
+  m_IntensityMultiplier: 0.75
+  m_BlendDistance: 0
   m_HDR: 1
-  m_BoxProjection: 1
+  m_BoxProjection: 0
   m_RenderDynamicObjects: 0
   m_UseOcclusionCulling: 1
-  m_Importance: 1
+  m_Importance: 5
   m_CustomBakedTexture: {fileID: 0}
 --- !u!4 &2021736056
 Transform:

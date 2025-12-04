@@ -21,6 +21,7 @@ public class DisplayBaron : MonoBehaviour
 
         if (!DoorManager.Instance.ContainsString(key))
         {
+            Debug.Log("Showing dialogue for DisplayBaron: " + key);
             dialogueController.ShowDialogue(dialogueIndexToShow);
             DoorManager.Instance.StoreString(key);
         }

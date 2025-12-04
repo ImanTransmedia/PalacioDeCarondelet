@@ -42,7 +42,15 @@ public class DialogueController : MonoBehaviour
 
     void Start()
     {
+        StopAllCoroutines();        
+        isDialoguePlaying = false;
+        isDialogueActive = false;
+        dialogueQueue.Clear();
+        currentDialogueLines = null;
+        currentLineIndex = 0;
+
         textComponent.text = string.Empty;
+
         dialoguePanelCanvasGroup = dialoguePanel.GetComponent<CanvasGroup>();
         dialoguePanel.SetActive(false);
         dialoguePanelCanvasGroup.alpha = 0f;
@@ -67,6 +75,7 @@ public class DialogueController : MonoBehaviour
         }
     }
 
+
     IEnumerator WaitForSceneThenShowDialogue()
     {
         yield return new WaitUntil(() => LoadingScreen.IsSceneReady);
@@ -79,10 +88,11 @@ public class DialogueController : MonoBehaviour
     {
         if (isDialoguePlaying)
         {
+            Debug.Log($"[DialogueController] Diálogo en reproducción. Agregando a la cola: {index}");
             dialogueQueue.Enqueue(index);
             return;
         }
-
+        Debug.Log($"[DialogueController] Mostrando diálogo inmediatamente: {index}");
         StartCoroutine(StartDialogueWithQueue(index));
     }
 
