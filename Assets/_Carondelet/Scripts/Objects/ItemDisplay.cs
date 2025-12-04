@@ -240,6 +240,7 @@ public class ItemDisplay : MonoBehaviour
         UIIngameManager.Instance.HideVideoPanel();
         isUIOpen = false;
         onDisplayEnd?.Invoke();
+        UIIngameManager.Instance.CustomClose?.Invoke();
     }
 
     private void ShowSlideShowUI()
@@ -269,5 +270,6 @@ public class ItemDisplay : MonoBehaviour
         UIIngameManager.Instance.HideSlideShowPanel();
         isUIOpen = false;
         onDisplayEnd?.Invoke();
+        UIIngameManager.Instance.CustomClose?.Invoke();
     }
 }

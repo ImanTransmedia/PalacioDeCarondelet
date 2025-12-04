@@ -1580,6 +1580,14 @@ PrefabInstance:
       propertyPath: m_VersionIndex
       value: 2119
       objectReference: {fileID: 0}
+    - target: {fileID: 5093466749646671644, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 5093466749646671644, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.08
+      objectReference: {fileID: 0}
     - target: {fileID: 6493452108645314471, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -2844,7 +2852,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 4294967295
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -5010,7 +5018,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 4294967295
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -8519,7 +8527,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5093466749646671644, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.02
+      value: 0.962
       objectReference: {fileID: 0}
     - target: {fileID: 5093466749646671644, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11266,6 +11274,14 @@ PrefabInstance:
     - target: {fileID: 4702556890091417744, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: m_VersionIndex
       value: 2119
+      objectReference: {fileID: 0}
+    - target: {fileID: 5093466749646671644, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.473
+      objectReference: {fileID: 0}
+    - target: {fileID: 5093466749646671644, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.08
       objectReference: {fileID: 0}
     - target: {fileID: 6493452108645314471, guid: 2b20a17c5f687dd46b49e53d5458c7fb, type: 3}
       propertyPath: m_Mesh
