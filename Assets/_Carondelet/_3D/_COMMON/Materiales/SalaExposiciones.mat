@@ -14,7 +14,6 @@ Material:
   m_ValidKeywords:
   - _COLORMAP
   - _MAPPING1_UV
-  - _ROUGHNESSMAP
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -143,7 +142,7 @@ Material:
     - _FuzzyBias: 0
     - _FuzzyScale: 1
     - _GlossMapScale: 1
-    - _Glossiness: 0.5
+    - _Glossiness: 0
     - _GlossyReflections: 1
     - _HUE: 0
     - _InvertRoughness: 0
@@ -169,7 +168,7 @@ Material:
     - _PowerTint: 0
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _ROUGHNESSMAP: 1
+    - _ROUGHNESSMAP: 0
     - _RandomHUE: 0
     - _RandomHue: 0
     - _ReceiveShadows: 1
@@ -217,7 +216,7 @@ Material:
     - _EdgeOffset: {r: 0, g: 0, b: 0, a: 0}
     - _EdgeTilling: {r: 1, g: 1, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _M_B_N: {r: 0, g: 1, b: 0, a: 0}
+    - _M_B_N: {r: 0, g: -2.18, b: 0, a: 0}
     - _Offset: {r: 0, g: 0, b: 0, a: 0}
     - _SSS_Tint: {r: 0.8509804, g: 0.5803921, b: 0.38039213, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}

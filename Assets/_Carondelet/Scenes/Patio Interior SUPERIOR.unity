@@ -1202,7 +1202,7 @@ PrefabInstance:
     - target: {fileID: 8770836252466826187, guid: df06df849913cb7409ec387ec94f49e9, type: 3}
       propertyPath: 'dialogueList.Array.data[0]'
       value: 
-      objectReference: {fileID: 1870076740}
+      objectReference: {fileID: 951379528}
     - target: {fileID: 8770836252466826187, guid: df06df849913cb7409ec387ec94f49e9, type: 3}
       propertyPath: 'dialogueList.Array.data[1]'
       value: 
@@ -1225,20 +1225,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8913401302015070158, guid: df06df849913cb7409ec387ec94f49e9, type: 3}
       propertyPath: dialogueList.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8913401302015070158, guid: df06df849913cb7409ec387ec94f49e9, type: 3}
       propertyPath: 'dialogueList.Array.data[0]'
       value: 
-      objectReference: {fileID: 1870076740}
+      objectReference: {fileID: 1905603707}
     - target: {fileID: 8913401302015070158, guid: df06df849913cb7409ec387ec94f49e9, type: 3}
       propertyPath: 'dialogueList.Array.data[1]'
       value: 
-      objectReference: {fileID: 1905603707}
+      objectReference: {fileID: 1080034792}
     - target: {fileID: 8913401302015070158, guid: df06df849913cb7409ec387ec94f49e9, type: 3}
       propertyPath: 'dialogueList.Array.data[2]'
       value: 
-      objectReference: {fileID: 1080034792}
+      objectReference: {fileID: 1870076740}
     - target: {fileID: 8913401302015070158, guid: df06df849913cb7409ec387ec94f49e9, type: 3}
       propertyPath: 'dialogueList.Array.data[3]'
       value: 
@@ -11104,7 +11104,7 @@ GameObject:
   - component: {fileID: 466295523}
   - component: {fileID: 466295522}
   m_Layer: 0
-  m_Name: TriggerDialogoMural
+  m_Name: TriggerDialogoMuralMOBILE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13817,7 +13817,7 @@ GameObject:
   - component: {fileID: 698559179}
   - component: {fileID: 698559178}
   m_Layer: 0
-  m_Name: TriggerDialogoSegundoPiso
+  m_Name: TriggerDialogoSegundoPisoPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13850,7 +13850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e471a14a9393c1340a7773a7de361f4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueIndexToShow: 3
+  dialogueIndexToShow: 2
   dialogueController: {fileID: 64971497}
 --- !u!65 &698559179
 BoxCollider:
@@ -15156,7 +15156,7 @@ GameObject:
   - component: {fileID: 749479018}
   - component: {fileID: 749479017}
   m_Layer: 0
-  m_Name: TriggerDialogoBanderaParte1
+  m_Name: TriggerDialogoBanderaPC
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -15208,7 +15208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e471a14a9393c1340a7773a7de361f4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueIndexToShow: 1
+  dialogueIndexToShow: 0
   dialogueController: {fileID: 64971497}
 --- !u!65 &749479019
 BoxCollider:
@@ -23276,6 +23276,91 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5899369415457170544, guid: d1869f03b9f459447a73f8b1a3ad38bd, type: 3}
   m_PrefabInstance: {fileID: 937367601}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &951379527
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1551369188}
+    m_Modifications:
+    - target: {fileID: 1174076665330656185, guid: 2b9f4b639e39c2d42aa56636747effa7, type: 3}
+      propertyPath: m_Name
+      value: nousar
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163131600672706241, guid: 2b9f4b639e39c2d42aa56636747effa7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163131600672706241, guid: 2b9f4b639e39c2d42aa56636747effa7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 295.40344
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163131600672706241, guid: 2b9f4b639e39c2d42aa56636747effa7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163131600672706241, guid: 2b9f4b639e39c2d42aa56636747effa7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163131600672706241, guid: 2b9f4b639e39c2d42aa56636747effa7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163131600672706241, guid: 2b9f4b639e39c2d42aa56636747effa7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163131600672706241, guid: 2b9f4b639e39c2d42aa56636747effa7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163131600672706241, guid: 2b9f4b639e39c2d42aa56636747effa7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163131600672706241, guid: 2b9f4b639e39c2d42aa56636747effa7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163131600672706241, guid: 2b9f4b639e39c2d42aa56636747effa7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805041862711166426, guid: 2b9f4b639e39c2d42aa56636747effa7, type: 3}
+      propertyPath: localizedVideo.m_TableEntryReference.m_KeyId
+      value: 156488720388
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805041862711166426, guid: 2b9f4b639e39c2d42aa56636747effa7, type: 3}
+      propertyPath: localizedString.m_TableEntryReference.m_KeyId
+      value: 6465691506204672
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805041862711166426, guid: 2b9f4b639e39c2d42aa56636747effa7, type: 3}
+      propertyPath: localizedVideo.m_TableReference.m_TableCollectionName
+      value: GUID:8b11e40beb3a3dc49881c1680cbd77f5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2b9f4b639e39c2d42aa56636747effa7, type: 3}
+--- !u!114 &951379528 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4805041862711166426, guid: 2b9f4b639e39c2d42aa56636747effa7, type: 3}
+  m_PrefabInstance: {fileID: 951379527}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55657c792f5e3ae4eb8d703d42c62496, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &951379529 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3163131600672706241, guid: 2b9f4b639e39c2d42aa56636747effa7, type: 3}
+  m_PrefabInstance: {fileID: 951379527}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &954182646
 GameObject:
   m_ObjectHideFlags: 0
@@ -23805,7 +23890,7 @@ GameObject:
   - component: {fileID: 1034554119}
   - component: {fileID: 1034554118}
   m_Layer: 0
-  m_Name: TriggerDialogoSegundoPiso
+  m_Name: TriggerDialogoSegundoPisoMOBILE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24879,6 +24964,50 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: eff3ec8f580aeec4aad6e064e16340ba, type: 2}
+    - target: {fileID: -2361651933839303688, guid: 699f2288642b25d4caad83903fb5124a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.9
+      objectReference: {fileID: 0}
+    - target: {fileID: -2361651933839303688, guid: 699f2288642b25d4caad83903fb5124a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.9
+      objectReference: {fileID: 0}
+    - target: {fileID: -2361651933839303688, guid: 699f2288642b25d4caad83903fb5124a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.9
+      objectReference: {fileID: 0}
+    - target: {fileID: -2361651933839303688, guid: 699f2288642b25d4caad83903fb5124a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.007
+      objectReference: {fileID: 0}
+    - target: {fileID: -2361651933839303688, guid: 699f2288642b25d4caad83903fb5124a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: -2361651933839303688, guid: 699f2288642b25d4caad83903fb5124a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9914449
+      objectReference: {fileID: 0}
+    - target: {fileID: -2361651933839303688, guid: 699f2288642b25d4caad83903fb5124a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.13052624
+      objectReference: {fileID: 0}
+    - target: {fileID: -2361651933839303688, guid: 699f2288642b25d4caad83903fb5124a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2361651933839303688, guid: 699f2288642b25d4caad83903fb5124a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2361651933839303688, guid: 699f2288642b25d4caad83903fb5124a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: -2361651933839303688, guid: 699f2288642b25d4caad83903fb5124a, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -2297812957580786586, guid: 699f2288642b25d4caad83903fb5124a, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -32986,7 +33115,7 @@ GameObject:
   - component: {fileID: 1364552756}
   - component: {fileID: 1364552755}
   m_Layer: 0
-  m_Name: TriggerDialogoBanderaParte1
+  m_Name: TriggerDialogoBanderaMOBILE
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -36215,6 +36344,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1870076741}
+  - {fileID: 951379529}
   - {fileID: 1905603706}
   - {fileID: 1080034791}
   m_Father: {fileID: 445845506}
@@ -44001,7 +44131,7 @@ GameObject:
   - component: {fileID: 1869817611}
   - component: {fileID: 1869817610}
   m_Layer: 0
-  m_Name: TriggerDialogoMural
+  m_Name: TriggerDialogoMuralPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44034,7 +44164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e471a14a9393c1340a7773a7de361f4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueIndexToShow: 2
+  dialogueIndexToShow: 1
   dialogueController: {fileID: 64971497}
 --- !u!65 &1869817611
 BoxCollider:
@@ -57020,23 +57150,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4752022332340867111, guid: 0213994f53519a44bb8002ce27a27429, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9950181
+      value: 0.99027383
       objectReference: {fileID: 0}
     - target: {fileID: 4752022332340867111, guid: 0213994f53519a44bb8002ce27a27429, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.087052844
+      value: 0.13037197
       objectReference: {fileID: 0}
     - target: {fileID: 4752022332340867111, guid: 0213994f53519a44bb8002ce27a27429, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.048403423
+      value: 0.048172627
       objectReference: {fileID: 0}
     - target: {fileID: 4752022332340867111, guid: 0213994f53519a44bb8002ce27a27429, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0042347526
+      value: -0.0063420446
       objectReference: {fileID: 0}
     - target: {fileID: 4752022332340867111, guid: 0213994f53519a44bb8002ce27a27429, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4752022332340867111, guid: 0213994f53519a44bb8002ce27a27429, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -57120,11 +57250,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6994381531545299443, guid: 0213994f53519a44bb8002ce27a27429, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9961947
+      value: 0.9914449
       objectReference: {fileID: 0}
     - target: {fileID: 6994381531545299443, guid: 0213994f53519a44bb8002ce27a27429, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.08715578
+      value: 0.13052616
       objectReference: {fileID: 0}
     - target: {fileID: 6994381531545299443, guid: 0213994f53519a44bb8002ce27a27429, type: 3}
       propertyPath: m_LocalRotation.y
@@ -57136,7 +57266,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6994381531545299443, guid: 0213994f53519a44bb8002ce27a27429, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6994381531545299443, guid: 0213994f53519a44bb8002ce27a27429, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
