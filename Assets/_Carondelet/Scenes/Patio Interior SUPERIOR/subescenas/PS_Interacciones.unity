@@ -1159,7 +1159,7 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   displayScale: {x: 1, y: 1, z: 1}
-  eyeOffset: {x: 0, y: 4, z: 0}
+  eyeOffset: {x: 0, y: 1.8, z: 1.65}
   salon: 5
   imageName: PP_T_Pileta.jpg
   itemImage: {fileID: 0}
@@ -1205,8 +1205,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 7, y: 2, z: 7}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 7, y: 5, z: 7}
+  m_Center: {x: 0, y: 2, z: 0}
 --- !u!4 &1705146601
 Transform:
   m_ObjectHideFlags: 0
@@ -1273,7 +1273,7 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   displayScale: {x: 1, y: 1, z: 1}
-  eyeOffset: {x: 0, y: 4, z: 0}
+  eyeOffset: {x: 0, y: 1.8, z: -1.65}
   salon: 5
   imageName: PP_T_Pileta.jpg
   itemImage: {fileID: 0}
@@ -1319,8 +1319,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 7, y: 2, z: 7}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 7, y: 5, z: 7}
+  m_Center: {x: 0, y: 2, z: 0}
 --- !u!4 &1757828675
 Transform:
   m_ObjectHideFlags: 0
