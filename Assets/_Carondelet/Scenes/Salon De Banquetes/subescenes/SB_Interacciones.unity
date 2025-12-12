@@ -187,6 +187,7 @@ MonoBehaviour:
   eyeOffset: {x: 0, y: 0.4, z: 0}
   oscilate: 1
   stuck: 0
+  customCloseHandling: 0
   isVideoDisplay: 1
   videoName: SB_Amatista_00.mp4
   videoReverse: SB_Amatista_01.mp4
@@ -268,7 +269,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1604530127}
   - {fileID: 1198652475}
   - {fileID: 1452663027}
   - {fileID: 2055345807}
@@ -466,6 +466,7 @@ MonoBehaviour:
   eyeOffset: {x: -0.15, y: 0, z: 0.3}
   oscilate: 1
   stuck: 0
+  customCloseHandling: 0
   isVideoDisplay: 1
   videoName: SB_VajillaL
   videoReverse: SB_VajillaL_rev
@@ -599,6 +600,7 @@ MonoBehaviour:
   eyeOffset: {x: 0, y: 0.85, z: 0.25}
   oscilate: 1
   stuck: 0
+  customCloseHandling: 0
   isVideoDisplay: 1
   videoName: SB_Aparador_00
   videoReverse: SB_Aparador_01
@@ -1107,6 +1109,7 @@ MonoBehaviour:
   eyeOffset: {x: 0.3, y: -0.65, z: 0}
   oscilate: 1
   stuck: 0
+  customCloseHandling: 0
   isVideoDisplay: 1
   videoName: OR_VirgenE_00
   videoReverse: OR_VirgenE_01
@@ -1790,6 +1793,7 @@ MonoBehaviour:
   eyeOffset: {x: 0.3, y: -0.45, z: 0}
   oscilate: 1
   stuck: 0
+  customCloseHandling: 0
   isVideoDisplay: 1
   videoName: SB_San_Joaquin
   videoReverse: SB_San_Joaquin
@@ -2093,6 +2097,7 @@ MonoBehaviour:
   eyeOffset: {x: 0, y: 0.8, z: 0}
   oscilate: 1
   stuck: 0
+  customCloseHandling: 0
   isVideoDisplay: 1
   videoName: SB_Esquinero
   videoReverse: SB_Esquinero
@@ -2559,6 +2564,7 @@ MonoBehaviour:
   eyeOffset: {x: 0, y: 0.8, z: 0}
   oscilate: 1
   stuck: 0
+  customCloseHandling: 0
   isVideoDisplay: 1
   videoName: SB_Esquinero
   videoReverse: SB_Esquinero
@@ -2980,6 +2986,7 @@ MonoBehaviour:
   eyeOffset: {x: 0.3, y: -0.45, z: 0}
   oscilate: 1
   stuck: 0
+  customCloseHandling: 0
   isVideoDisplay: 1
   videoName: SB_Santa_Ana
   videoReverse: SB_Santa_Ana
@@ -3170,6 +3177,7 @@ MonoBehaviour:
   eyeOffset: {x: 0, y: 1, z: 0}
   oscilate: 1
   stuck: 0
+  customCloseHandling: 0
   isVideoDisplay: 1
   videoName: OR_Cristo_00.mp4
   videoReverse: OR_Cristo_01.mp4
@@ -3290,126 +3298,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objeto: OR_Cristo
---- !u!1 &1604530126
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1604530127}
-  - component: {fileID: 1604530130}
-  - component: {fileID: 1604530129}
-  - component: {fileID: 1604530128}
-  m_Layer: 3
-  m_Name: I_JaronT
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1604530127
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1604530126}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.447, y: -0.685, z: 12.962}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 123753033}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1604530128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1604530126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77b2ded2c7d0c7244aabec323ea7176e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectName: SB_Jarron
-  itemName:
-    m_TableReference:
-      m_TableCollectionName: GUID:e6909cd5edeaea74aab924612974dffc
-    m_TableEntryReference:
-      m_KeyId: 6903966347845649
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
-  itemDescription:
-    m_TableReference:
-      m_TableCollectionName: GUID:e6909cd5edeaea74aab924612974dffc
-    m_TableEntryReference:
-      m_KeyId: 6903966347845650
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
-  eyeOffset: {x: 0, y: 0.3, z: 0}
-  oscilate: 1
-  stuck: 0
-  isVideoDisplay: 1
-  videoName: SB_Jarron_00.mp4
-  videoReverse: SB_Jarron_01.mp4
-  videoPosition: {x: 0, y: 0}
-  videoScale: {x: 1, y: 1, z: 1}
-  isSlideShow: 1
-  showSlideOnly: 1
-  salon: 0
-  imageNames: []
-  onDisplayStart:
-    m_PersistentCalls:
-      m_Calls: []
-  onDisplayEnd:
-    m_PersistentCalls:
-      m_Calls: []
-  references:
-    version: 2
-    RefIds: []
---- !u!114 &1604530129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1604530126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58893d659e920c4438026939647011fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objeto: SB_Jarron
---- !u!65 &1604530130
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1604530126}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 0.77545804, z: 0.66043615}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1614524141
 GameObject:
   m_ObjectHideFlags: 0
@@ -3478,6 +3366,7 @@ MonoBehaviour:
   eyeOffset: {x: 0.45, y: 0.35, z: 0}
   oscilate: 1
   stuck: 0
+  customCloseHandling: 0
   isVideoDisplay: 1
   videoName: OR_Altar_00
   videoReverse: OR_Altar_01
@@ -4289,6 +4178,7 @@ MonoBehaviour:
   eyeOffset: {x: 0, y: 0.5, z: 0}
   oscilate: 1
   stuck: 0
+  customCloseHandling: 0
   isVideoDisplay: 1
   videoName: SB_Mesa_00.mp4
   videoReverse: SB_Mesa_01.mp4

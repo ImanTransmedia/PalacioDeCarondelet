@@ -67,6 +67,7 @@ public class ResetCamMenu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Debug.Log("ResetCamMenu: ESC presionado, cerrando menu");
+            GameObject.FindAnyObjectByType<ToolTipOrchestrator>()?.ResetAll();
             onClickOutside?.Invoke();
         }
     }

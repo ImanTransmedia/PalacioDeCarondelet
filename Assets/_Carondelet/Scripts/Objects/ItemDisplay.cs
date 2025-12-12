@@ -14,6 +14,7 @@ public class ItemDisplay : MonoBehaviour
     [SerializeField] public Vector3 eyeOffset = new Vector3(0f, 0f, 0f);
     public bool oscilate = false;
     public bool stuck = false;
+    [SerializeField] private bool customCloseHandling = false;
 
     [Space(10)]
     [Header("VideoDisplay")]
@@ -45,9 +46,7 @@ public class ItemDisplay : MonoBehaviour
     {
         TrySubscribeToConfigReady();
 
-        // 🔹 Me suscribo al evento global de cierre del UI
-        if (UIIngameManager.Instance != null)
-            UIIngameManager.Instance.CustomClose.AddListener(HandleUIClose);
+            UIIngameManager.CustomClose += HandleUIClose;
     }
 
     private void OnDisable()
@@ -61,9 +60,7 @@ public class ItemDisplay : MonoBehaviour
             _waiter = null;
         }
 
-        // 🔹 Me desuscribo del evento
-        if (UIIngameManager.Instance != null)
-            UIIngameManager.Instance.CustomClose.RemoveListener(HandleUIClose);
+            UIIngameManager.CustomClose -= HandleUIClose;
     }
 
     private void HandleUIClose()
@@ -188,13 +185,11 @@ public class ItemDisplay : MonoBehaviour
 
         if (!isUIOpen)
         {
-            if (isSlideShow) ShowSlideShowUI();
-            else if (isVideoDisplay) ShowVideoUI();
+            ShowVideoUI();
         }
         else
         {
-            if (isSlideShow) CloseSlideShowUI();
-            else if (isVideoDisplay) CloseVideoUI();
+            CloseVideoUI();
         }
 
         _refreshing = false;
@@ -279,11 +274,4 @@ public class ItemDisplay : MonoBehaviour
         onDisplayStart?.Invoke();
     }
 
-    private void CloseSlideShowUI()
-    {
-        UIIngameManager.Instance.HideSlideShowPanel();
-        isUIOpen = false;
-        onDisplayEnd?.Invoke();
-        UIIngameManager.Instance.CustomClose?.Invoke();
-    }
 }

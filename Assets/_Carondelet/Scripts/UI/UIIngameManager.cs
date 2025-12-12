@@ -48,7 +48,7 @@ public class UIIngameManager : MonoBehaviour
 
     [SerializeField] private Material OriginalMat;
 
-    public  UnityEvent CustomClose;
+    public static UnityAction CustomClose;
 
 
     [SerializeField] private CanvasGroup itemVideoCanvasGroup;
@@ -812,6 +812,7 @@ public class UIIngameManager : MonoBehaviour
 
         if (!isAnyPanelOpen)
             return;
+
 
         if (itemPanel != null && itemPanel.activeSelf)
         {
