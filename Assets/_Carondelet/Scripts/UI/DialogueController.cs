@@ -25,6 +25,11 @@ public class DialogueController : MonoBehaviour
 
     public List<LocalizedDialogue> dialogueList;
 
+    [Header("Mobile text wrap (only mobile/WebGL mobile)")]
+    public bool mobileWrapEnabled = true;
+    public int mobileMaxWordsPerLine = 8;
+    public int mobileMaxCharsPerLine = 34;
+
     [Header("Multimedia Settings")]
     public VideoPlayer videoPlayer;
     // public AudioSource audioSource;
@@ -124,10 +129,72 @@ public class DialogueController : MonoBehaviour
         string localizedText = localizedString.GetLocalizedString();
         textSpeed = dialogue.finalSpeed * 1.3f;
         currentDialogueLines = SplitTextIntoLines(localizedText);
+
+        if (mobileWrapEnabled && IsMobileRuntime())
+        {
+            currentDialogueLines = WrapLinesForMobile(currentDialogueLines, mobileMaxWordsPerLine, mobileMaxCharsPerLine);
+        }
+
         currentLineIndex = 0;
 
         StartCoroutine(PrepareAndStartDialogue(index));
     }
+
+    private bool IsMobileRuntime()
+    {
+#if UNITY_WEBGL
+        return Application.isMobilePlatform;
+#else
+    return Application.isMobilePlatform;
+#endif
+    }
+
+    private List<string> WrapLinesForMobile(List<string> inputLines, int maxWordsPerLine, int maxCharsPerLine)
+    {
+        List<string> output = new List<string>();
+
+        foreach (var line in inputLines)
+        {
+            // Divide por espacios múltiples
+            var words = Regex.Split(line.Trim(), @"\s+");
+            if (words.Length == 0) continue;
+
+            int wordCountInLine = 0;
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+
+            for (int i = 0; i < words.Length; i++)
+            {
+                string w = words[i];
+                if (string.IsNullOrEmpty(w)) continue;
+
+                bool isFirstWord = sb.Length == 0;
+
+                int newLen = sb.Length + (isFirstWord ? 0 : 1) + w.Length;
+
+                bool exceedWords = (maxWordsPerLine > 0) && (wordCountInLine >= maxWordsPerLine);
+                bool exceedChars = (maxCharsPerLine > 0) && (!isFirstWord) && (newLen > maxCharsPerLine);
+
+                if (exceedWords || exceedChars)
+                {
+                    output.Add(sb.ToString());
+                    sb.Clear();
+                    wordCountInLine = 0;
+                    isFirstWord = true;
+                }
+
+                if (!isFirstWord) sb.Append(" ");
+                sb.Append(w);
+                wordCountInLine++;
+
+            }
+
+            if (sb.Length > 0)
+                output.Add(sb.ToString());
+        }
+
+        return output;
+    }
+
 
     private IEnumerator PrepareAndStartDialogue(int index)
     {
