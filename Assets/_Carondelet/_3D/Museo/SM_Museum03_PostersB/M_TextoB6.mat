@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_A1
+  m_Name: M_TextoB6
   m_Shader: {fileID: -6465566751694194690, guid: c7a31a031552d0e428d982093bd6606c, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -80,7 +80,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 3508e57b65fb0354dac6718d3bb3fac1, type: 3}
+        m_Texture: {fileID: 2800000, guid: d879879d4d024914686dac3320cf60ba, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -196,7 +196,7 @@ Material:
     - _SSS_Indirect: 0.5
     - _SSS_Intensity: 0
     - _SSS_ShadowStrenght: 1
-    - _Saturacion: 1.1
+    - _Saturacion: 1
     - _Seed: 0
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
@@ -209,7 +209,7 @@ Material:
     - _Tile: 1
     - _USECOLORMAP: 1
     - _UseAlphaMap: 0
-    - _UseAoMap: 1
+    - _UseAoMap: 0
     - _UseColorMap: 1
     - _UseDither: 0
     - _UseEmissiveMap: 0
