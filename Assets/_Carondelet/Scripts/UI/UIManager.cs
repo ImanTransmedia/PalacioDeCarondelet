@@ -1,9 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.Runtime.InteropServices;
 public class UIManager : MonoBehaviour
 {
+
+#if UNITY_WEBGL && !UNITY_EDITOR
+    [DllImport("__Internal")] private static extern IntPtr DS_GetDeviceString();
+    [DllImport("__Internal")] private static extern int DS_IsTouchDevice();
+#endif
+
     [Header("Script References")]
     public SceneLoader sceneLoader;
     public AccessibilityManager accessibilityManager;
@@ -72,8 +78,52 @@ public class UIManager : MonoBehaviour
 
     bool DetectMobileWebGL()
     {
-        return Application.isMobilePlatform;
+        // En Android/iOS nativo esto funciona bien:
+        if (Application.isMobilePlatform)
+            return true;
+
+#if UNITY_WEBGL && !UNITY_EDITOR
+    try
+    {
+        string device = "";
+
+        IntPtr ptr = DS_GetDeviceString();
+        if (ptr != IntPtr.Zero)
+        {
+#if UNITY_2021_2_OR_NEWER
+            device = Marshal.PtrToStringUTF8(ptr);
+#else
+            device = Marshal.PtrToStringAnsi(ptr);
+#endif
+        }
+
+        device = (device ?? "").ToLowerInvariant();
+
+        // Consideramos "mobile" todo lo que sea iPhone/iPad/Android Phone/Android Tablet o generico Mobile
+        if (device.Contains("ios") || device.Contains("iphone") || device.Contains("ipad"))
+            return true;
+
+        if (device.Contains("android"))
+            return true;
+
+        if (device.Contains("mobile"))
+            return true;
+
+        // Fallback: si es tactil, casi seguro no quieres UI de desktop (sobre todo iPad)
+        if (DS_IsTouchDevice() == 1)
+            return true;
     }
+    catch
+    {
+        // Si algo falla, caemos a desktop
+    }
+#endif
+
+        return false;
+    }
+
+
+
 
     public void StartAsyncLoadScene(string sceneName)
     {
