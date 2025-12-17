@@ -20,7 +20,8 @@ public class IntereactiveTooltip : MonoBehaviour, IPointerEnterHandler, IPointer
 
     public UnityEvent OnHoverEnter;
     public UnityEvent OnHoverExit;
-    public UnityEvent OnClick;
+    public UnityEvent OnEnableEvent;
+    public UnityEvent OnDisableEvent;
     public List<GameObject> buttonList;
 
     public Vector3 dioramaTargetRotation;
@@ -30,6 +31,7 @@ public class IntereactiveTooltip : MonoBehaviour, IPointerEnterHandler, IPointer
 
     [Header("Otros Tooltips a desactivar")]
     public List<IntereactiveTooltip> otrosTooltips;
+    private bool clickToggleState = false;
 
     private void SetPanelVisibility(bool visible)
     {
@@ -62,25 +64,29 @@ public class IntereactiveTooltip : MonoBehaviour, IPointerEnterHandler, IPointer
     public void OnPointerExit(PointerEventData eventData) { }
     public void OnPointerClick(PointerEventData eventData) { }
 
-public void changeState()
-{
-    bool newState = !state;
-
-    if (newState)
+    public void changeState()
     {
-        foreach (var tooltip in otrosTooltips)
+        bool newState = !state;
+
+        if (newState)
         {
-            if (tooltip != null && tooltip != this)
+            foreach (var tooltip in otrosTooltips)
             {
-                tooltip.state = false;
-                tooltip.SetPanelVisibility(false);
+                if (tooltip != null && tooltip != this)
+                {
+                    tooltip.CloseTooltip(); 
+                }
             }
         }
+        else
+        {
+            clickToggleState = false;
+        }
+
+        state = newState;
+        SetPanelVisibility(state);
     }
 
-    state = newState;
-    SetPanelVisibility(state); 
-}
 
     private void Update()
     {
@@ -125,6 +131,42 @@ public void SetTargetTextFromContenido()
         }
     }
 }
+
+    public void HandleOnClick()
+    {
+        if (!clickToggleState)
+        {
+            // Primer click
+            OnEnableEvent?.Invoke();
+            clickToggleState = true;
+        }
+        else
+        {
+            // Segundo click
+            OnDisableEvent?.Invoke();
+            clickToggleState = false;
+        }
+    }
+
+    public void ExternalDisable()
+    {
+        if (clickToggleState)
+            OnDisableEvent?.Invoke();
+
+        CloseTooltip(false);
+    }
+
+    private void CloseTooltip(bool invokeDisableEvent = false)
+    {
+        state = false;
+        lastState = false;          
+        clickToggleState = false;  
+        SetPanelVisibility(false);
+
+        if (invokeDisableEvent)
+            OnDisableEvent?.Invoke();
+    }
+
 
     private void OnLocalizedStringChanged(string localizedText)
     {

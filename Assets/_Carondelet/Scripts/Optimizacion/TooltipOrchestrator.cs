@@ -30,7 +30,7 @@ public class ToolTipOrchestrator : MonoBehaviour
         else
         {
             for (int i = 0; i < buttons.Length; i++)
-                SetButtonEnabled(i, true);
+               SetButtonEnabled(i, true);
         }
     }
 
@@ -54,7 +54,7 @@ public class ToolTipOrchestrator : MonoBehaviour
     private void SetButtonEnabled(int i, bool enabled)
     {
         if (i < 0 || i >= buttons.Length || buttons[i] == null) return;
-        buttons[i].interactable = enabled;
+       // buttons[i].interactable = enabled;
 
 
     }

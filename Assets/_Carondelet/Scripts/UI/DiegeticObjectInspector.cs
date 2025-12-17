@@ -95,40 +95,28 @@ public class DiegeticObjectInspector : MonoBehaviour
         initialRotation = cameraTransform.rotation;            
     }
 
-    
+
     public void InspectObject(Transform target)
     {
-
         if (isReturning || cameraTransform == null)
             return;
 
-
+        if (isInspecting && lastInspectedTarget == target)
+        {
+            Debug.Log("Reset Camera");
+            ResetCamera();
+            return;
+        }
 
         previousPosition = cameraTransform.position;
         previousRotation = cameraTransform.rotation;
 
         IntereactiveTooltip inspectable = target.GetComponent<IntereactiveTooltip>();
-
         float zoom = (inspectable != null) ? inspectable.zoomDistance : zoomDistance;
-            
+
         StopAllCoroutines();
         StartCoroutine(MoveToTarget(target, zoom));
         StartCoroutine(SwitchPanelsWithFade(panelAreaExterior, panelAreaSeleccionada));
-
-        Debug.Log("Inspecting Object: " + target.name);
-        Debug.Log("Last" + lastInspectedTarget);
-        Debug.Log("Current" + target);
-        if (isInspecting && lastInspectedTarget == target)
-        {
-            Debug.Log("Reset Camera");
-            ResetCamera();
-            lastInspectedTarget = null;
-            isInspecting = false;
-            return;
-        }
-
-        /*  if (cam != null)
-             StartCoroutine(ChangeFOV(cam.fieldOfView, minInspectFOV, fovTransitionDuration)); */
 
         isInspecting = true;
 
@@ -136,35 +124,40 @@ public class DiegeticObjectInspector : MonoBehaviour
         {
             if (dioramaRotationCoroutine != null)
                 StopCoroutine(dioramaRotationCoroutine);
+
             dioramaRotationCoroutine = StartCoroutine(
                 SmoothRotateDiorama(inspectable.dioramaTargetRotation, 1f)
             );
         }
+
         lastInspectedTarget = target;
     }
+
 
     public void ResetCamera()
     {
         if (cameraTransform == null || diorama == null)
             return;
-        StartCoroutine(SwitchPanelsWithFade(panelAreaSeleccionada, panelAreaExterior));
-        StopAllCoroutines();
 
+        StopAllCoroutines(); 
+
+        StartCoroutine(SwitchPanelsWithFade(panelAreaSeleccionada, panelAreaExterior));
         StartCoroutine(SmoothResetCameraAndDiorama());
+
         lastInspectedTarget = null;
+
         if (cam != null)
             StartCoroutine(ChangeFOV(cam.fieldOfView, initialFOV, fovTransitionDuration));
 
         isInspecting = false;
+
         foreach (IntereactiveTooltip tooltip in interactiveTooltips)
         {
             if (tooltip != null)
                 tooltip.state = false;
         }
-
-        //gameObject.GetComponent<ToolTipOrchestrator>().ResetAll();
-
     }
+
 
     private IEnumerator MoveToTarget(Transform target, float zoomDistance)
     {
