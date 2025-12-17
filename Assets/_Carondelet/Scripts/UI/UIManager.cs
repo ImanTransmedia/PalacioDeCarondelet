@@ -81,7 +81,7 @@ public class UIManager : MonoBehaviour
        // showCursor();
     }
 
-    bool DetectMobileWebGL()
+    public bool DetectMobileWebGL()
     {
         // En Android/iOS nativo esto funciona bien:
         if (Application.isMobilePlatform)
@@ -114,9 +114,6 @@ public class UIManager : MonoBehaviour
         if (device.Contains("mobile"))
             return true;
 
-        // Fallback: si es tactil, casi seguro no quieres UI de desktop (sobre todo iPad)
-        if (DS_IsTouchDevice() == 1)
-            return true;
     }
     catch
     {

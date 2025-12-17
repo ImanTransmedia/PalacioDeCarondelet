@@ -62,7 +62,7 @@ public class FirstPersonMovement : MonoBehaviour
 
     private void OnEnable()
     {
-        usePointerLook = GameObject.FindAnyObjectByType<UIManager>().isMobile;
+        usePointerLook = GameObject.FindAnyObjectByType<UIManager>().DetectMobileWebGL();
         inputActions.Player.Enable();
         inputActions.Player.Move.performed += OnMove;
         inputActions.Player.Move.canceled += OnMove;
