@@ -3,24 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <!-- Meta etiquetas para previsualización al compartir -->
-    <meta
-      property="og:title"
-      content="Palacio de Carondelet - Tour Virtual 360"
-    />
-    <meta
-      property="og:description"
-      content="Explora el Palacio de Carondelet en un tour virtual inmersivo 360°."
-    />
-    <meta
-      property="og:image"
-      content="/TemplateData/og-thumbnail.jpg"
-    />
-    <meta
-      property="og:url"
-      content="/"
-    />
+    <meta property="og:title" content="Palacio de Carondelet - Tour Virtual 360" />
+    <meta property="og:description" content="Explora el Palacio de Carondelet en un tour virtual inmersivo 360°." />
+    <meta property="og:image" content="/TemplateData/og-thumbnail.jpg" />
+    <meta property="og:url" content="/" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="TemplateData/favicon.svg" />
+    <link rel="alternate icon" type="image/png" href="TemplateData/favicon.png" />
 
     <title>{{{ PRODUCT_NAME }}}</title>
     <meta
@@ -29,15 +19,6 @@
     />
     <script src="TemplateData/pleaserotate.js"></script>
 
-    <!-- SVG como favicon principal -->
-    <link rel="icon" type="image/svg+xml" href="TemplateData/favicon.svg" />
-
-    <!-- PNG como fallback -->
-    <link
-      rel="alternate icon"
-      type="image/png"
-      href="TemplateData/favicon.png"
-    />
 
     <!-- Google Analytics -->
     <script
@@ -209,16 +190,31 @@
             window.addEventListener("load", () => {
               resizeCanvas();
 
-              const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-              if (isMobile) {
-                checkOrientation();
-                window.addEventListener("orientationchange", checkOrientation);
-                window.addEventListener("resize", checkOrientation);
-              } else {
-                window.addEventListener("resize", () =>
-                  setTimeout(resizeCanvas, 300)
-                );
-              }
+function isIPad() {
+  const ua = navigator.userAgent || "";
+  const isOldiPad = /iPad/i.test(ua);
+  const isNewiPadOS = (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  return isOldiPad || isNewiPadOS;
+}
+
+function isAnyMobile() {
+  const ua = navigator.userAgent || "";
+  const uaSaysMobile = /Android|iPhone|iPod/i.test(ua) || isIPad();
+  const coarsePointer = window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
+  // “coarse pointer” ayuda a detectar tablets/teléfonos aunque el UA sea raro.
+  return uaSaysMobile || coarsePointer;
+}
+
+window.addEventListener("load", () => {
+  resizeCanvas();
+
+  if (isAnyMobile()) {
+    checkOrientation();
+    window.addEventListener("orientationchange", checkOrientation);
+    window.addEventListener("resize", checkOrientation);
+  } else {
+    window.addEventListener("resize", () => setTimeout(resizeCanvas, 300));
+  }
 
               // Bandera
       // ---------- Animación de bandera optimizada ----------
