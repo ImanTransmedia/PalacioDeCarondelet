@@ -1,14 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 using System.Runtime.InteropServices;
 public class UIManager : MonoBehaviour
 {
 
 #if UNITY_WEBGL && !UNITY_EDITOR
-    [DllImport("__Internal")] private static extern IntPtr DS_GetDeviceString();
-    [DllImport("__Internal")] private static extern int DS_IsTouchDevice();
+    [DllImport("__Internal")]
+    private static extern IntPtr DS_GetDeviceString();
+
+    [DllImport("__Internal")]
+    private static extern int DS_IsTouchDevice();
 #endif
+
 
     [Header("Script References")]
     public SceneLoader sceneLoader;
