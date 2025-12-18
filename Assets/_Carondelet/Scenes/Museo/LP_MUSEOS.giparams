@@ -8,13 +8,13 @@ LightmapParameters:
   m_PrefabAsset: {fileID: 0}
   m_Name: LP_MUSEOS
   serializedVersion: 4
-  resolution: 2
-  clusterResolution: 0.6
+  resolution: 1
+  clusterResolution: 0.5
   irradianceBudget: 128
-  irradianceQuality: 16384
+  irradianceQuality: 8192
   backFaceTolerance: 0.1
   isTransparent: 0
-  modellingTolerance: 0.001
+  modellingTolerance: 0.01
   systemTag: -1
   edgeStitching: 1
   blurRadius: 2
