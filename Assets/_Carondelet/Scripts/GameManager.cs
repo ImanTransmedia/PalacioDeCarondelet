@@ -13,9 +13,9 @@ public class GameManager : MonoBehaviour
     public static string CommonImageURL = "https://palaciocarondelet360.presidencia.gob.ec/MediaResources/Images/";
     public static string CommonVideoURL = "https://palaciocarondelet360.presidencia.gob.ec/MediaResources/Videos/";
     // TESTING
-    public static string ConfigurationURL = "https://historiasmagneticas.com/Carondelet/configInteractuables.json";
+    //public static string ConfigurationURL = "https://historiasmagneticas.com/Carondelet/configInteractuables.json";
     // DEPLOY
-    //public static string ConfigurationURL = "https://palaciocarondelet360.presidencia.gob.ec/configInteractuables.json";
+    public static string ConfigurationURL = "https://palaciocarondelet360.presidencia.gob.ec/configInteractuables.json";
     public static string CommonVideoListURL = "https://historiasmagneticas.com/Carondelet/MediaResources/Videos/SalonAzul/";
 
     private const bool ALWAYS_REFRESH = true;
