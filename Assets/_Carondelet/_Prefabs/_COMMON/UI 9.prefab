@@ -25762,6 +25762,18 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4278190080
       objectReference: {fileID: 0}
+    - target: {fileID: 6225369742046569340, guid: 8f5fb6bdb4aae0b499a97fc3bc5ddb3a, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6225369742046569340, guid: 8f5fb6bdb4aae0b499a97fc3bc5ddb3a, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6225369742046569340, guid: 8f5fb6bdb4aae0b499a97fc3bc5ddb3a, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6677987838996552506, guid: 8f5fb6bdb4aae0b499a97fc3bc5ddb3a, type: 3}
       propertyPath: m_Name
       value: Canvas_Notification_interaccion
@@ -25993,6 +26005,14 @@ PrefabInstance:
     - target: {fileID: 1511633659526083717, guid: 3d764034c901aca4f82cde2a8e131331, type: 3}
       propertyPath: linesPerSegment
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511633659526083717, guid: 3d764034c901aca4f82cde2a8e131331, type: 3}
+      propertyPath: mobileMaxCharsPerLine
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511633659526083717, guid: 3d764034c901aca4f82cde2a8e131331, type: 3}
+      propertyPath: mobileMaxWordsPerLine
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1511633659526083717, guid: 3d764034c901aca4f82cde2a8e131331, type: 3}
       propertyPath: dialogueList.Array.size
@@ -26356,6 +26376,14 @@ PrefabInstance:
     - target: {fileID: 1511633659526083717, guid: 3d764034c901aca4f82cde2a8e131331, type: 3}
       propertyPath: mobileWrapEnabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511633659526083717, guid: 3d764034c901aca4f82cde2a8e131331, type: 3}
+      propertyPath: mobileMaxCharsPerLine
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511633659526083717, guid: 3d764034c901aca4f82cde2a8e131331, type: 3}
+      propertyPath: mobileMaxWordsPerLine
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1511633659526083717, guid: 3d764034c901aca4f82cde2a8e131331, type: 3}
       propertyPath: 'dialogueList.Array.data[0]'
