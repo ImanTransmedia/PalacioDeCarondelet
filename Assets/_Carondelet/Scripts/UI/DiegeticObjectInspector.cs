@@ -67,7 +67,9 @@ public class DiegeticObjectInspector : MonoBehaviour
     private Coroutine dioramaRotationCoroutine;
 
     [Header("Opciones de control")]
-    public bool enableZoom = true;   
+    public bool enableZoom = true;
+    private bool isDraggingDiorama = false;
+
 
 
     void Start()
@@ -329,6 +331,7 @@ public class DiegeticObjectInspector : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1))
         {
+            isDraggingDiorama = true;
             lastMousePosition = Input.mousePosition;
             targetDioramaPosition = diorama.transform.position;
         }
@@ -350,7 +353,13 @@ public class DiegeticObjectInspector : MonoBehaviour
             );
             lastMousePosition = Input.mousePosition;
         }
+
+        if (Input.GetMouseButtonUp(1))
+        {
+            isDraggingDiorama = false;
+        }
     }
+
 
     private IEnumerator SmoothRotateDiorama(Vector3 targetEulerAngles, float duration = 1f)
     {
@@ -406,32 +415,34 @@ public class DiegeticObjectInspector : MonoBehaviour
 
         isReturning = false;
 }
-
-void HandleTouchZoom()
-{
-        if (!enableZoom || cam == null)   // <--- chequeo
+    void HandleTouchZoom()
+    {
+        if (!enableZoom || cam == null)
             return;
 
-        if (Input.touchCount == 2)
-        {
-            Touch touchZero = Input.GetTouch(0);
-            Touch touchOne = Input.GetTouch(1);
+        if (Input.touchCount != 2)
+            return;
 
-            Vector2 touchZeroPrevPos = touchZero.position - touchZero.deltaPosition;
-            Vector2 touchOnePrevPos = touchOne.position - touchOne.deltaPosition;
+        Touch touchZero = Input.GetTouch(0);
+        Touch touchOne = Input.GetTouch(1);
 
-            float prevTouchDeltaMag = (touchZeroPrevPos - touchOnePrevPos).magnitude;
-            float currentTouchDeltaMag = (touchZero.position - touchOne.position).magnitude;
-            float deltaMagnitudeDiff = prevTouchDeltaMag - currentTouchDeltaMag;
 
-            float sensitivity = isInspecting ? inspectZoomSensitivity * 0.7f : zoomSensitivity * 0.2f;
-            float minFOV = isInspecting ? minInspectFOV : minNormalFOV;
+        Vector2 touchZeroPrevPos = touchZero.position - touchZero.deltaPosition;
+        Vector2 touchOnePrevPos = touchOne.position - touchOne.deltaPosition;
 
-            targetFOV -= deltaMagnitudeDiff * sensitivity; // <--- CORREGIDO
-            targetFOV = Mathf.Clamp(targetFOV, minFOV, initialFOV);
+        float prevTouchDeltaMag = (touchZeroPrevPos - touchOnePrevPos).magnitude;
+        float currentTouchDeltaMag = (touchZero.position - touchOne.position).magnitude;
 
-            float smoothSpeed = isInspecting ? inspectZoomSmoothSpeed : normalZoomSmoothSpeed;
-            cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, targetFOV, smoothSpeed * Time.deltaTime);
+        float delta = currentTouchDeltaMag - prevTouchDeltaMag;
+
+        float sensitivity = isInspecting ? inspectZoomSensitivity * 0.7f : zoomSensitivity * 0.2f;
+        float minFOV = isInspecting ? minInspectFOV : minNormalFOV;
+
+        targetFOV -= delta * sensitivity;
+        targetFOV = Mathf.Clamp(targetFOV, minFOV, initialFOV);
+
+        float smoothSpeed = isInspecting ? inspectZoomSmoothSpeed : normalZoomSmoothSpeed;
+        cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, targetFOV, smoothSpeed * Time.deltaTime);
     }
-}
+
 }
