@@ -52,4 +52,9 @@ public class DoorManager : MonoBehaviour
         isAccesible = accesibility;
     }
 
+    public void Restart()
+    {
+        storedStrings.Clear();
+    }
+
 }

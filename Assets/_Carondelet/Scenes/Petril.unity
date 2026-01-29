@@ -13354,6 +13354,7 @@ MonoBehaviour:
   tutorialObjects:
   - {fileID: 1331184455}
   playerMovement: {fileID: 2126598548}
+  uiManager: {fileID: 0}
 --- !u!114 &1049974676 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2702144370315608083, guid: df06df849913cb7409ec387ec94f49e9, type: 3}
@@ -33225,6 +33226,10 @@ PrefabInstance:
     - target: {fileID: 1303354386294779346, guid: 4a992afaa1cc44f4fa22586a28e94cd1, type: 3}
       propertyPath: acceleration
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1303354386294779346, guid: 4a992afaa1cc44f4fa22586a28e94cd1, type: 3}
+      propertyPath: usePointerLook
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1584643175598670708, guid: 4a992afaa1cc44f4fa22586a28e94cd1, type: 3}
       propertyPath: m_LocalPosition.x

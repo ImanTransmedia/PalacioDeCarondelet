@@ -9,23 +9,26 @@ public class TutorialManager : MonoBehaviour
 
     [Header("Movimiento del personaje")]
     public FirstPersonMovement playerMovement;
+    [SerializeField] private UIManager uiManager;
 
     void Start()
     {
         string currentSceneName = SceneManager.GetActiveScene().name;
 
-        if (DoorManager.Instance != null && !DoorManager.Instance.ContainsString(currentSceneName))
-        {
-            ActivateTutorial(true);
+        bool alreadySeen = false;
+
+        if (DoorManager.Instance != null)
+            alreadySeen = DoorManager.Instance.ContainsString(currentSceneName);
+
+        bool isFirstTime = !alreadySeen;
+
+        ActivateTutorial(isFirstTime);
+
+        if (isFirstTime && DoorManager.Instance != null)
             DoorManager.Instance.StoreString(currentSceneName);
-        }
 
-        else
-        {
-            ActivateTutorial(false);
-        }
-        playerMovement.isInteracting = false;
-
+        if (playerMovement != null)
+            playerMovement.isInteracting = false;
     }
 
     private void ActivateTutorial(bool isFirstTime)
@@ -38,8 +41,12 @@ public class TutorialManager : MonoBehaviour
 
         if (playerMovement != null)
         {
+            if (isFirstTime)
+                uiManager.showCursor();
+            else
+                uiManager.hideCursor();
             playerMovement.enabled = !isFirstTime;
-            playerMovement.isInteracting = false;
+            playerMovement.isInteracting = isFirstTime;
         }
     }
 }
