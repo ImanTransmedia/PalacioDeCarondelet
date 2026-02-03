@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.Networking;
 using UnityEngine.Video;
-using System.Text.RegularExpressions;
+using System.Text.RegularExpressions;   
 
 public class DialogueController : MonoBehaviour
 {
