@@ -15,7 +15,6 @@ public class DiegeticObjectInspector : MonoBehaviour
 
     public Camera Cam => cam;
     public bool IsInspecting => isInspecting;
-
     [Header("Configuracion entrada")]
     public float duration = 2f;
     public float speed = 0.25f;
