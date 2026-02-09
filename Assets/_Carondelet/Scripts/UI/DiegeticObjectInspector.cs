@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 
 public class DiegeticObjectInspector : MonoBehaviour
 {
@@ -12,33 +10,11 @@ public class DiegeticObjectInspector : MonoBehaviour
     public float rotationSpeed = 5f;
     public float zoomDistance = 2f;
 
-    [Header("FOV Zoom Settings")]
-    public float zoomSmoothSpeed = 5f;
-    public float normalZoomSmoothSpeed = 5f;
-    public float inspectZoomSmoothSpeed = 3f;
-    public float minNormalFOV = 40f;
-    public float minInspectFOV = 20f;
-    public float initialFOV = 60f;
-    public float zoomSensitivity = 10f;
-    public float inspectZoomSensitivity = 15f;
-    public float fovTransitionDuration = 0.5f;
-
-    private float targetFOV;
     private Camera cam;
+    private float initialFovStored;
 
     public Camera Cam => cam;
     public bool IsInspecting => isInspecting;
-
-    [Header("Diorama Movimiento con Click Derecho")]
-    public float dragSpeed = 0.1f;
-    public float smoothMoveSpeed = 5f;
-    public float minX = -1.5f;
-    public float maxX = 1.5f;
-    public float minY = -1.5f;
-    public float maxY = 1.5f;
-
-    private Vector3 targetDioramaPosition;
-    private Vector3 lastMousePosition;
 
     [Header("Configuracion entrada")]
     public float duration = 2f;
@@ -69,10 +45,6 @@ public class DiegeticObjectInspector : MonoBehaviour
     private Vector3 inspectStartPosition;
     private Coroutine dioramaRotationCoroutine;
 
-    [Header("Opciones de control")]
-    public bool enableZoom = true;
-    private bool isDraggingDiorama = false;
-
     void Start()
     {
         initialDioramaPosition = diorama.transform.position;
@@ -89,8 +61,7 @@ public class DiegeticObjectInspector : MonoBehaviour
 
         if (cam != null)
         {
-            cam.fieldOfView = initialFOV;
-            targetFOV = initialFOV;
+            initialFovStored = cam.fieldOfView;
         }
 
         initialPosition = cameraTransform.position;
@@ -147,7 +118,7 @@ public class DiegeticObjectInspector : MonoBehaviour
         lastInspectedTarget = null;
 
         if (cam != null)
-            StartCoroutine(ChangeFOV(cam.fieldOfView, initialFOV, fovTransitionDuration));
+            cam.fieldOfView = initialFovStored;
 
         isInspecting = false;
 
@@ -253,21 +224,7 @@ public class DiegeticObjectInspector : MonoBehaviour
         canvasGroup.alpha = 0f;
     }
 
-    private IEnumerator ChangeFOV(float startFOV, float endFOV, float duration)
-    {
-        float elapsed = 0f;
-        while (elapsed < duration)
-        {
-            if (cam != null)
-            {
-                cam.fieldOfView = Mathf.Lerp(startFOV, endFOV, elapsed / duration);
-                elapsed += Time.deltaTime;
-            }
-            yield return null;
-        }
-        if (cam != null)
-            cam.fieldOfView = endFOV;
-    }
+    public float InitialFOV => initialFovStored;
 
     public void MoveCameraForward()
     {
@@ -286,101 +243,6 @@ public class DiegeticObjectInspector : MonoBehaviour
             elapsed += Time.deltaTime;
             yield return null;
         }
-    }
-
-    public void UpdateMouseZoom(float scrollInput)
-    {
-        if (!enableZoom || cam == null)
-            return;
-
-        if (Mathf.Abs(scrollInput) > 0.01f)
-        {
-            if (isInspecting)
-            {
-                targetFOV -= scrollInput * inspectZoomSensitivity;
-                targetFOV = Mathf.Clamp(targetFOV, minInspectFOV, initialFOV);
-            }
-            else
-            {
-                targetFOV -= scrollInput * zoomSensitivity;
-                targetFOV = Mathf.Clamp(targetFOV, minNormalFOV, initialFOV);
-            }
-        }
-
-        float smoothSpeed = isInspecting ? inspectZoomSmoothSpeed : normalZoomSmoothSpeed;
-        cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, targetFOV, smoothSpeed * Time.deltaTime);
-    }
-
-    public void BeginMousePan(Vector3 mousePosition)
-    {
-        if (diorama == null)
-            return;
-
-        isDraggingDiorama = true;
-        lastMousePosition = mousePosition;
-        targetDioramaPosition = diorama.transform.position;
-    }
-
-    public void UpdateMousePan(Vector3 mousePosition)
-    {
-        if (!isDraggingDiorama || diorama == null)
-            return;
-
-        Vector3 delta = mousePosition - lastMousePosition;
-        delta *= dragSpeed * Time.deltaTime;
-
-        targetDioramaPosition += new Vector3(delta.x, delta.y, 0f);
-
-        targetDioramaPosition.x = Mathf.Clamp(targetDioramaPosition.x, minX, maxX);
-        targetDioramaPosition.y = Mathf.Clamp(targetDioramaPosition.y, minY, maxY);
-
-        diorama.transform.position = Vector3.Lerp(
-            diorama.transform.position,
-            targetDioramaPosition,
-            smoothMoveSpeed * Time.deltaTime
-        );
-
-        lastMousePosition = mousePosition;
-    }
-
-    public void EndMousePan()
-    {
-        isDraggingDiorama = false;
-    }
-
-    public void ApplyTouchZoomDelta(float pinchDelta)
-    {
-        if (!enableZoom || cam == null)
-            return;
-
-        float sensitivity = isInspecting ? inspectZoomSensitivity * 0.7f : zoomSensitivity * 0.2f;
-        float minFOV = isInspecting ? minInspectFOV : minNormalFOV;
-
-        targetFOV -= pinchDelta * sensitivity;
-        targetFOV = Mathf.Clamp(targetFOV, minFOV, initialFOV);
-
-        float smoothSpeed = isInspecting ? inspectZoomSmoothSpeed : normalZoomSmoothSpeed;
-        cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, targetFOV, smoothSpeed * Time.deltaTime);
-    }
-
-    public void ApplyTouchPanDelta(Vector2 screenDelta)
-    {
-        if (diorama == null)
-            return;
-
-        Vector3 delta = new Vector3(screenDelta.x, screenDelta.y, 0f);
-        delta *= dragSpeed * Time.deltaTime;
-
-        targetDioramaPosition = diorama.transform.position + new Vector3(delta.x, delta.y, 0f);
-
-        targetDioramaPosition.x = Mathf.Clamp(targetDioramaPosition.x, minX, maxX);
-        targetDioramaPosition.y = Mathf.Clamp(targetDioramaPosition.y, minY, maxY);
-
-        diorama.transform.position = Vector3.Lerp(
-            diorama.transform.position,
-            targetDioramaPosition,
-            smoothMoveSpeed * Time.deltaTime
-        );
     }
 
     private IEnumerator SmoothRotateDiorama(Vector3 targetEulerAngles, float duration = 1f)
