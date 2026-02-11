@@ -1,10 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-/// <summary>
-/// Centraliza TODA la lógica de Paneo + Zoom (PC y Mobile) para el diorama/cámara.
-/// DiegeticObjectInspector debe quedarse solo con la lógica de inspección (mover a target / reset / UI).
-/// </summary>
 public class PanZoom : MonoBehaviour
 {
     [Header("References")]
@@ -12,17 +8,14 @@ public class PanZoom : MonoBehaviour
 
     [Header("Runtime / UI")]
     public bool ignoreWhenOverUI = true;
-    [SerializeField] private UIManager uiManager; // si existe en tu proyecto, úsalo para detectar mobile en WebGL
+    [SerializeField] private UIManager uiManager; 
 
     [Header("Targets")]
-    [Tooltip("Si está vacío, se usa diegetic.Cam")]
     public Camera targetCamera;
-    [Tooltip("Si está vacío, se usa diegetic.diorama")]
     public Transform diorama;
 
     [Header("Pan (PC + Mobile)")]
     public bool enablePan = true;
-    [Tooltip("Unidades del mundo por pixel (ajusta para sentirlo tipo Sketchfab)")]
     public float panUnitsPerPixel = 0.0025f;
     public float panDeadzonePixels = 6f;
     public float panSmoothSpeed = 10f;
@@ -36,7 +29,6 @@ public class PanZoom : MonoBehaviour
     public float zoomSensitivityWheel = 10f;
 
     [Header("Zoom (Mobile pinch)")]
-    [Tooltip("Multiplicador para convertir delta de pixeles del pinch a cambio de FOV")]
     public float zoomSensitivityPinch = 0.08f;
     public float zoomDeadzonePixels = 2f;
 
@@ -47,14 +39,12 @@ public class PanZoom : MonoBehaviour
     public float normalZoomSmoothSpeed = 10f;
     public float inspectZoomSmoothSpeed = 10f;
 
-    // Internal state
     float targetFOV;
 
     bool isDraggingMouse = false;
     Vector2 lastMousePos;
     Vector3 targetDioramaPos;
 
-    // Mobile gesture state
     int panFingerId = -1;
     bool isPanningTouch = false;
     Vector2 lastPanPos;
@@ -102,9 +92,7 @@ public class PanZoom : MonoBehaviour
         if (diegetic == null)
             return;
 
-        // IMPORTANTÍSIMO:
-        // En mobile (sobre todo WebGL), los toques pueden disparar también los inputs de mouse.
-        // Por eso separamos completamente el flujo PC vs Mobile.
+
         if (IsMobileRuntime())
             UpdateMobile();
         else
@@ -117,7 +105,6 @@ public class PanZoom : MonoBehaviour
         var d = Diorama;
         if (cam == null || d == null) return;
 
-        // Zoom mouse wheel
         if (enableZoom)
         {
             float scroll = Input.GetAxis("Mouse ScrollWheel");
@@ -125,7 +112,6 @@ public class PanZoom : MonoBehaviour
                 ApplyZoomDelta(-scroll * zoomSensitivityWheel);
         }
 
-        // Pan con click derecho
         if (!enablePan) return;
 
         if (Input.GetMouseButtonDown(1))
@@ -155,7 +141,6 @@ public class PanZoom : MonoBehaviour
         if (Input.GetMouseButtonUp(1))
             isDraggingMouse = false;
 
-        // suavizado final
         SmoothDiorama();
         SmoothFov();
     }
@@ -186,7 +171,6 @@ public class PanZoom : MonoBehaviour
                 return;
             }
 
-            // Si venimos de un pinch, exigimos que el usuario "re-inicie" el gesto para pan.
             if (isPinching)
             {
                 if (t.phase == TouchPhase.Began)
@@ -207,7 +191,6 @@ public class PanZoom : MonoBehaviour
             return;
         }
 
-        // 2+ dedos => pinch zoom
         if (Input.touchCount >= 2)
         {
             Touch t0 = Input.GetTouch(0);
@@ -279,7 +262,6 @@ public class PanZoom : MonoBehaviour
         if (Mathf.Abs(deltaDist) < zoomDeadzonePixels)
             return;
 
-        // dist aumenta => dedos se separan => acercar (menos FOV)
         ApplyZoomDelta(-deltaDist * zoomSensitivityPinch);
 
         if (t0.phase == TouchPhase.Ended || t0.phase == TouchPhase.Canceled ||
