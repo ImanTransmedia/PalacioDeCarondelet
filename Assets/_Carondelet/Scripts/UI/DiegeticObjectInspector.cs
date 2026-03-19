@@ -10,6 +10,8 @@ public class DiegeticObjectInspector : MonoBehaviour
     public float rotationSpeed = 5f;
     public float zoomDistance = 2f;
 
+    public PanZoom panZoom;
+
     private Camera cam;
     private float initialFovStored;
 
@@ -65,6 +67,8 @@ public class DiegeticObjectInspector : MonoBehaviour
 
         initialPosition = cameraTransform.position;
         initialRotation = cameraTransform.rotation;
+
+        ResetCamera();
     }
 
     public void InspectObject(Transform target)
@@ -111,14 +115,16 @@ public class DiegeticObjectInspector : MonoBehaviour
 
         StopAllCoroutines();
 
+        if (panZoom != null)
+        {
+            panZoom.blockInputAndSmoothing = true;
+            panZoom.ResetView(false);
+        }
+
         StartCoroutine(SwitchPanelsWithFade(panelAreaSeleccionada, panelAreaExterior));
         StartCoroutine(SmoothResetCameraAndDiorama());
 
         lastInspectedTarget = null;
-
-        if (cam != null)
-            cam.fieldOfView = initialFovStored;
-
         isInspecting = false;
 
         foreach (IntereactiveTooltip tooltip in interactiveTooltips)
@@ -274,6 +280,9 @@ public class DiegeticObjectInspector : MonoBehaviour
         Vector3 dioramaEndPos = initialDioramaPosition;
         Quaternion dioramaEndRot = initialDioramaRotation;
 
+        float startFov = cam != null ? cam.fieldOfView : initialFovStored;
+        float endFov = initialFovStored;
+
         float elapsed = 0f;
         float duration = 1f;
 
@@ -287,12 +296,26 @@ public class DiegeticObjectInspector : MonoBehaviour
 
             diorama.transform.position = Vector3.Lerp(dioramaStartPos, dioramaEndPos, t);
             diorama.transform.rotation = Quaternion.Slerp(dioramaStartRot, dioramaEndRot, t);
+
+            if (cam != null)
+                cam.fieldOfView = Mathf.Lerp(startFov, endFov, t);
+
             yield return null;
         }
 
+        cameraTransform.position = endPos;
         cameraTransform.rotation = endRot;
         diorama.transform.position = dioramaEndPos;
         diorama.transform.rotation = dioramaEndRot;
+
+        if (cam != null)
+            cam.fieldOfView = endFov;
+
+        if (panZoom != null)
+        {
+            panZoom.ResetView(true);
+            panZoom.blockInputAndSmoothing = false;
+        }
 
         isReturning = false;
     }

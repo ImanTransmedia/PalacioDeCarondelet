@@ -8,7 +8,7 @@ public class PanZoom : MonoBehaviour
 
     [Header("Runtime / UI")]
     public bool ignoreWhenOverUI = true;
-    [SerializeField] private UIManager uiManager; 
+    [SerializeField] private UIManager uiManager;
 
     [Header("Targets")]
     public Camera targetCamera;
@@ -19,10 +19,19 @@ public class PanZoom : MonoBehaviour
     public float panUnitsPerPixel = 0.0025f;
     public float panDeadzonePixels = 6f;
     public float panSmoothSpeed = 10f;
+
+    [Header("Pan Limits")]
     public float minX = -1.5f;
     public float maxX = 1.5f;
     public float minY = -1.5f;
     public float maxY = 1.5f;
+
+    [Header("Elastic Pan")]
+    public bool useElasticPan = true;
+    public float elasticExtraX = 0.35f;
+    public float elasticExtraY = 0.35f;
+    [Range(0.05f, 1f)] public float elasticDragFactor = 0.35f;
+    public float elasticReturnSpeed = 12f;
 
     [Header("Zoom (PC mouse wheel)")]
     public bool enableZoom = true;
@@ -39,11 +48,16 @@ public class PanZoom : MonoBehaviour
     public float normalZoomSmoothSpeed = 10f;
     public float inspectZoomSmoothSpeed = 10f;
 
+    [Header("Reset")]
+    public bool resetWhenExitInspect = true;
+    public bool blockInputAndSmoothing = false;
+
     float targetFOV;
 
     bool isDraggingMouse = false;
     Vector2 lastMousePos;
     Vector3 targetDioramaPos;
+    Vector3 initialDioramaPos;
 
     int panFingerId = -1;
     bool isPanningTouch = false;
@@ -51,6 +65,8 @@ public class PanZoom : MonoBehaviour
 
     bool isPinching = false;
     float lastPinchDist = 0f;
+
+    bool lastInspecting = false;
 
     Camera Cam
     {
@@ -84,7 +100,12 @@ public class PanZoom : MonoBehaviour
 
         var d = Diorama;
         if (d != null)
+        {
+            initialDioramaPos = d.position;
             targetDioramaPos = d.position;
+        }
+
+        lastInspecting = diegetic != null && diegetic.IsInspecting;
     }
 
     void Update()
@@ -92,6 +113,17 @@ public class PanZoom : MonoBehaviour
         if (diegetic == null)
             return;
 
+        if (blockInputAndSmoothing)
+            return;
+
+        bool inspectingNow = diegetic.IsInspecting;
+
+        if (resetWhenExitInspect && lastInspecting && !inspectingNow)
+        {
+            ResetView(false);
+        }
+
+        lastInspecting = inspectingNow;
 
         if (IsMobileRuntime())
             UpdateMobile();
@@ -112,34 +144,35 @@ public class PanZoom : MonoBehaviour
                 ApplyZoomDelta(-scroll * zoomSensitivityWheel);
         }
 
-        if (!enablePan) return;
-
-        if (Input.GetMouseButtonDown(1))
+        if (enablePan)
         {
-            if (ignoreWhenOverUI && IsMouseOverUI())
+            if (Input.GetMouseButtonDown(1))
             {
-                isDraggingMouse = false;
-                return;
+                if (ignoreWhenOverUI && IsMouseOverUI())
+                {
+                    isDraggingMouse = false;
+                }
+                else
+                {
+                    isDraggingMouse = true;
+                    lastMousePos = Input.mousePosition;
+                }
             }
 
-            isDraggingMouse = true;
-            lastMousePos = Input.mousePosition;
-            targetDioramaPos = d.position;
+            if (Input.GetMouseButton(1) && isDraggingMouse)
+            {
+                Vector2 cur = Input.mousePosition;
+                Vector2 delta = cur - lastMousePos;
+
+                if (delta.sqrMagnitude >= panDeadzonePixels * panDeadzonePixels)
+                    ApplyPanDelta(delta);
+
+                lastMousePos = cur;
+            }
+
+            if (Input.GetMouseButtonUp(1))
+                isDraggingMouse = false;
         }
-
-        if (Input.GetMouseButton(1) && isDraggingMouse)
-        {
-            Vector2 cur = Input.mousePosition;
-            Vector2 delta = cur - lastMousePos;
-
-            if (delta.sqrMagnitude >= panDeadzonePixels * panDeadzonePixels)
-                ApplyPanDelta(delta);
-
-            lastMousePos = cur;
-        }
-
-        if (Input.GetMouseButtonUp(1))
-            isDraggingMouse = false;
 
         SmoothDiorama();
         SmoothFov();
@@ -278,9 +311,38 @@ public class PanZoom : MonoBehaviour
 
         Vector3 deltaWorld = new Vector3(screenDelta.x, screenDelta.y, 0f) * panUnitsPerPixel;
 
-        targetDioramaPos = d.position + deltaWorld;
-        targetDioramaPos.x = Mathf.Clamp(targetDioramaPos.x, minX, maxX);
-        targetDioramaPos.y = Mathf.Clamp(targetDioramaPos.y, minY, maxY);
+        // importante: acumular sobre el target, no sobre la posición actual
+        Vector3 desired = targetDioramaPos + deltaWorld;
+
+        if (useElasticPan)
+        {
+            desired.x = ApplyElasticAxis(desired.x, minX, maxX, elasticExtraX);
+            desired.y = ApplyElasticAxis(desired.y, minY, maxY, elasticExtraY);
+        }
+        else
+        {
+            desired.x = Mathf.Clamp(desired.x, minX, maxX);
+            desired.y = Mathf.Clamp(desired.y, minY, maxY);
+        }
+
+        targetDioramaPos = desired;
+    }
+
+    float ApplyElasticAxis(float value, float min, float max, float extraLimit)
+    {
+        if (value < min)
+        {
+            float over = min - value;
+            return Mathf.Max(min - extraLimit, min - over * elasticDragFactor);
+        }
+
+        if (value > max)
+        {
+            float over = value - max;
+            return Mathf.Min(max + extraLimit, max + over * elasticDragFactor);
+        }
+
+        return value;
     }
 
     void ApplyZoomDelta(float fovDelta)
@@ -299,6 +361,21 @@ public class PanZoom : MonoBehaviour
         var d = Diorama;
         if (d == null) return;
 
+        bool isActivelyPanning = isDraggingMouse || isPanningTouch;
+
+        if (!isActivelyPanning)
+        {
+            Vector3 clampedTarget = targetDioramaPos;
+            clampedTarget.x = Mathf.Clamp(clampedTarget.x, minX, maxX);
+            clampedTarget.y = Mathf.Clamp(clampedTarget.y, minY, maxY);
+
+            targetDioramaPos = Vector3.Lerp(
+                targetDioramaPos,
+                clampedTarget,
+                elasticReturnSpeed * Time.deltaTime
+            );
+        }
+
         d.position = Vector3.Lerp(d.position, targetDioramaPos, panSmoothSpeed * Time.deltaTime);
     }
 
@@ -310,6 +387,28 @@ public class PanZoom : MonoBehaviour
         bool inspecting = diegetic != null && diegetic.IsInspecting;
         float smooth = inspecting ? inspectZoomSmoothSpeed : normalZoomSmoothSpeed;
         cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, targetFOV, smooth * Time.deltaTime);
+    }
+
+    public void ResetView(bool instant = false)
+    {
+        var cam = Cam;
+        var d = Diorama;
+
+        ResetGesture();
+
+        if (d != null)
+        {
+            targetDioramaPos = initialDioramaPos;
+            if (instant)
+                d.position = initialDioramaPos;
+        }
+
+        if (cam != null)
+        {
+            targetFOV = initialFOV;
+            if (instant)
+                cam.fieldOfView = initialFOV;
+        }
     }
 
     bool IsMobileRuntime()

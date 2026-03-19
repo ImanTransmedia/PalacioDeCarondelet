@@ -20,6 +20,7 @@ public class UIManager : MonoBehaviour
     public AccessibilityManager accessibilityManager;
     public FirstPersonMovement firstPerson;
 
+
     public bool playerStartsDisable = false;
 
     [Header("Mobile device status")]
