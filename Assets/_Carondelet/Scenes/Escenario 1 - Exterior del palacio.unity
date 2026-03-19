@@ -4432,7 +4432,6 @@ MonoBehaviour:
   sceneLoader: {fileID: 0}
   accessibilityManager: {fileID: 583358874}
   firstPerson: {fileID: 0}
-  panZoom: {fileID: 0}
   playerStartsDisable: 1
   isMobile: 1
   desktopUIObjects:
@@ -4490,7 +4489,7 @@ MonoBehaviour:
   moveSpeed: 5
   rotationSpeed: 5
   zoomDistance: 1
-  panZoom: {fileID: 0}
+  panZoom: {fileID: 583358876}
   duration: 4
   speed: 0.25
   diorama: {fileID: 954277323}
@@ -4589,6 +4588,7 @@ MonoBehaviour:
   normalZoomSmoothSpeed: 10
   inspectZoomSmoothSpeed: 10
   resetWhenExitInspect: 1
+  blockInputAndSmoothing: 1
 --- !u!224 &592861549 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8065519474290850153, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
