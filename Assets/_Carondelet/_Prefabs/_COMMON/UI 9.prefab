@@ -6293,7 +6293,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 60}
+  m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6891428217540891471
 CanvasRenderer:
@@ -6341,7 +6341,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2867925622568367260}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 8f79c94b004612f49a1b47cd70df8c9c, type: 2}
   m_CullingMode: 0
@@ -10669,7 +10669,7 @@ MonoBehaviour:
   accessibilityManager: {fileID: 1465573209404095654}
   firstPerson: {fileID: 0}
   playerStartsDisable: 0
-  isMobile: 1
+  isMobile: 0
   desktopUIObjects:
   - {fileID: 1974126104743352220}
   - {fileID: 6691859784997612575}
@@ -14324,7 +14324,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: para saber mas
+  m_text: pour en savoir plus
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ae84f5d438b49d241ad5e773b748675d, type: 2}
   m_sharedMaterial: {fileID: -3788190475492753091, guid: ae84f5d438b49d241ad5e773b748675d, type: 2}
@@ -15723,7 +15723,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Presiona \"P\" para abrir el men\xFA de opciones"
+  m_text: Appuyez sur "P" pour ouvrir le menu des options
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ae84f5d438b49d241ad5e773b748675d, type: 2}
   m_sharedMaterial: {fileID: -3788190475492753091, guid: ae84f5d438b49d241ad5e773b748675d, type: 2}
@@ -19415,7 +19415,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 60}
+  m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6564217435088112842
 CanvasRenderer:
@@ -23411,7 +23411,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3926111694948096709, guid: 35325d0fc8a013e4c845f0819b976e74, type: 3}
       propertyPath: m_text
-      value: Pasillo principal
+      value: Couloir principal
       objectReference: {fileID: 0}
     - target: {fileID: 3926111694948096709, guid: 35325d0fc8a013e4c845f0819b976e74, type: 3}
       propertyPath: m_fontColor.b
@@ -23475,7 +23475,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4842167395785808447, guid: 35325d0fc8a013e4c845f0819b976e74, type: 3}
       propertyPath: m_text
-      value: Presiona
+      value: Appuyez
       objectReference: {fileID: 0}
     - target: {fileID: 4842167395785808447, guid: 35325d0fc8a013e4c845f0819b976e74, type: 3}
       propertyPath: m_fontColor.b
@@ -23671,7 +23671,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9208940560412887443, guid: 35325d0fc8a013e4c845f0819b976e74, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 102.63
+      value: 105.38
       objectReference: {fileID: 0}
     - target: {fileID: 9208940560412887443, guid: 35325d0fc8a013e4c845f0819b976e74, type: 3}
       propertyPath: m_SizeDelta.y
@@ -26495,7 +26495,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1511633659526083717, guid: 3d764034c901aca4f82cde2a8e131331, type: 3}
       propertyPath: mobileMaxWordsPerLine
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1511633659526083717, guid: 3d764034c901aca4f82cde2a8e131331, type: 3}
       propertyPath: dialogueList.Array.size
