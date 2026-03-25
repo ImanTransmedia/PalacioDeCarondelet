@@ -17,6 +17,9 @@ public class AccessibilityManager : MonoBehaviour
     [Header("Objetos que se activan con controles alternativos")]
     public List<GameObject> alternativeControlObjects;
 
+    [Header("CanvasGroups que cambian con accesibilidad")]
+    public List<CanvasGroup> accessibilityCanvasGroups;
+
     [Header("Asignación manual de botones en orden")]
     public List<Button> orderedButtons;
 
@@ -30,6 +33,7 @@ public class AccessibilityManager : MonoBehaviour
         enableAlternativeControls = DoorManager.Instance.isAccesible;
         UpdateButtonList();
         ToggleKeyLabels(enableAlternativeControls);
+
         if (enableAlternativeControls)
         {
             AssignKeyBindings();
@@ -50,6 +54,8 @@ public class AccessibilityManager : MonoBehaviour
             alternatePanel.alpha = 0f;
             defaultPanel.alpha = 1f;
         }
+
+        UpdateAccessibilityCanvasGroups();
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -59,7 +65,7 @@ public class AccessibilityManager : MonoBehaviour
 
     private void UpdateButtonList()
     {
-        buttons = new List<Button>(orderedButtons); // Usa el orden del inspector
+        buttons = new List<Button>(orderedButtons);
 
         for (int i = 0; i < buttons.Count; i++)
         {
@@ -107,11 +113,13 @@ public class AccessibilityManager : MonoBehaviour
             DoorManager.Instance.IsAccesibleChange(enableAlternativeControls);
             ClearKeyBindings();
         }
+
         UpdateAlternativeControlObjects();
+        UpdateAccessibilityCanvasGroups();
         ToggleKeyLabels(enableAlternativeControls);
     }
 
-    private void UpdateAlternativeControlObjects() 
+    private void UpdateAlternativeControlObjects()
     {
         foreach (GameObject obj in alternativeControlObjects)
         {
@@ -119,6 +127,19 @@ public class AccessibilityManager : MonoBehaviour
             {
                 obj.SetActive(enableAlternativeControls);
             }
+        }
+    }
+
+    private void UpdateAccessibilityCanvasGroups()
+    {
+        foreach (CanvasGroup cg in accessibilityCanvasGroups)
+        {
+            if (cg == null)
+                continue;
+
+            cg.alpha = enableAlternativeControls ? 1f : 0f;
+            cg.interactable = enableAlternativeControls;
+            cg.blocksRaycasts = enableAlternativeControls;
         }
     }
 
@@ -131,9 +152,6 @@ public class AccessibilityManager : MonoBehaviour
             buttons[i].onClick.RemoveAllListeners();
             buttons[i].onClick.AddListener(() => OnButtonClick(index));
         }
-
-       // CancelInvoke(nameof(AssignKeyBindings));
-       // Invoke(nameof(AssignKeyBindings), repeatDelay);
     }
 
     private void ClearKeyBindings()
@@ -159,26 +177,26 @@ public class AccessibilityManager : MonoBehaviour
         }
 
         if (enableAlternativeControls)
-    {
-        for (int i = 0; i < keyAssignments.Count; i++)
         {
-            if (
-                Input.GetKeyDown(keyAssignments[i])
-                || Input.GetKeyDown(ConvertKeypadToAlpha(keyAssignments[i]))
-            )
+            for (int i = 0; i < keyAssignments.Count; i++)
             {
                 if (
-                    i < buttons.Count
-                    && buttons[i] != null
-                    && buttons[i].gameObject.activeInHierarchy
-                    && buttons[i].interactable
+                    Input.GetKeyDown(keyAssignments[i]) ||
+                    Input.GetKeyDown(ConvertKeypadToAlpha(keyAssignments[i]))
                 )
                 {
-                    buttons[i].onClick.Invoke();
+                    if (
+                        i < buttons.Count &&
+                        buttons[i] != null &&
+                        buttons[i].gameObject.activeInHierarchy &&
+                        buttons[i].interactable
+                    )
+                    {
+                        buttons[i].onClick.Invoke();
+                    }
                 }
             }
         }
-    }
     }
 
     private void ToggleKeyLabels(bool state)
@@ -254,24 +272,28 @@ public class AccessibilityManager : MonoBehaviour
     {
         float elapsedTime = 0f;
         canvasGroup.gameObject.SetActive(true);
+
         while (elapsedTime < tooltipFadeDuration)
         {
             elapsedTime += Time.deltaTime;
             canvasGroup.alpha = Mathf.Lerp(0f, 1f, elapsedTime / tooltipFadeDuration);
             yield return null;
         }
+
         canvasGroup.alpha = 1f;
     }
 
     private IEnumerator FadeOut(CanvasGroup canvasGroup)
     {
         float elapsedTime = 0f;
+
         while (elapsedTime < tooltipFadeDuration)
         {
             elapsedTime += Time.deltaTime;
             canvasGroup.alpha = Mathf.Lerp(1f, 0f, elapsedTime / tooltipFadeDuration);
             yield return null;
         }
+
         canvasGroup.alpha = 0f;
         canvasGroup.gameObject.SetActive(false);
     }
@@ -281,9 +303,8 @@ public class AccessibilityManager : MonoBehaviour
         UpdateButtonList();
         AssignKeyBindings();
         ToggleKeyLabels(enableAlternativeControls);
-            UpdateAlternativeControlObjects();
-       // CancelInvoke(nameof(RefreshAccessibilitySettings));
-      //  Invoke(nameof(RefreshAccessibilitySettings), repeatDelay);
+        UpdateAlternativeControlObjects();
+        UpdateAccessibilityCanvasGroups();
     }
 
     public void OnPanelActivated()
