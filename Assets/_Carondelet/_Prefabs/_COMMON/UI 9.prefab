@@ -1012,8 +1012,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 109.73, y: -25}
-  m_SizeDelta: {x: 94.73, y: 0}
+  m_AnchoredPosition: {x: 99.99, y: -25}
+  m_SizeDelta: {x: 84.99, y: 0}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &8540468350086982402
 CanvasRenderer:
@@ -23676,7 +23676,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9208940560412887443, guid: 35325d0fc8a013e4c845f0819b976e74, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 105.38
+      value: 63.54
       objectReference: {fileID: 0}
     - target: {fileID: 9208940560412887443, guid: 35325d0fc8a013e4c845f0819b976e74, type: 3}
       propertyPath: m_SizeDelta.y
@@ -26496,11 +26496,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1511633659526083717, guid: 3d764034c901aca4f82cde2a8e131331, type: 3}
       propertyPath: mobileMaxCharsPerLine
-      value: 60
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1511633659526083717, guid: 3d764034c901aca4f82cde2a8e131331, type: 3}
       propertyPath: mobileMaxWordsPerLine
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1511633659526083717, guid: 3d764034c901aca4f82cde2a8e131331, type: 3}
       propertyPath: dialogueList.Array.size
