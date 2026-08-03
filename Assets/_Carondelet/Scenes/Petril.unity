@@ -26365,7 +26365,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5935724636094023965, guid: df06df849913cb7409ec387ec94f49e9, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 102.63
+      value: 105.38
       objectReference: {fileID: 0}
     - target: {fileID: 5935724636094023965, guid: df06df849913cb7409ec387ec94f49e9, type: 3}
       propertyPath: m_SizeDelta.y
@@ -33282,6 +33282,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1150757858}
     m_Modifications:
+    - target: {fileID: 2988064465336058517, guid: ba66b76faeb1bb14c93b4620c840efdc, type: 3}
+      propertyPath: speedFrench
+      value: 0.055
+      objectReference: {fileID: 0}
     - target: {fileID: 4636071453018503614, guid: ba66b76faeb1bb14c93b4620c840efdc, type: 3}
       propertyPath: m_Name
       value: DialogoEntrandoAlPatio
@@ -33442,6 +33446,10 @@ PrefabInstance:
     - target: {fileID: 1285735429765252602, guid: d67e79040f092a14db1b42f1e230928b, type: 3}
       propertyPath: m_Name
       value: DialogoPrincipioDelPasillo
+      objectReference: {fileID: 0}
+    - target: {fileID: 8734902468550718540, guid: d67e79040f092a14db1b42f1e230928b, type: 3}
+      propertyPath: speedFrench
+      value: 0.055
       objectReference: {fileID: 0}
     - target: {fileID: 8734902468550718540, guid: d67e79040f092a14db1b42f1e230928b, type: 3}
       propertyPath: speedSpanish

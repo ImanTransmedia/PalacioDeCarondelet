@@ -334,6 +334,7 @@ MonoBehaviour:
   tooltipFadeDuration: 0.15
   repeatDelay: 0.5
   alternativeControlObjects: []
+  accessibilityCanvasGroups: []
   orderedButtons:
   - {fileID: 920590080}
   keyAssignments: 000100000201000003010000040100000501000006010000070100000801000009010000
@@ -1610,7 +1611,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3874082101029523942, guid: 3d764034c901aca4f82cde2a8e131331, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -10.0000305
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 3874082101029523942, guid: 3d764034c901aca4f82cde2a8e131331, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2595,6 +2596,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1005262629}
     m_Modifications:
+    - target: {fileID: 3420305507863902300, guid: e555d365f3f312a4f885992a339ce585, type: 3}
+      propertyPath: speedFrench
+      value: 0.055
+      objectReference: {fileID: 0}
     - target: {fileID: 4435457938163940844, guid: e555d365f3f312a4f885992a339ce585, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

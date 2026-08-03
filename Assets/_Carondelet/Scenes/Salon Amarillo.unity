@@ -2437,7 +2437,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5935724636094023965, guid: df06df849913cb7409ec387ec94f49e9, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 142.64
+      value: 128.36
       objectReference: {fileID: 0}
     - target: {fileID: 5935724636094023965, guid: df06df849913cb7409ec387ec94f49e9, type: 3}
       propertyPath: m_SizeDelta.y
@@ -12617,6 +12617,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1064663049}
     m_Modifications:
+    - target: {fileID: 5875873200326365956, guid: 7264a18f28914b04c8cf611992fcad24, type: 3}
+      propertyPath: speedFrench
+      value: 0.055
+      objectReference: {fileID: 0}
     - target: {fileID: 8012751718710212352, guid: 7264a18f28914b04c8cf611992fcad24, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

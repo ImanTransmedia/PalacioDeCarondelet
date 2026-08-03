@@ -4520,6 +4520,7 @@ MonoBehaviour:
   tooltipFadeDuration: 0.15
   repeatDelay: 0.5
   alternativeControlObjects: []
+  accessibilityCanvasGroups: []
   orderedButtons:
   - {fileID: 1077473266}
   - {fileID: 1550615756}
@@ -23897,7 +23898,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 991899899}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.4401408
+  m_Size: 0.4615952
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -24165,7 +24166,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 945414334711182563, guid: 50532f48ce835024296d3c83a57307d1, type: 3}
       propertyPath: speedFrench
-      value: 0.05
+      value: 0.055
       objectReference: {fileID: 0}
     - target: {fileID: 945414334711182563, guid: 50532f48ce835024296d3c83a57307d1, type: 3}
       propertyPath: speedKichwa
