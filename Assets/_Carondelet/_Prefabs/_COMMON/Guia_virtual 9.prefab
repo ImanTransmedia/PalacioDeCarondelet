@@ -1231,7 +1231,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 6714897388686705003}
   dialoguePanel: {fileID: 7503016200803564869}
-  minTextSpeed: 0.02
+  minTextSpeed: 0.005
+  maxTextSpeed: 0.12
+  waitBetweenSegments: 0.45
   dialogueList:
   - {fileID: 1487717184788344806}
   - {fileID: 2715584886399841347}
@@ -1239,7 +1241,11 @@ MonoBehaviour:
   videoAudioOutput: {fileID: 0}
   startDialogueAutomatically: 0
   dialogueIndexToShow: 0
-  autoAdjustTextSpeed: 0
+  autoAdjustTextSpeed: 1
+  subtitleStartDelay: 0.2
+  subtitleEndReadingTime: 1.5
+  videoPrepareTimeout: 15
+  videoPlaybackGraceTime: 5
 --- !u!1 &5828587966439896894
 GameObject:
   m_ObjectHideFlags: 0

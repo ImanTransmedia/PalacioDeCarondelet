@@ -18,9 +18,10 @@ public class DialogueController : MonoBehaviour
     public TextMeshProUGUI textComponent;
     public GameObject dialoguePanel;
     private CanvasGroup dialoguePanelCanvasGroup;
-    public float minTextSpeed = 0.02f;
+    public float minTextSpeed = 0.005f;
+    public float maxTextSpeed = 0.12f;
     private float textSpeed = 0.0f;
-    private float waitBetweenSegments = 0.8f;
+    [SerializeField] private float waitBetweenSegments = 0.45f;
     private int linesPerSegment = 1;
 
     public List<LocalizedDialogue> dialogueList;
@@ -41,9 +42,17 @@ public class DialogueController : MonoBehaviour
 
     public bool startDialogueAutomatically = false;
     public int dialogueIndexToShow = 0;
-    private float timeBeforeDisappear = 3.5f;
     private string sessionKey;
-    public bool autoAdjustTextSpeed = false;
+    public bool autoAdjustTextSpeed = true;
+
+    [Header("Subtitle synchronization patch")]
+    [Min(0f)] public float subtitleStartDelay = 0.2f;
+    [Min(0f)] public float subtitleEndReadingTime = 1.5f;
+    [Min(1f)] public float videoPrepareTimeout = 15f;
+    [Min(1f)] public float videoPlaybackGraceTime = 5f;
+
+    private bool videoPreparedSuccessfully;
+    private bool videoPlaybackError;
 
     void Start()
     {
@@ -64,9 +73,10 @@ public class DialogueController : MonoBehaviour
             videoPlayer.errorReceived += OnVideoError;
 
         GameObject audioGO = GameObject.Find("AudioSourceVideo");
-        videoAudioOutput = audioGO.GetComponent<AudioSource>();
-        videoPlayer.audioOutputMode = VideoAudioOutputMode.AudioSource;
-        videoPlayer.SetTargetAudioSource(0, videoAudioOutput);
+        if (audioGO != null)
+            videoAudioOutput = audioGO.GetComponent<AudioSource>();
+
+        ConfigureVideoAudio();
 
         if (startDialogueAutomatically)
         {
@@ -127,7 +137,10 @@ public class DialogueController : MonoBehaviour
         LocalizedDialogue dialogue = dialogueList[index];
         LocalizedString localizedString = dialogue.localizedString;
         string localizedText = localizedString.GetLocalizedString();
-        textSpeed = dialogue.finalSpeed * 1.3f;
+        localizedText = Regex.Replace(localizedText, @"[ \t]+", " ").Trim();
+        textSpeed = dialogue.finalSpeed > 0f
+            ? Mathf.Max(minTextSpeed, dialogue.finalSpeed * 1.3f)
+            : 0.04f;
         currentDialogueLines = SplitTextIntoLines(localizedText);
 
         if (mobileWrapEnabled && IsMobileRuntime())
@@ -199,6 +212,8 @@ public class DialogueController : MonoBehaviour
     private IEnumerator PrepareAndStartDialogue(int index)
     {
         isDialogueActive = true;
+        videoPreparedSuccessfully = false;
+        videoPlaybackError = false;
         dialoguePanel.SetActive(true);
 
         if (dialoguePanelCanvasGroup != null)
@@ -215,15 +230,30 @@ public class DialogueController : MonoBehaviour
             {
                 // yield return StartCoroutine(LoadAndPlayMultimedia(videoPath, audioPath));
                 yield return StartCoroutine(LoadAndPlayVideo(videoPath));
-                videoPlayer.time = 0;
-                videoPlayer.Play();
+                if (videoPreparedSuccessfully)
+                {
+                    videoPlayer.time = 0;
+                    videoPlayer.Play();
 
-                yield return new WaitUntil(() => videoPlayer.isPlaying /*&& audioSource.isPlaying*/);
+                    float playDeadline = Time.realtimeSinceStartup + videoPlaybackGraceTime;
+                    while (!videoPlayer.isPlaying && !videoPlaybackError && Time.realtimeSinceStartup < playDeadline)
+                        yield return null;
 
-                if (dialoguePanelCanvasGroup != null)
-                    dialoguePanelCanvasGroup.alpha = 1f;
+                    if (videoPlayer.isPlaying)
+                    {
+                        UpdateTextSpeedBasedOnVideo();
 
-                yield return new WaitForSeconds(2f);
+                        if (dialoguePanelCanvasGroup != null)
+                            dialoguePanelCanvasGroup.alpha = 1f;
+
+                        if (subtitleStartDelay > 0f)
+                            yield return new WaitForSecondsRealtime(subtitleStartDelay);
+                    }
+                    else
+                    {
+                        Debug.LogWarning("[DialogueController] El video no inici\u00f3; se mostrar\u00e1 el texto con la velocidad de respaldo.");
+                    }
+                }
             }
         }
 
@@ -244,10 +274,14 @@ public class DialogueController : MonoBehaviour
                 currentLineIndex++;
             }
 
-            yield return new WaitForSeconds(waitBetweenSegments);
+            if (currentLineIndex < currentDialogueLines.Count && waitBetweenSegments > 0f)
+                yield return new WaitForSecondsRealtime(waitBetweenSegments);
         }
 
-        yield return new WaitForSeconds(timeBeforeDisappear);
+        yield return StartCoroutine(WaitForVideoCompletion());
+
+        if (subtitleEndReadingTime > 0f)
+            yield return new WaitForSecondsRealtime(subtitleEndReadingTime);
 
         if (dialoguePanelCanvasGroup != null)
             yield return StartCoroutine(FadeCanvasGroup(dialoguePanelCanvasGroup, 1f, 0f, 0.65f));
@@ -307,6 +341,46 @@ public class DialogueController : MonoBehaviour
         return segments;
     }
 
+    private void UpdateTextSpeedBasedOnVideo()
+    {
+        if (!autoAdjustTextSpeed || videoPlayer == null || videoPlayer.length <= 0d ||
+            currentDialogueLines == null || currentDialogueLines.Count == 0)
+            return;
+
+        int totalCharacters = 0;
+        foreach (string line in currentDialogueLines)
+            totalCharacters += line.Length;
+
+        if (totalCharacters <= 0)
+            return;
+
+        int segmentCount = Mathf.CeilToInt((float)currentDialogueLines.Count / Mathf.Max(1, linesPerSegment));
+        float pauseDuration = Mathf.Max(0, segmentCount - 1) * waitBetweenSegments;
+        float typingDuration = Mathf.Max(0.1f, (float)videoPlayer.length - subtitleStartDelay - pauseDuration);
+
+        textSpeed = Mathf.Clamp(typingDuration / totalCharacters, minTextSpeed, maxTextSpeed);
+        Debug.Log($"[DialogueController] Subt\u00edtulos ajustados a {videoPlayer.length:F2}s; velocidad: {textSpeed:F4}s por car\u00e1cter.");
+    }
+
+    private IEnumerator WaitForVideoCompletion()
+    {
+        if (!videoPreparedSuccessfully || videoPlayer == null || videoPlayer.length <= 0d)
+            yield break;
+
+        float remaining = Mathf.Max(0f, (float)(videoPlayer.length - videoPlayer.time));
+        float deadline = Time.realtimeSinceStartup + remaining + videoPlaybackGraceTime;
+
+        while (!videoPlaybackError && videoPlayer.time < videoPlayer.length - 0.1d &&
+               Time.realtimeSinceStartup < deadline)
+        {
+            // Recupera pausas inesperadas del VideoPlayer sin bloquear indefinidamente el di\u00e1logo.
+            if (!videoPlayer.isPlaying)
+                videoPlayer.Play();
+
+            yield return null;
+        }
+    }
+
     /*
     private IEnumerator LoadAndPlayMultimedia(string videoPath, string audioPath)
     {
@@ -322,14 +396,55 @@ public class DialogueController : MonoBehaviour
 
     private IEnumerator LoadAndPlayVideo(string relativePath)
     {
-        if (videoPlayer == null) yield break;
+        videoPreparedSuccessfully = false;
+        videoPlaybackError = false;
+
+        if (videoPlayer == null)
+            yield break;
 
         string fullPath = System.IO.Path.Combine(Application.streamingAssetsPath, relativePath).Replace("\\", "/");
+        ConfigureVideoAudio();
         videoPlayer.url = fullPath;
         videoPlayer.Prepare();
 
-        while (!videoPlayer.isPrepared)
+        float deadline = Time.realtimeSinceStartup + videoPrepareTimeout;
+        while (!videoPlayer.isPrepared && !videoPlaybackError && Time.realtimeSinceStartup < deadline)
             yield return null;
+
+        videoPreparedSuccessfully = videoPlayer.isPrepared && !videoPlaybackError;
+        if (videoPreparedSuccessfully)
+            ConfigureVideoAudio();
+
+        if (!videoPreparedSuccessfully)
+            Debug.LogError($"[DialogueController] No se pudo preparar el video dentro de {videoPrepareTimeout:F1}s: {fullPath}");
+    }
+
+    private void ConfigureVideoAudio()
+    {
+        if (videoPlayer == null)
+            return;
+
+        if (videoAudioOutput == null)
+        {
+            GameObject audioGO = GameObject.Find("AudioSourceVideo");
+            if (audioGO != null)
+                videoAudioOutput = audioGO.GetComponent<AudioSource>();
+        }
+
+        if (videoAudioOutput == null)
+        {
+            Debug.LogError("[DialogueController] No se encontr\u00f3 el AudioSourceVideo para reproducir el audio del Bar\u00f3n.");
+            return;
+        }
+
+        if (!videoPlayer.isPrepared)
+        {
+            videoPlayer.audioOutputMode = VideoAudioOutputMode.AudioSource;
+            videoPlayer.controlledAudioTrackCount = 1;
+            videoPlayer.EnableAudioTrack(0, true);
+        }
+
+        videoPlayer.SetTargetAudioSource(0, videoAudioOutput);
     }
 
     /*
@@ -397,6 +512,7 @@ public class DialogueController : MonoBehaviour
 
     private void OnVideoError(VideoPlayer source, string message)
     {
+        videoPlaybackError = true;
         Debug.LogError("VideoPlayer error: " + message);
     }
 
