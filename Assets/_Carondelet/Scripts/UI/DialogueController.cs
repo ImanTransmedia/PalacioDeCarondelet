@@ -46,7 +46,7 @@ public class DialogueController : MonoBehaviour
     public bool autoAdjustTextSpeed = true;
 
     [Header("Subtitle synchronization patch")]
-    [Min(0f)] public float subtitleStartDelay = 0.2f;
+    [Min(0f)] public float subtitleStartDelay = 0.8f;
     [Min(0f)] public float subtitleEndReadingTime = 1.5f;
     [Min(1f)] public float videoPrepareTimeout = 15f;
     [Min(1f)] public float videoPlaybackGraceTime = 5f;
