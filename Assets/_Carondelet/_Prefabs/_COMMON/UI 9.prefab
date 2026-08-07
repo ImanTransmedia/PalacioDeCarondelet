@@ -851,7 +851,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Usa las teclas para desplazarte:  '
+  m_text: "Usa las teclas para desplazarte:  \r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ae84f5d438b49d241ad5e773b748675d, type: 2}
   m_sharedMaterial: {fileID: -3788190475492753091, guid: ae84f5d438b49d241ad5e773b748675d, type: 2}
@@ -1012,8 +1012,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 99.99, y: -25}
-  m_SizeDelta: {x: 84.99, y: 0}
+  m_AnchoredPosition: {x: 112.94, y: -25}
+  m_SizeDelta: {x: 97.94, y: 0}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &8540468350086982402
 CanvasRenderer:
@@ -1043,7 +1043,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Dirige tu punto de vista con:'
+  m_text: 'Dirige ton point de vue avec :'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ae84f5d438b49d241ad5e773b748675d, type: 2}
   m_sharedMaterial: {fileID: -3788190475492753091, guid: ae84f5d438b49d241ad5e773b748675d, type: 2}
@@ -6794,7 +6794,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 15, y: -5}
-  m_SizeDelta: {x: 380, y: 21.61}
+  m_SizeDelta: {x: 400, y: 21.61}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &9012613346536612372
 CanvasRenderer:
@@ -14656,7 +14656,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Continuar
+  m_text: Continuer
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9bebf639862243f4d8a02ad22d8d7492, type: 2}
   m_sharedMaterial: {fileID: 3931979881352775979, guid: 9bebf639862243f4d8a02ad22d8d7492, type: 2}
@@ -22259,8 +22259,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5680377073619669224, guid: a15aa075e770d3f4fa754488fa889bba, type: 3}
       propertyPath: m_text
-      value: "Usa el teclado para navegar \r\nPara desactivar el modo accesible presiona
-        \u201CTab\u201D "
+      value: "Appuyez sur \"Tab\" pour passer en mode de contr\xF4le accessible"
       objectReference: {fileID: 0}
     - target: {fileID: 5680480715775031059, guid: a15aa075e770d3f4fa754488fa889bba, type: 3}
       propertyPath: m_SizeDelta.x
@@ -22304,7 +22303,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7354782566565146003, guid: a15aa075e770d3f4fa754488fa889bba, type: 3}
       propertyPath: m_text
-      value: Ahora puedes usar el teclado para controlar toda la experiencia
+      value: "Usa el teclado para navegar \nPara desactivar el modo accesible presiona
+        \u201CTab\u201D "
       objectReference: {fileID: 0}
     - target: {fileID: 7354782566565146003, guid: a15aa075e770d3f4fa754488fa889bba, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -23676,7 +23676,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9208940560412887443, guid: 35325d0fc8a013e4c845f0819b976e74, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 63.54
+      value: 105.38
       objectReference: {fileID: 0}
     - target: {fileID: 9208940560412887443, guid: 35325d0fc8a013e4c845f0819b976e74, type: 3}
       propertyPath: m_SizeDelta.y
@@ -24923,7 +24923,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5928302857607790581, guid: c955603015293e040863c615254875c5, type: 3}
       propertyPath: m_Value
-      value: 1.0000008
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6035461119539876922, guid: c955603015293e040863c615254875c5, type: 3}
       propertyPath: m_fontSize
