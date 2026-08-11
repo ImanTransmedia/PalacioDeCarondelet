@@ -46,7 +46,8 @@ public class DialogueController : MonoBehaviour
     public bool autoAdjustTextSpeed = true;
 
     [Header("Subtitle synchronization patch")]
-    [Min(0f)] public float subtitleStartDelay = 0.8f;
+    [Min(0f)] public float subtitleStartDelay = 0.9f;
+    [Min(0f)] public float subtitleEndDelay = 0.9f;
     [Min(0f)] public float subtitleEndReadingTime = 1.5f;
     [Min(1f)] public float videoPrepareTimeout = 15f;
     [Min(1f)] public float videoPlaybackGraceTime = 5f;
@@ -356,7 +357,10 @@ public class DialogueController : MonoBehaviour
 
         int segmentCount = Mathf.CeilToInt((float)currentDialogueLines.Count / Mathf.Max(1, linesPerSegment));
         float pauseDuration = Mathf.Max(0, segmentCount - 1) * waitBetweenSegments;
-        float typingDuration = Mathf.Max(0.1f, (float)videoPlayer.length - subtitleStartDelay - pauseDuration);
+        // Reserva el mismo margen para las animaciones de entrada y salida.
+        // El texto empieza después del primer margen y termina antes del último.
+        float animationMargins = subtitleStartDelay + subtitleEndDelay;
+        float typingDuration = Mathf.Max(0.1f, (float)videoPlayer.length - animationMargins - pauseDuration);
 
         textSpeed = Mathf.Clamp(typingDuration / totalCharacters, minTextSpeed, maxTextSpeed);
         Debug.Log($"[DialogueController] Subt\u00edtulos ajustados a {videoPlayer.length:F2}s; velocidad: {textSpeed:F4}s por car\u00e1cter.");
