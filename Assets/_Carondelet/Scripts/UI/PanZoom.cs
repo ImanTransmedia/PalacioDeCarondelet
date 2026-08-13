@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class PanZoom : MonoBehaviour
 {
@@ -67,6 +69,7 @@ public class PanZoom : MonoBehaviour
     float lastPinchDist = 0f;
 
     bool lastInspecting = false;
+    readonly List<RaycastResult> uiRaycastResults = new List<RaycastResult>();
 
     Camera Cam
     {
@@ -196,7 +199,7 @@ public class PanZoom : MonoBehaviour
         {
             Touch t = Input.GetTouch(0);
 
-            if (ignoreWhenOverUI && IsTouchOverUI(t.fingerId))
+            if (ignoreWhenOverUI && IsTouchOverUI(t))
             {
                 ResetGesture();
                 SmoothDiorama();
@@ -229,7 +232,7 @@ public class PanZoom : MonoBehaviour
             Touch t0 = Input.GetTouch(0);
             Touch t1 = Input.GetTouch(1);
 
-            if (ignoreWhenOverUI && (IsTouchOverUI(t0.fingerId) || IsTouchOverUI(t1.fingerId)))
+            if (ignoreWhenOverUI && (IsTouchOverUI(t0) || IsTouchOverUI(t1)))
             {
                 ResetGesture();
                 SmoothDiorama();
@@ -311,7 +314,7 @@ public class PanZoom : MonoBehaviour
 
         Vector3 deltaWorld = new Vector3(screenDelta.x, screenDelta.y, 0f) * panUnitsPerPixel;
 
-        // importante: acumular sobre el target, no sobre la posición actual
+        // importante: acumular sobre el target, no sobre la posiciÃ³n actual
         Vector3 desired = targetDioramaPos + deltaWorld;
 
         if (useElasticPan)
@@ -419,11 +422,29 @@ public class PanZoom : MonoBehaviour
         return Application.isMobilePlatform;
     }
 
-    bool IsTouchOverUI(int fingerId)
+    bool IsTouchOverUI(Touch touch)
     {
         if (!ignoreWhenOverUI) return false;
         if (EventSystem.current == null) return false;
-        return EventSystem.current.IsPointerOverGameObject(fingerId);
+
+        // En WebGL mobile el pointerId del EventSystem no siempre coincide con
+        // Touch.fingerId. El raycast por posicion detecta el ScrollRect de forma fiable.
+        var pointerData = new PointerEventData(EventSystem.current)
+        {
+            pointerId = touch.fingerId,
+            position = touch.position
+        };
+
+        uiRaycastResults.Clear();
+        EventSystem.current.RaycastAll(pointerData, uiRaycastResults);
+
+        foreach (RaycastResult result in uiRaycastResults)
+        {
+            if (result.gameObject.GetComponentInParent<ScrollRect>() != null)
+                return true;
+        }
+
+        return EventSystem.current.IsPointerOverGameObject(touch.fingerId);
     }
 
     bool IsMouseOverUI()
