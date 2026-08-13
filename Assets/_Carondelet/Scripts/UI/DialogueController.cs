@@ -156,11 +156,13 @@ public class DialogueController : MonoBehaviour
 
     private bool IsMobileRuntime()
     {
-#if UNITY_WEBGL
+        // Application.isMobilePlatform no identifica de forma fiable un navegador
+        // movil en WebGL. UIManager ya centraliza esa deteccion mediante el plugin JS.
+        UIManager uiManager = FindObjectOfType<UIManager>();
+        if (uiManager != null)
+            return uiManager.isMobile || uiManager.DetectMobileWebGL();
+
         return Application.isMobilePlatform;
-#else
-    return Application.isMobilePlatform;
-#endif
     }
 
     private List<string> WrapLinesForMobile(List<string> inputLines, int maxWordsPerLine, int maxCharsPerLine)

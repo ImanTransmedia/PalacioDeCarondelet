@@ -26,6 +26,10 @@ public class UIManager : MonoBehaviour
     [Header("Mobile device status")]
     public bool isMobile;
 
+    [Header("Editor testing")]
+    [Tooltip("Fuerza el modo mobile solo al ejecutar desde el Editor. No afecta builds.")]
+    public bool forceMobileInEditor = true;
+
     [Header("Desktop UI Elements")]
     public List<GameObject> desktopUIObjects;
 
@@ -84,6 +88,11 @@ public class UIManager : MonoBehaviour
 
     public bool DetectMobileWebGL()
     {
+#if UNITY_EDITOR
+        if (forceMobileInEditor)
+            return true;
+#endif
+
         // En Android/iOS nativo esto funciona bien:
         if (Application.isMobilePlatform)
             return true;

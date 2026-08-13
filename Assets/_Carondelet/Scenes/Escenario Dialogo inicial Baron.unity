@@ -354,7 +354,8 @@ MonoBehaviour:
   accessibilityManager: {fileID: 252331489}
   firstPerson: {fileID: 0}
   playerStartsDisable: 1
-  isMobile: 0
+  isMobile: 1
+  forceMobileInEditor: 1
   desktopUIObjects:
   - {fileID: 894892211}
   mobileUIObjects: []
@@ -1504,6 +1505,14 @@ PrefabInstance:
     - target: {fileID: 1511633659526083717, guid: 3d764034c901aca4f82cde2a8e131331, type: 3}
       propertyPath: waitBetweenSegments
       value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511633659526083717, guid: 3d764034c901aca4f82cde2a8e131331, type: 3}
+      propertyPath: mobileMaxCharsPerLine
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511633659526083717, guid: 3d764034c901aca4f82cde2a8e131331, type: 3}
+      propertyPath: mobileMaxWordsPerLine
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1511633659526083717, guid: 3d764034c901aca4f82cde2a8e131331, type: 3}
       propertyPath: dialogueList.Array.size
