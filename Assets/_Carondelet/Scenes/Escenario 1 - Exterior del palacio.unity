@@ -3153,8 +3153,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1513561063}
   m_HandleRect: {fileID: 1513561062}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 1
+  m_Value: 1.0000001
+  m_Size: 0.7621331
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4434,6 +4434,7 @@ MonoBehaviour:
   firstPerson: {fileID: 0}
   playerStartsDisable: 1
   isMobile: 1
+  forceMobileInEditor: 1
   desktopUIObjects:
   - {fileID: 340942097}
   - {fileID: 2001359699}
@@ -13745,8 +13746,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1375238816}
   m_HandleRect: {fileID: 1375238815}
   m_Direction: 2
-  m_Value: 1.0000165
-  m_Size: 0.987502
+  m_Value: 1
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -17835,6 +17836,14 @@ PrefabInstance:
     - target: {fileID: 1511633659526083717, guid: 3d764034c901aca4f82cde2a8e131331, type: 3}
       propertyPath: waitBetweenSegments
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511633659526083717, guid: 3d764034c901aca4f82cde2a8e131331, type: 3}
+      propertyPath: mobileMaxCharsPerLine
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511633659526083717, guid: 3d764034c901aca4f82cde2a8e131331, type: 3}
+      propertyPath: mobileMaxWordsPerLine
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1511633659526083717, guid: 3d764034c901aca4f82cde2a8e131331, type: 3}
       propertyPath: dialogueList.Array.size
@@ -23898,7 +23907,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 991899899}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.4615952
+  m_Size: 0.2524207
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
