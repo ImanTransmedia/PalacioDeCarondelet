@@ -12,6 +12,7 @@ public class IntereactiveTooltip : MonoBehaviour, IPointerEnterHandler, IPointer
 {
     public CanvasGroup panelCanvasGroup;
     public TextMeshProUGUI targetText;
+    public TextMeshProUGUI targetTextMobile;
     public LocalizedString textoLocalizado;
     public float fadeDuration = 0.2f;
     private bool lastState = false;
@@ -171,9 +172,11 @@ public void SetTargetTextFromContenido()
     private void OnLocalizedStringChanged(string localizedText)
     {
         if (targetText != null)
-        {
             targetText.text = localizedText;
-        }
+
+        if (targetTextMobile != null)
+            targetTextMobile.text = localizedText;
+
         textoLocalizado.StringChanged -= OnLocalizedStringChanged;
     }
 }
