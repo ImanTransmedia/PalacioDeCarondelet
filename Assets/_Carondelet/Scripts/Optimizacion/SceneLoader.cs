@@ -30,6 +30,19 @@ public class SceneLoader : MonoBehaviour
         _sceneLoadHandle = Addressables.LoadSceneAsync(targetScene,
             LoadSceneMode.Single,
             activateOnLoad: true);
+        _sceneLoadHandle.Completed += HandleAddressableSceneLoaded;
+    }
+
+    private void HandleAddressableSceneLoaded(AsyncOperationHandle<SceneInstance> handle)
+    {
+        if (handle.Status == AsyncOperationStatus.Succeeded)
+        {
+            AddressableSceneHandleRegistry.ReplaceWith(handle);
+        }
+        else if (handle.IsValid())
+        {
+            Addressables.Release(handle);
+        }
     }
 
     public void LoadSceneNoAdresable()

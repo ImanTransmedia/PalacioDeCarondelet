@@ -7,6 +7,39 @@ using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
 
+public static class AddressableSceneHandleRegistry
+{
+    private static readonly System.Collections.Generic.List<AsyncOperationHandle<SceneInstance>> Handles = new();
+
+    public static void Register(AsyncOperationHandle<SceneInstance> handle)
+    {
+        if (handle.IsValid() && !Handles.Contains(handle))
+            Handles.Add(handle);
+    }
+
+    public static void Unregister(AsyncOperationHandle<SceneInstance> handle)
+    {
+        Handles.Remove(handle);
+    }
+
+    public static void ReplaceWith(AsyncOperationHandle<SceneInstance> handle)
+    {
+        ReleaseAll();
+        Register(handle);
+    }
+
+    public static void ReleaseAll()
+    {
+        foreach (AsyncOperationHandle<SceneInstance> handle in Handles)
+        {
+            if (handle.IsValid())
+                Addressables.Release(handle);
+        }
+
+        Handles.Clear();
+    }
+}
+
 public class LoadingScreen : MonoBehaviour
 {
     public static bool IsSceneReady { get; private set; }
@@ -68,11 +101,11 @@ public class LoadingScreen : MonoBehaviour
         IsSceneReady = false;
         Debug.Log("Cargando escena base...");
 
+        // La escena anterior ya fue descargada al entrar a LoadingScreen.
+        // Libera sus handles para que Addressables pueda descargar sus bundles.
+        AddressableSceneHandleRegistry.ReleaseAll();
         yield return Resources.UnloadUnusedAssets();
         System.GC.Collect();
-        var clearCache = Addressables.ClearDependencyCacheAsync(sceneAddress, false);
-        yield return clearCache;
-        Addressables.Release(clearCache);
 
         var handle = Addressables.LoadSceneAsync(sceneAddress, LoadSceneMode.Single);
         while (!handle.IsDone)
@@ -88,8 +121,12 @@ public class LoadingScreen : MonoBehaviour
         if (handle.Status != AsyncOperationStatus.Succeeded)
         {
             Debug.LogError($"Error al cargar escena base: {sceneAddress}");
+            if (handle.IsValid())
+                Addressables.Release(handle);
             yield break;
         }
+
+        AddressableSceneHandleRegistry.Register(handle);
 
         Debug.Log("Escena base cargada. Comprobando sub‑escenas...");
 

@@ -47,10 +47,6 @@ public class AdditiveSceneLoader : MonoBehaviour
             yield return Resources.UnloadUnusedAssets();
             System.GC.Collect();
 
-            var clearCacheHandle = Addressables.ClearDependencyCacheAsync(key, false);
-            yield return clearCacheHandle;
-            Addressables.Release(clearCacheHandle);
-
             AsyncOperationHandle<SceneInstance> handle = Addressables.LoadSceneAsync(
                 key, LoadSceneMode.Additive, true);
 
@@ -64,11 +60,14 @@ public class AdditiveSceneLoader : MonoBehaviour
             if (handle.Status == AsyncOperationStatus.Succeeded)
             {
                 loadedSceneHandles.Add(handle);
+                AddressableSceneHandleRegistry.Register(handle);
                 Progress = (float)(i + 1) / totalSubScenes;
                 yield return new WaitForSeconds(0.2f);
             }
             else
             {
+                if (handle.IsValid())
+                    Addressables.Release(handle);
                 yield break;
             }
         }
@@ -88,7 +87,10 @@ public class AdditiveSceneLoader : MonoBehaviour
     {
         foreach (var handle in loadedSceneHandles)
         {
-            yield return Addressables.UnloadSceneAsync(handle, UnloadSceneOptions.None);
+            AddressableSceneHandleRegistry.Unregister(handle);
+
+            if (handle.IsValid())
+                yield return Addressables.UnloadSceneAsync(handle, UnloadSceneOptions.None, true);
         }
 
         loadedSceneHandles.Clear();

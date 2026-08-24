@@ -22,10 +22,13 @@ public class LoadSceneAddressable : MonoBehaviour
     {
         if (obj.Status == AsyncOperationStatus.Succeeded)
         {
+            AddressableSceneHandleRegistry.ReplaceWith(obj);
             Debug.Log("Escena cargada correctamente.");
         }
         else
         {
+            if (obj.IsValid())
+                Addressables.Release(obj);
             Debug.LogError("Error al cargar la escena.");
         }
     }
